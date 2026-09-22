@@ -1,0 +1,17 @@
+{
+  "api_version": "juli.scenario.v1",
+  "id": "career-fit",
+  "version": "0.1.1",
+  "name": "岗位匹配示例",
+  "description": "结合岗位材料与个人背景组织分析；不把未提供的个人能力当作不存在。",
+  "resource_roles": [
+    {"name": "opportunity", "label": "岗位资料", "min_count": 1, "max_count": 8},
+    {"name": "background", "label": "个人经历和作品", "min_count": 0, "max_count": 64}
+  ],
+  "instructions": "instructions.md",
+  "result_schema": "result.schema.json",
+  "tools": [
+    {"name": "evidence.search", "version": "1.0.0"},
+    {"name": "evidence.read", "version": "1.0.0"}
+  ]
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "id": "tender-review",
+    "package": "scenarios/tender-review",
+    "question": "结合项目要求与已保存的背景资料，整理巡检交付依据和待确认事项。",
+    "query": "巡检",
+    "clarification": "离线演示：这次希望优先核对哪方面的交付条件？",
+    "answer": "先整理巡检交付依据；没有的资料请明确列出。",
+    "context_roles": ["organization"],
+    "documents": [
+      {"file": "tender/requirement.md", "roles": ["requirements"], "background": false},
+      {"file": "tender/profile.md", "roles": ["organization"], "background": true},
+      {"file": "tender/delivery.md", "roles": ["organization"], "background": true}
+    ],
+    "complete_payload": {"summary": "合成流程：已回读项目要求和两份组织背景，实际交付适配待确认。", "missing_information": ["当前人员可用时间尚需确认。"]},
+    "missing_payload": {"summary": "资料不足，不能仅凭项目要求判断组织是否满足条件。", "missing_information": ["未绑定组织背景资料。"]}
+  },
+  {
+    "id": "career-fit",
+    "package": "scenarios/career-fit",
+    "question": "结合岗位文件与已保存的个人经历和作品，整理 Python 要求的相关依据。",
+    "query": "Python",
+    "clarification": "离线演示：这次投递最希望先了解哪方面？",
+    "answer": "先整理 Python 相关经历；不要预测录用结果。",
+    "context_roles": ["background"],
+    "documents": [
+      {"file": "career/job.md", "roles": ["opportunity"], "background": false},
+      {"file": "career/resume.md", "roles": ["background"], "background": true},
+      {"file": "career/portfolio.md", "roles": ["background"], "background": true}
+    ],
+    "complete_payload": {"summary": "合成流程：已回读岗位、经历和作品；是否投递仍需结合本人偏好。", "questions": ["是否接受岗位要求的现场协作安排？"]},
+    "missing_payload": {"summary": "资料不足，尚不能根据岗位文件评估个人匹配情况。", "questions": ["请补充个人经历与作品资料。"]}
+  },
+  {
+    "id": "equipment-choice",
+    "package": "examples/scenario_acceptance/scenarios/equipment-choice",
+    "question": "结合候选设备资料、个人约束和使用环境，整理便携条件。",
+    "query": "便携",
+    "clarification": "离线演示：设备选择这次优先考虑什么？",
+    "answer": "先看便携要求；没有证据的参数保留未知。",
+    "context_roles": ["constraints", "usage-context"],
+    "documents": [
+      {"file": "equipment/offer.md", "roles": ["options"], "background": false},
+      {"file": "equipment/needs.md", "roles": ["constraints"], "background": true},
+      {"file": "equipment/context.md", "roles": ["usage-context"], "background": true}
+    ],
+    "complete_payload": {"summary": "合成流程：已引用三种角色的资料，兼容性仍待补充。", "checks": [{"criterion": "便携与外接兼容性", "status": "unknown"}]},
+    "missing_payload": {"summary": "资料不足，缺少个人约束及使用环境。", "checks": [{"criterion": "个人适用性", "status": "unknown"}]}
+  }
+]

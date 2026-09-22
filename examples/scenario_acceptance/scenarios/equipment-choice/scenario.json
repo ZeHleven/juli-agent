@@ -1,0 +1,18 @@
+{
+  "api_version": "juli.scenario.v1",
+  "id": "equipment-choice",
+  "version": "0.1.0",
+  "name": "设备选择扩展示例",
+  "description": "新角色与自定义结构结果的独立场景包；使用合成资料验证接入流程。",
+  "resource_roles": [
+    {"name": "options", "label": "候选设备", "min_count": 1, "max_count": 8},
+    {"name": "constraints", "label": "个人约束", "min_count": 0, "max_count": 8},
+    {"name": "usage-context", "label": "使用环境", "min_count": 0, "max_count": 8}
+  ],
+  "instructions": "instructions.md",
+  "result_schema": "result.schema.json",
+  "tools": [
+    {"name": "evidence.search", "version": "1.0.0"},
+    {"name": "evidence.read", "version": "1.0.0"}
+  ]
+}

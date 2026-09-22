@@ -1,0 +1,179 @@
+{
+  "mode": "offline_synthetic_scenario_acceptance",
+  "real_model_calls": 0,
+  "analysis_quality_evaluated": false,
+  "transport": "in_process_http_testclient",
+  "results": [
+    {
+      "scenario": "tender-review",
+      "mode": "complete",
+      "task_status": "completed",
+      "bound_resources": 3,
+      "cited_resources": 3,
+      "clarification_resumed_after_app_rebuild": true,
+      "actions": 10,
+      "scripted_model_calls": 6,
+      "input_units": 58493,
+      "payload": {
+        "missing_information": [
+          "当前人员可用时间尚需确认。"
+        ],
+        "summary": "合成流程：已回读项目要求和两份组织背景，实际交付适配待确认。"
+      }
+    },
+    {
+      "scenario": "tender-review",
+      "mode": "missing_background",
+      "task_status": "completed",
+      "bound_resources": 1,
+      "cited_resources": 1,
+      "clarification_resumed_after_app_rebuild": true,
+      "actions": 6,
+      "scripted_model_calls": 4,
+      "input_units": 30570,
+      "payload": {
+        "missing_information": [
+          "未绑定组织背景资料。"
+        ],
+        "summary": "资料不足，不能仅凭项目要求判断组织是否满足条件。"
+      }
+    },
+    {
+      "scenario": "career-fit",
+      "mode": "complete",
+      "task_status": "completed",
+      "bound_resources": 3,
+      "cited_resources": 3,
+      "clarification_resumed_after_app_rebuild": true,
+      "actions": 10,
+      "scripted_model_calls": 6,
+      "input_units": 58413,
+      "payload": {
+        "questions": [
+          "是否接受岗位要求的现场协作安排？"
+        ],
+        "summary": "合成流程：已回读岗位、经历和作品；是否投递仍需结合本人偏好。"
+      }
+    },
+    {
+      "scenario": "career-fit",
+      "mode": "missing_background",
+      "task_status": "completed",
+      "bound_resources": 1,
+      "cited_resources": 1,
+      "clarification_resumed_after_app_rebuild": true,
+      "actions": 6,
+      "scripted_model_calls": 4,
+      "input_units": 30616,
+      "payload": {
+        "questions": [
+          "请补充个人经历与作品资料。"
+        ],
+        "summary": "资料不足，尚不能根据岗位文件评估个人匹配情况。"
+      }
+    },
+    {
+      "scenario": "equipment-choice",
+      "mode": "complete",
+      "task_status": "completed",
+      "bound_resources": 3,
+      "cited_resources": 3,
+      "clarification_resumed_after_app_rebuild": true,
+      "actions": 10,
+      "scripted_model_calls": 6,
+      "input_units": 59434,
+      "payload": {
+        "checks": [
+          {
+            "criterion": "便携与外接兼容性",
+            "status": "unknown"
+          }
+        ],
+        "summary": "合成流程：已引用三种角色的资料，兼容性仍待补充。"
+      }
+    },
+    {
+      "scenario": "equipment-choice",
+      "mode": "missing_background",
+      "task_status": "completed",
+      "bound_resources": 1,
+      "cited_resources": 1,
+      "clarification_resumed_after_app_rebuild": true,
+      "actions": 6,
+      "scripted_model_calls": 4,
+      "input_units": 31252,
+      "payload": {
+        "checks": [
+          {
+            "criterion": "个人适用性",
+            "status": "unknown"
+          }
+        ],
+        "summary": "资料不足，缺少个人约束及使用环境。"
+      }
+    }
+  ],
+  "date": "2026-09-22",
+  "version": "0.1.0.dev6",
+  "tests": {
+    "tests": 208,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "added_tests": 26,
+  "installed_wheel": "juli_agent-0.1.0.dev6-py3-none-any.whl",
+  "wheel_sha256": "ac4cc00396352e703bf21a5c5972a226f1fd6eccfef146f71a491732df4ee769",
+  "installed_package_outside_source_verified": true,
+  "unchanged_core_runtime_migration_files": 14,
+  "example_task_budget": {
+    "max_actions": 24,
+    "max_input_tokens": 128000,
+    "max_output_tokens": 4000
+  },
+  "environment": {
+    "python": "3.12.4",
+    "platform": "Windows",
+    "dependencies": {
+      "pydantic": "2.13.2",
+      "jsonschema": "4.26.0",
+      "fastapi": "0.136.0",
+      "httpx": "0.28.1",
+      "pytest": "9.0.3",
+      "pypdf": "6.13.2"
+    }
+  },
+  "budget_baseline": {
+    "scenario": "tender-review",
+    "default_budget": {
+      "max_actions": 24,
+      "max_input_tokens": 32000,
+      "max_output_tokens": 4000
+    },
+    "state": "failed",
+    "usage": {
+      "actions": 5,
+      "model_calls": 3,
+      "input_units": 22445,
+      "output_tokens": 300,
+      "active_seconds": 0.03200000000651926
+    },
+    "events": [
+      "running",
+      "model_reserved",
+      "model_committed",
+      "pending",
+      "running",
+      "model_reserved",
+      "model_committed",
+      "tool_reserved",
+      "tool_committed",
+      "model_reserved",
+      "model_committed",
+      "tool_reserved",
+      "tool_committed",
+      "admission_rejected",
+      "failed"
+    ]
+  }
+}

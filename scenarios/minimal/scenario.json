@@ -1,0 +1,17 @@
+{
+  "api_version": "juli.scenario.v1",
+  "id": "minimal",
+  "version": "0.1.0",
+  "name": "自定义资料分析模板",
+  "description": "从这里定义自己的资料角色和结果结构，无须修改核心。",
+  "resource_roles": [
+    {"name": "subject", "label": "本次分析资料", "min_count": 1, "max_count": 64},
+    {"name": "reference", "label": "参考资料", "min_count": 0, "max_count": 64}
+  ],
+  "instructions": "instructions.md",
+  "result_schema": "result.schema.json",
+  "tools": [
+    {"name": "evidence.search", "version": "1.0.0"},
+    {"name": "evidence.read", "version": "1.0.0"}
+  ]
+}

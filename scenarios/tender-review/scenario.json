@@ -1,0 +1,17 @@
+{
+  "api_version": "juli.scenario.v1",
+  "id": "tender-review",
+  "version": "0.1.1",
+  "name": "招投标研判示例",
+  "description": "结合项目要求与组织背景资料。合成流程已验证资料绑定、追问和引用；实际研判质量尚未验收。",
+  "resource_roles": [
+    {"name": "requirements", "label": "本次项目要求", "min_count": 1, "max_count": 16},
+    {"name": "organization", "label": "组织背景资料", "min_count": 0, "max_count": 64}
+  ],
+  "instructions": "instructions.md",
+  "result_schema": "result.schema.json",
+  "tools": [
+    {"name": "evidence.search", "version": "1.0.0"},
+    {"name": "evidence.read", "version": "1.0.0"}
+  ]
+}

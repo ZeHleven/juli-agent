@@ -1,0 +1,79 @@
+{
+  "date": "2026-09-22",
+  "milestone": "M07",
+  "decision": "retain_existing_durable_runner",
+  "scope": "LangGraph scheduling adapter delegates to the existing Juli ledger; separate native interrupt and crash probes.",
+  "environment": {
+    "python": "3.12.4",
+    "os": "Windows",
+    "architecture": "AMD64",
+    "sqlite": "3.45.3",
+    "packages": {
+      "langgraph": "1.2.9",
+      "langgraph-checkpoint": "4.1.1",
+      "langgraph-checkpoint-sqlite": "3.1.1",
+      "langgraph-prebuilt": "1.1.0",
+      "langgraph-sdk": "0.4.2",
+      "langchain-core": "1.5.1",
+      "langsmith": "0.10.10",
+      "aiosqlite": "0.22.1",
+      "sqlite-vec": "0.1.9",
+      "pydantic": "2.13.2",
+      "pytest": "9.0.3"
+    }
+  },
+  "comparison": {
+    "tests": 24,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "elapsed_seconds": 14.192
+  },
+  "production_regression": {
+    "tests": 182,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "elapsed_seconds": 20.46
+  },
+  "asserted_observations": {
+    "same_snapshot_requests_and_result": true,
+    "completed_actions_per_driver": 6,
+    "fake_model_calls_per_driver": 4,
+    "native_interrupt_node_entries_before_resume": 1,
+    "native_interrupt_node_entries_after_resume": 2,
+    "crash_after_business_commit_business_action_count": 1,
+    "crash_after_business_commit_graph_expected_action_count": 0,
+    "graph_resume_error": "stale_runtime_version",
+    "crash_resume_business_action_count": 1,
+    "graph_reconciliation": "Explicit business-state read and answer, then new scheduling; no automatic repair of the old graph.",
+    "real_model_calls": 0,
+    "test_socket_connection_attempts": 0,
+    "network_guard_scope": "Parent tests and subprocess probes; dependency downloads are outside the tests."
+  },
+  "package_verification": {
+    "wheel": "juli_agent-0.1.0.dev5-py3-none-any.whl",
+    "sha256": "81af6918d05da19c9382511c758251a0f4e031d41664a9106fc2fa48844713c2",
+    "runtime_files_equal_to_source": 44,
+    "experiment_files_in_wheel": 0,
+    "langgraph_or_langchain_runtime_dependencies": 0,
+    "unchanged_baseline_runtime_test_scenario_and_config_files": 67
+  },
+  "experiment_source_sha256": {
+    "experiments/m07_langgraph/candidate.py": "e3be3c779a4e9ce92efe0b53568f9fac8985c02960f08aa1ae94795798d53166",
+    "experiments/m07_langgraph/conftest.py": "b6a378e92ed2767959e7ab30f17d25509c5a85367626e8fba32a5f8d1071e2ea",
+    "experiments/m07_langgraph/fixtures.py": "c6e4e2d488b175daa89bd5f6ac32eba8d58b544b2e0c53418087aa191dc0c80d",
+    "experiments/m07_langgraph/process_probe.py": "22becd74ff00569ccb41f4692c9e7583ea16673852bf26efd49f7431dc17f9d1",
+    "experiments/m07_langgraph/test_comparison.py": "8773143892baf65c45229b26134e168a1f510e4a9073b67694c352cf3cd82c68"
+  },
+  "warnings": [
+    "One RequestsDependencyWarning from the existing Python environment during comparison; assertions passed."
+  ],
+  "not_evaluated": [
+    "Real model quality",
+    "Latency or throughput comparison",
+    "Full LangGraph-native replacement",
+    "Multi-agent execution",
+    "Production deployment"
+  ]
+}

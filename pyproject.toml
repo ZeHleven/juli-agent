@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=70"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "juli-agent"
+version = "0.1.0.dev7"
+description = "Evidence-grounded analysis: reusable contracts and scenario extensions."
+readme = "README.md"
+requires-python = ">=3.11"
+license = {file = "LICENSE"}
+authors = [{name = "ZHIHAO LIN (ZeHleven)"}]
+classifiers = ["Development Status :: 3 - Alpha", "License :: OSI Approved :: MIT License", "Programming Language :: Python :: 3"]
+dependencies = ["pydantic>=2.10,<3", "jsonschema>=4.23,<5", "referencing>=0.35,<1"]
+
+[project.optional-dependencies]
+api = ["fastapi>=0.115,<1", "uvicorn>=0.32,<1"]
+documents = ["pypdf>=6,<7"]
+model = ["httpx>=0.28,<1"]
+dev = ["pytest>=8,<10", "httpx>=0.28,<1"]
+
+[project.scripts]
+juli = "juli.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["backend/src"]
+
+[tool.setuptools]
+license-files = ["LICENSE"]
+
+[tool.setuptools.package-data]
+juli = ["web/*.html", "web/*.css", "web/*.js"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["backend/src"]
+addopts = "-q"

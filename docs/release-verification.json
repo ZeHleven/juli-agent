@@ -1,0 +1,172 @@
+{
+  "mode": "offline_synthetic_scenario_acceptance",
+  "real_model_calls": 0,
+  "analysis_quality_evaluated": false,
+  "transport": "in_process_http_testclient",
+  "results": [
+    {
+      "scenario": "tender-review",
+      "mode": "complete",
+      "task_status": "completed",
+      "bound_resources": 3,
+      "cited_resources": 3,
+      "clarification_resumed_after_app_rebuild": true,
+      "actions": 10,
+      "scripted_model_calls": 6,
+      "input_units": 58493,
+      "payload": {
+        "missing_information": [
+          "当前人员可用时间尚需确认。"
+        ],
+        "summary": "合成流程：已回读项目要求和两份组织背景，实际交付适配待确认。"
+      }
+    },
+    {
+      "scenario": "tender-review",
+      "mode": "missing_background",
+      "task_status": "completed",
+      "bound_resources": 1,
+      "cited_resources": 1,
+      "clarification_resumed_after_app_rebuild": true,
+      "actions": 6,
+      "scripted_model_calls": 4,
+      "input_units": 30570,
+      "payload": {
+        "missing_information": [
+          "未绑定组织背景资料。"
+        ],
+        "summary": "资料不足，不能仅凭项目要求判断组织是否满足条件。"
+      }
+    },
+    {
+      "scenario": "career-fit",
+      "mode": "complete",
+      "task_status": "completed",
+      "bound_resources": 3,
+      "cited_resources": 3,
+      "clarification_resumed_after_app_rebuild": true,
+      "actions": 10,
+      "scripted_model_calls": 6,
+      "input_units": 58413,
+      "payload": {
+        "questions": [
+          "是否接受岗位要求的现场协作安排？"
+        ],
+        "summary": "合成流程：已回读岗位、经历和作品；是否投递仍需结合本人偏好。"
+      }
+    },
+    {
+      "scenario": "career-fit",
+      "mode": "missing_background",
+      "task_status": "completed",
+      "bound_resources": 1,
+      "cited_resources": 1,
+      "clarification_resumed_after_app_rebuild": true,
+      "actions": 6,
+      "scripted_model_calls": 4,
+      "input_units": 30616,
+      "payload": {
+        "questions": [
+          "请补充个人经历与作品资料。"
+        ],
+        "summary": "资料不足，尚不能根据岗位文件评估个人匹配情况。"
+      }
+    },
+    {
+      "scenario": "equipment-choice",
+      "mode": "complete",
+      "task_status": "completed",
+      "bound_resources": 3,
+      "cited_resources": 3,
+      "clarification_resumed_after_app_rebuild": true,
+      "actions": 10,
+      "scripted_model_calls": 6,
+      "input_units": 59419,
+      "payload": {
+        "checks": [
+          {
+            "criterion": "便携与外接兼容性",
+            "status": "unknown"
+          }
+        ],
+        "summary": "合成流程：已引用三种角色的资料，兼容性仍待补充。"
+      }
+    },
+    {
+      "scenario": "equipment-choice",
+      "mode": "missing_background",
+      "task_status": "completed",
+      "bound_resources": 1,
+      "cited_resources": 1,
+      "clarification_resumed_after_app_rebuild": true,
+      "actions": 6,
+      "scripted_model_calls": 4,
+      "input_units": 31252,
+      "payload": {
+        "checks": [
+          {
+            "criterion": "个人适用性",
+            "status": "unknown"
+          }
+        ],
+        "summary": "资料不足，缺少个人约束及使用环境。"
+      }
+    }
+  ],
+  "date": "2026-09-22",
+  "version": "0.1.0.dev7",
+  "tests": {
+    "tests": 216,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "added_tests": 8,
+  "wheel": {
+    "filename": "juli_agent-0.1.0.dev7-py3-none-any.whl",
+    "sha256": "35af51952d95830b972f374a4076a48bff9d8587d53f96a4f3736c0f65748035",
+    "mit_license_included": true,
+    "matches_source": true,
+    "experimental_dependencies": false
+  },
+  "fresh_install": {
+    "extras": [
+      "api",
+      "documents",
+      "model",
+      "dev"
+    ],
+    "inherited_site_packages": false,
+    "pip_check": "passed"
+  },
+  "installed_package_outside_source_verified": true,
+  "unchanged_core_runtime_migration_files": 14,
+  "environment": {
+    "python": "3.12.4",
+    "platform": "Windows",
+    "dependency_inventory": "dependencies.json"
+  },
+  "warnings": [
+    "Starlette TestClient httpx deprecation",
+    "AnyIO BlockingPortal alias deprecation"
+  ],
+  "limitations": [
+    "No real model quality evaluation",
+    "No public deployment evaluation",
+    "No full security audit",
+    "Windows and Python 3.12 only",
+    "Optional M07 experiment not rerun"
+  ],
+  "publication": {
+    "github_push": false,
+    "pypi_upload": false
+  },
+  "source_export": {
+    "validated_files": 124,
+    "basic_sensitive_file_check": "passed",
+    "python_syntax_and_local_links": "passed",
+    "test_recheck_after_checker_corrections": 8,
+    "full_security_audit": false,
+    "git_history_scanned": false
+  }
+}

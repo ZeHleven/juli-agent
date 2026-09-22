@@ -1,0 +1,15 @@
+include LICENSE README.md AGENTS.md CONTRIBUTING.md THIRD_PARTY_NOTICES.md SECURITY.md
+include pyproject.toml MANIFEST.in .gitignore .gitattributes
+recursive-include backend/src/juli *.py *.html *.css *.js
+recursive-include scenarios *.json *.md
+recursive-include examples *.py *.json *.md
+recursive-include experiments *.py *.json *.md *.txt
+recursive-include tests *.py
+recursive-include tools *.py
+recursive-include docs *.md *.json
+prune .git
+prune .local
+prune .venv
+prune build
+prune dist
+global-exclude *.py[cod] *.db *.sqlite* *.log .env .env.*
