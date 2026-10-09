@@ -1,0 +1,110 @@
+{
+  "case_id": "course-01",
+  "purpose": "评审专用，禁止随输入上传给被测模型。",
+  "required_findings": [
+    {
+      "id": "goal",
+      "statement": "课程周报项目与学习者的工具目标存在内容匹配，但不保证学习效果。",
+      "evidence": [
+        {
+          "document_id": "course",
+          "quote": "内容包括数据清洗、分组汇总、图表展示及自动生成周报，结课项目为一份可复跑的数据周报。"
+        },
+        {
+          "document_id": "background",
+          "quote": "我的目标是从课程开课日起8周内做出自动生成数据周报的个人工具。"
+        }
+      ],
+      "critical": true
+    },
+    {
+      "id": "required-time",
+      "statement": "每周2小时实时课与3小时作业合计至少5小时，且周三时段不能由回放替代。",
+      "evidence": [
+        {
+          "document_id": "course",
+          "quote": "每周三19:30至21:30须实时到课，另需每周3小时作业时间。"
+        },
+        {
+          "document_id": "course",
+          "quote": "课程不提供用回放替代实时到课的安排。"
+        }
+      ],
+      "critical": true
+    },
+    {
+      "id": "skills",
+      "statement": "背景自述满足列出的Python基础；没有SQL不能被当作硬性不合格。",
+      "evidence": [
+        {
+          "document_id": "course",
+          "quote": "课程要求学员已能使用Python函数、列表和字典，并独立完成CSV文件读写。"
+        },
+        {
+          "document_id": "course",
+          "quote": "SQL属于建议基础，不是报名或完成课程的必需条件。"
+        },
+        {
+          "document_id": "background",
+          "quote": "我已写过使用函数、列表和字典的小脚本，并独立完成过CSV读写。"
+        },
+        {
+          "document_id": "background",
+          "quote": "我没有学过SQL。"
+        }
+      ],
+      "critical": true
+    },
+    {
+      "id": "schedule",
+      "statement": "自述每周6小时及周三时段能够覆盖课程时间要求。",
+      "evidence": [
+        {
+          "document_id": "background",
+          "quote": "开课后的8周，我每周能投入6小时，周三19:30至21:30可以实时上课。"
+        }
+      ],
+      "critical": true
+    },
+    {
+      "id": "cost",
+      "statement": "总费用2400元在3000元预算内。",
+      "evidence": [
+        {
+          "document_id": "course",
+          "quote": "学费为2400元。"
+        },
+        {
+          "document_id": "course",
+          "quote": "本课程无其他必须支付的服务或材料费。"
+        },
+        {
+          "document_id": "background",
+          "quote": "我的总预算上限为3000元，包含学费和必须另外支付的服务或材料费用。"
+        }
+      ],
+      "critical": true
+    }
+  ],
+  "allowed_conclusions": [
+    "在资料自述真实的前提下，内容、基础、时间和预算均显示适配，可以考虑报名。"
+  ],
+  "forbidden_conclusions": [
+    "将收藏文章或没有SQL直接等同于没有编程能力。",
+    "保证就业、录用或必然学会。",
+    "把用户补充的自述伪装为课程或背景文件已记载的事实。"
+  ],
+  "clarification": {
+    "required": false,
+    "topics": [],
+    "avoid": [
+      "反复索要资料已经给出的预算、Python基础或周三时间"
+    ],
+    "answer_facts": [],
+    "after_answer_expectation": "已有信息足够形成有依据的条件性建议，不以用户未回答额外偏好问题判失败。"
+  },
+  "review_notes": [
+    "本题仅评估给定课程与背景的条件匹配，不评估课程真实教学水平。",
+    "逐条核对结论含义，接受等价措辞，不要求引用或行动顺序完全相同。"
+  ]
+}

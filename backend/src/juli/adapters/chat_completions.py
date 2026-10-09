@@ -5,10 +5,8 @@ import json
 import time
 from urllib.parse import urlsplit
 
-from pydantic import ValidationError
-
 from juli.core.common import DomainError, canonical_json
-from juli.core.models import ModelReply, ModelRequest, ModelToolCall, ModelUsage
+from juli.core.models import MAX_MODEL_TOOL_CALLS, ModelReply, ModelRequest, ModelToolCall, ModelUsage
 from juli.core.schemas import decode_json
 
 
@@ -67,12 +65,14 @@ class ChatCompletionsProvider:
         messages = []
         for message in request.messages:
             item = {'role': message.role, 'content': message.content}
-            if message.tool_call is not None:
-                call = message.tool_call
-                alias = tool_alias(call.tool)
-                if alias not in aliases:
-                    raise DomainError('tool_not_granted', 'History includes an unavailable tool.')
-                item = {'role': 'assistant', 'content': None, 'tool_calls': [{'id': call.call_id, 'type': 'function', 'function': {'name': alias, 'arguments': call.arguments_json}}]}
+            if message.calls:
+                wire_calls = []
+                for call in message.calls:
+                    alias = tool_alias(call.tool)
+                    if alias not in aliases:
+                        raise DomainError('tool_not_granted', 'History includes an unavailable tool.')
+                    wire_calls.append({'id': call.call_id, 'type': 'function', 'function': {'name': alias, 'arguments': call.arguments_json}})
+                item = {'role': 'assistant', 'content': message.content or None, 'tool_calls': wire_calls}
             if message.tool_call_id:
                 item['tool_call_id'] = message.tool_call_id
             messages.append(item)
@@ -130,17 +130,31 @@ class ChatCompletionsProvider:
             message = choice['message']
             if message['role'] != 'assistant' or message.get('refusal'):
                 raise ValueError('refusal or non-assistant message')
-            calls = message.get('tool_calls') or []
+            calls = message.get('tool_calls')
+            if calls is None:
+                calls = []
+            if not isinstance(calls, list):
+                raise ValueError('tool calls must be an array')
             if calls:
-                if len(calls) != 1 or choice['finish_reason'] != 'tool_calls' or message.get('content'):
-                    raise ValueError('ambiguous tool response')
-                call = calls[0]
-                if call['type'] != 'function':
-                    raise ValueError('unsupported tool type')
-                reference = aliases[call['function']['name']]
-                if not isinstance(call['function']['arguments'], str):
-                    raise ValueError('arguments must be JSON text')
-                return ModelReply(tool_call=ModelToolCall(call_id=call['id'], tool=reference, arguments_json=call['function']['arguments']), usage=stats)
+                if len(calls) > MAX_MODEL_TOOL_CALLS or choice['finish_reason'] != 'tool_calls':
+                    raise ValueError('incomplete or oversized tool batch')
+                explanation = message.get('content')
+                if explanation is not None and not isinstance(explanation, str):
+                    raise ValueError('assistant content must be text or null')
+                parsed = []
+                for call in calls:
+                    if call['type'] != 'function':
+                        raise ValueError('unsupported tool type')
+                    reference = aliases[call['function']['name']]
+                    if not isinstance(call['function']['arguments'], str):
+                        raise ValueError('arguments must be JSON text')
+                    tool_call = ModelToolCall(call_id=call['id'], tool=reference, arguments_json=call['function']['arguments'])
+                    if not isinstance(decode_json(tool_call.arguments_json), dict):
+                        raise ValueError('arguments must encode a JSON object')
+                    parsed.append(tool_call)
+                # Validate the entire batch before returning any executable request.
+                fields = {'tool_call': parsed[0]} if len(parsed) == 1 else {'tool_calls': tuple(parsed)}
+                return ModelReply(text=explanation or None, usage=stats, **fields)
             if choice['finish_reason'] != 'stop' or not isinstance(message.get('content'), str):
                 raise ValueError('incomplete model response')
             return ModelReply(text=message['content'], usage=stats)

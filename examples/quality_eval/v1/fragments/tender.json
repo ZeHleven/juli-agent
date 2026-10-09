@@ -1,0 +1,200 @@
+[
+  {
+    "id": "tender-01",
+    "domain": "tender",
+    "condition": "sufficient",
+    "split": "development",
+    "scenario_path": "scenarios/tender-review",
+    "as_of_date": "2026-10-02",
+    "question": "以2026-10-02为判断时点，结合项目说明和机构资料，分析我们目前是否具备参与栖屿项目的基础。请列出关键依据、不确定事项以及参与前需要处理的事项；缺少关键信息时再问我。",
+    "documents": [
+      {
+        "id": "requirements",
+        "path": "inputs/tender-01/requirements.md",
+        "role": "requirements",
+        "display_name": "栖屿项目说明"
+      },
+      {
+        "id": "organization",
+        "path": "inputs/tender-01/organization.md",
+        "role": "organization",
+        "display_name": "虚构机构甲项目资料"
+      }
+    ],
+    "gold_path": "grader/tender-01.json",
+    "tags": [
+      "synthetic",
+      "hard_requirements",
+      "two_document_alignment",
+      "evidence_support"
+    ]
+  },
+  {
+    "id": "tender-02",
+    "domain": "tender",
+    "condition": "missing",
+    "split": "development",
+    "scenario_path": "scenarios/tender-review",
+    "as_of_date": "2026-10-02",
+    "question": "以2026-10-02为判断时点，结合石汀项目要求和我们的资料，分析现在是否适合参与，指出需要补充什么，并说明已有依据。",
+    "documents": [
+      {
+        "id": "requirements",
+        "path": "inputs/tender-02/requirements.md",
+        "role": "requirements",
+        "display_name": "石汀项目要求"
+      },
+      {
+        "id": "organization",
+        "path": "inputs/tender-02/organization.md",
+        "role": "organization",
+        "display_name": "虚构机构乙资料"
+      }
+    ],
+    "gold_path": "grader/tender-02.json",
+    "tags": [
+      "synthetic",
+      "missing_evidence",
+      "clarification",
+      "self_report_boundary"
+    ]
+  },
+  {
+    "id": "tender-03",
+    "domain": "tender",
+    "condition": "conflicting",
+    "split": "development",
+    "scenario_path": "scenarios/tender-review",
+    "as_of_date": "2026-10-02",
+    "question": "请结合砾湾项目规则与我们提交的两份记录，按2026-10-02的情况分析能否参与。把影响结论的依据和需要我确认的事项说清楚。",
+    "documents": [
+      {
+        "id": "requirements",
+        "path": "inputs/tender-03/requirements.md",
+        "role": "requirements",
+        "display_name": "砾湾项目规则"
+      },
+      {
+        "id": "organization",
+        "path": "inputs/tender-03/organization.md",
+        "role": "organization",
+        "display_name": "虚构机构丙方案记录甲"
+      },
+      {
+        "id": "organization_b",
+        "path": "inputs/tender-03/organization-b.md",
+        "role": "organization",
+        "display_name": "虚构机构丙方案记录乙"
+      }
+    ],
+    "gold_path": "grader/tender-03.json",
+    "tags": [
+      "synthetic",
+      "conflicting_sources",
+      "clarification",
+      "no_implicit_precedence"
+    ]
+  },
+  {
+    "id": "tender-04",
+    "domain": "tender",
+    "condition": "long_context",
+    "split": "development",
+    "scenario_path": "scenarios/tender-review",
+    "as_of_date": "2026-10-02",
+    "question": "按2026-10-02的情况，结合完整项目文件和机构摘要，判断我们是否适合按现有方案参与榆灯项目。请优先指出会改变参与判断的条件，并引用对应依据。",
+    "documents": [
+      {
+        "id": "requirements",
+        "path": "inputs/tender-04/requirements.md",
+        "role": "requirements",
+        "display_name": "榆灯完整项目文件"
+      },
+      {
+        "id": "organization",
+        "path": "inputs/tender-04/organization.md",
+        "role": "organization",
+        "display_name": "虚构机构丁资料摘要"
+      }
+    ],
+    "gold_path": "grader/tender-04.json",
+    "tags": [
+      "synthetic",
+      "long_markdown",
+      "specific_over_general",
+      "late_critical_condition"
+    ]
+  },
+  {
+    "id": "tender-05",
+    "domain": "tender",
+    "condition": "counterfactual",
+    "split": "development",
+    "scenario_path": "scenarios/tender-review",
+    "as_of_date": "2026-10-02",
+    "question": "以2026-10-02为判断时点，结合项目说明和机构资料，分析我们目前是否具备参与栖屿项目的基础。请列出关键依据、不确定事项以及参与前需要处理的事项；缺少关键信息时再问我。",
+    "documents": [
+      {
+        "id": "requirements",
+        "path": "inputs/tender-05/requirements.md",
+        "role": "requirements",
+        "display_name": "栖屿项目说明"
+      },
+      {
+        "id": "organization",
+        "path": "inputs/tender-05/organization.md",
+        "role": "organization",
+        "display_name": "虚构机构甲项目资料"
+      }
+    ],
+    "gold_path": "grader/tender-05.json",
+    "tags": [
+      "synthetic",
+      "paired_case",
+      "counterfactual",
+      "valid_on_as_of_not_sufficient"
+    ],
+    "pair": {
+      "base_case": "tender-01",
+      "relation": "changes_conclusion",
+      "changed_document_id": "organization",
+      "description": "仅将Q2凭证截止日由2026-12-31改为2026-10-31；判断应从材料支持全部必要条件变为不覆盖2026-11-15的已知缺口，其余五项保持不变。"
+    }
+  },
+  {
+    "id": "tender-06",
+    "domain": "tender",
+    "condition": "invariance",
+    "split": "development",
+    "scenario_path": "scenarios/tender-review",
+    "as_of_date": "2026-10-02",
+    "question": "以2026-10-02为判断时点，结合项目说明和机构资料，分析我们目前是否具备参与栖屿项目的基础。请列出关键依据、不确定事项以及参与前需要处理的事项；缺少关键信息时再问我。",
+    "documents": [
+      {
+        "id": "requirements",
+        "path": "inputs/tender-06/requirements.md",
+        "role": "requirements",
+        "display_name": "栖屿项目说明"
+      },
+      {
+        "id": "organization",
+        "path": "inputs/tender-06/organization.md",
+        "role": "organization",
+        "display_name": "虚构机构甲项目资料"
+      }
+    ],
+    "gold_path": "grader/tender-06.json",
+    "tags": [
+      "synthetic",
+      "paired_case",
+      "invariance",
+      "irrelevant_detail"
+    ],
+    "pair": {
+      "base_case": "tender-01",
+      "relation": "preserves_conclusion",
+      "changed_document_id": "organization",
+      "description": "只将机构宣传封面颜色从青绿色改为浅灰色；该颜色不属于项目要求，六项条件及参与基础结论应保持不变。"
+    }
+  }
+]

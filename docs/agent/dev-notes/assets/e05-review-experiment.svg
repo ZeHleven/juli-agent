@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1410" viewBox="0 0 1200 1410" role="img" aria-labelledby="title desc">
+  <title id="title">据理 E05：增加审查阶段后的真实失败记录</title>
+  <desc id="desc">合成评测机制示意，非实机截图。E04完成2题，E05完成0题，均为三题中的流程完成数而非准确率。缺出勤信息题完成草稿、框架回读、实际追问、回答与再审查，最终分析仍被拒收；另两题分别在草稿格式和证据读取参数处失败。502项离线测试通过不能替代真实质量验证。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0 0 L6 3 L0 6" fill="none" stroke="#7c766c" stroke-width="1.5"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="1410" fill="#f5f2eb"/>
+  <g font-family="Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" fill="#202c32">
+    <text x="64" y="69" font-size="20" letter-spacing="2" fill="#536d68">据理 · 开发笔记 E05 · 2026-10-03</text>
+    <text x="64" y="131" font-size="44" font-weight="700">加了一层审查，</text>
+    <text x="64" y="190" font-size="44" font-weight="700">这轮完整流程却退到了 <tspan fill="#a23c36">0/3</tspan></text>
+    <text x="64" y="229" font-size="20" fill="#656a66">合成评测机制示意 · 非实机截图 · 本地未发布素材</text>
+
+    <rect x="64" y="261" width="518" height="143" rx="15" fill="#fffaf4" stroke="#d5cfc3"/>
+    <text x="90" y="296" font-size="20" fill="#656a66">同样三道题，新的独立试次</text>
+    <text x="90" y="351" font-size="39" font-weight="700">E04  2/3  →  <tspan fill="#a23c36">E05  0/3</tspan></text>
+    <text x="90" y="383" font-size="18">流程完成数，不是准确率或稳定性结论</text>
+    <rect x="604" y="261" width="532" height="143" rx="15" fill="#e6ede8" stroke="#c5d1c6"/>
+    <text x="630" y="299" font-size="20" fill="#536d68">离线约束验证</text>
+    <text x="630" y="349" font-size="39" font-weight="700">502 项通过</text>
+    <text x="630" y="383" font-size="18">有两项既有依赖警告；不能替代真实质量验证</text>
+
+    <text x="64" y="456" font-size="27" font-weight="700">缺出勤信息题：前半段走通，最终仍失败</text>
+    <text x="64" y="490" font-size="18" fill="#656a66">以下路径在本题实际发生；“框架回读”不等于模型自主调用。</text>
+    <g fill="#e6ede8" stroke="#c5d1c6">
+      <rect x="64" y="520" width="194" height="112" rx="12"/>
+      <rect x="289" y="520" width="194" height="112" rx="12"/>
+      <rect x="514" y="520" width="194" height="112" rx="12"/>
+      <rect x="739" y="520" width="194" height="112" rx="12"/>
+    </g>
+    <g fill="none" stroke="#7c766c" stroke-width="2" marker-end="url(#arrow)">
+      <path d="M262 576 H283"/>
+      <path d="M487 576 H508"/>
+      <path d="M712 576 H733"/>
+      <path d="M937 576 H959"/>
+    </g>
+    <rect x="966" y="520" width="170" height="112" rx="12" fill="#f5ded8" stroke="#d4a39a"/>
+    <g font-size="22" font-weight="700" text-anchor="middle">
+      <text x="161" y="560">合法草稿</text>
+      <text x="386" y="560">框架回读</text>
+      <text x="611" y="560">实际追问</text>
+      <text x="836" y="560">回答后再审</text>
+      <text x="1051" y="560" fill="#a23c36">最终拒收</text>
+    </g>
+    <g font-size="17" text-anchor="middle" fill="#53605b">
+      <text x="161" y="600">不是正式结果</text>
+      <text x="386" y="600">两份原文</text>
+      <text x="611" y="600">出勤＋冗余问题</text>
+      <text x="836" y="600">允许继续生成</text>
+      <text x="1051" y="600" fill="#a23c36">自述类别错误</text>
+    </g>
+
+    <text x="64" y="693" font-size="27" font-weight="700">三道题分别停在哪里</text>
+    <rect x="64" y="719" width="1072" height="118" rx="12" fill="#fffaf4" stroke="#d5cfc3"/>
+    <text x="89" y="752" font-size="21" font-weight="700">缺出勤信息题 · career-02</text>
+    <text x="89" y="786" font-size="19">收到用户回答后，把用户自述写成需要文档证据的 fact，引用却为空。</text>
+    <text x="89" y="815" font-size="18" fill="#a23c36">最终输出违反结果合同；result = null，不能算流程完成。</text>
+
+    <rect x="64" y="853" width="1072" height="118" rx="12" fill="#fffaf4" stroke="#d5cfc3"/>
+    <text x="89" y="886" font-size="21" font-weight="700">资料充分题 · career-01</text>
+    <text x="89" y="920" font-size="19">两次检索、两次回读后，草稿场景结果多出不允许的 trust 字段。</text>
+    <text x="89" y="949" font-size="18" fill="#a23c36">草稿结构被拒；还没有进入新审查阶段。</text>
+
+    <rect x="64" y="987" width="1072" height="118" rx="12" fill="#fffaf4" stroke="#d5cfc3"/>
+    <text x="89" y="1020" font-size="21" font-weight="700">方案冲突题 · tender-03</text>
+    <text x="89" y="1054" font-size="19">首个工具批次混合检索与读取，读取时误把文件版本编号当成证据编号。</text>
+    <text x="89" y="1083" font-size="18" fill="#a23c36">原文读取失败；尚未形成草稿，也没有实际追问。</text>
+
+    <path d="M64 1141 H1136" stroke="#c7c4b9"/>
+    <text x="64" y="1182" font-size="24" font-weight="700">目前保留为显式开启的试验模式，默认关闭</text>
+    <text x="64" y="1217" font-size="19">一次局部机制验证，不等于整条流程可靠；三题单次也不足以隔离模型随机性。</text>
+    <text x="64" y="1250" font-size="19">本轮 9 次调用 · 费用上界 ¥0.115106 · 累计占用 ¥0.502344 / ¥5</text>
+    <text x="64" y="1283" font-size="19">累计调用 28 / 36 次 · 费用含历史预留，不是供应商实际账单。</text>
+    <text x="64" y="1330" font-size="17" fill="#656a66">依据：docs/evaluation/round-05-plan.md 与 round-05-result.md；辅助复核不等于人工验收。</text>
+    <text x="64" y="1361" font-size="17" fill="#656a66">仅表示这三道合成题的本次轨迹；没有编造已修复结果，未对外发布。</text>
+  </g>
+</svg>

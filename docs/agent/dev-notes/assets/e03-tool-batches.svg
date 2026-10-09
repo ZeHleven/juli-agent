@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="850" viewBox="0 0 1200 850" role="img" aria-labelledby="title desc">
+  <title id="title">据理：完整保留回复，逐项执行工具</title>
+  <desc id="desc">合成案例的协议机制示意图。修复前两个工具请求与说明文字被拒绝；修复后完整保留一条消息，检查整批，再串行执行各工具。不是产品截图或真实评测通过证明。</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#486357"/></marker></defs>
+  <rect width="1200" height="850" fill="#f5f2eb"/>
+  <g font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#183f35">
+    <text x="64" y="76" font-size="18" letter-spacing="3">据理 JULI · 开发笔记 E03</text>
+    <text x="64" y="137" font-size="42" font-weight="700">完整保留回复，逐项执行工具</text>
+    <text x="64" y="181" font-size="20" fill="#52685f">合成案例 · 协议机制示意图（非产品实机截图）</text>
+    <rect x="64" y="225" width="1072" height="142" rx="18" fill="#fff" stroke="#d9dfd7"/>
+    <text x="94" y="270" font-size="20" font-weight="700">一条模型回复</text>
+    <text x="94" y="319" font-size="24">说明文字 ＋ 检索岗位要求 ＋ 检索个人背景</text>
+    <path d="M600 367 V413" stroke="#486357" stroke-width="3" marker-end="url(#arrow)"/>
+    <rect x="64" y="435" width="292" height="178" rx="18" fill="#e5eee4"/>
+    <text x="92" y="479" font-size="24" font-weight="700">1  检查完整列表</text>
+    <text x="92" y="526" font-size="19">工具是否允许？参数有效？</text>
+    <text x="92" y="561" font-size="19">调用 ID 唯一？预算足够？</text>
+    <path d="M361 524 H435" stroke="#486357" stroke-width="3" marker-end="url(#arrow)"/>
+    <rect x="454" y="435" width="292" height="178" rx="18" fill="#d4e6dd"/>
+    <text x="482" y="479" font-size="24" font-weight="700">2  逐个执行工具</text>
+    <text x="482" y="526" font-size="19">每项独立授权、计入动作</text>
+    <text x="482" y="561" font-size="19">失败或撤权，停止余项</text>
+    <path d="M751 524 H825" stroke="#486357" stroke-width="3" marker-end="url(#arrow)"/>
+    <rect x="844" y="435" width="292" height="178" rx="18" fill="#c5ddcf"/>
+    <text x="872" y="479" font-size="24" font-weight="700">3  回传全部结果</text>
+    <text x="872" y="526" font-size="19">保持原说明、顺序与 ID</text>
+    <text x="872" y="561" font-size="19">然后才请求下一次模型</text>
+    <text x="64" y="697" font-size="23" font-weight="700">一次模型回复计一次调用；每个工具分别计入执行预算。</text>
+    <text x="64" y="747" font-size="19" fill="#52685f">E02 曾在协议检查处停止。此图解释修复机制，不代表分析质量已经通过。</text>
+    <text x="64" y="795" font-size="17" fill="#52685f">来源：本地 E02 原始响应与 E03 工程记录 · 仅本地准备，未经发布</text>
+  </g>
+</svg>

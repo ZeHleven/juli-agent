@@ -1,0 +1,107 @@
+{
+  "purpose": "验证关键出勤信息缺失时保留未知，并在有效追问后更新判断。",
+  "required_findings": [
+    {
+      "id": "experience",
+      "statement": "四年全职经验满足至少三年的要求。",
+      "evidence": [
+        {
+          "document_id": "opportunity",
+          "quote": "录用流程进入业务面试前，必须满足至少三年全职数据分析工作经验；实习、课程作业和个人练习不计入这个年限。"
+        },
+        {
+          "document_id": "background",
+          "quote": "我的全职数据分析工作经验合计四年，不包括实习和课程作业。"
+        }
+      ],
+      "critical": true
+    },
+    {
+      "id": "technical_work",
+      "statement": "已有 SQL 多表查询和 Python 脚本维护的初步能力证据。",
+      "evidence": [
+        {
+          "document_id": "background",
+          "quote": "我独立编写过 SQL 多表查询，用来关联库存、订单和补货记录，检查重复行后再制作运营汇总。"
+        },
+        {
+          "document_id": "background",
+          "quote": "我负责一套 Python 清洗脚本的维护，包括字段校验、格式转换和运行异常记录，每周检查执行结果。"
+        },
+        {
+          "document_id": "opportunity",
+          "quote": "需要能够独立编写 SQL 多表查询，并用 Python 维护可重复运行的数据清洗脚本。"
+        }
+      ],
+      "critical": true
+    },
+    {
+      "id": "collaboration",
+      "statement": "有与运营共同确认指标并根据反馈修改口径的经历。",
+      "evidence": [
+        {
+          "document_id": "background",
+          "quote": "我与运营负责人共同定义过缺货率的分母，确认取消订单是否计入后修改了周报，并保存口径变更说明。"
+        },
+        {
+          "document_id": "opportunity",
+          "quote": "需要有一次与非技术同事共同确认指标口径、根据反馈修改分析结果的经历。"
+        }
+      ],
+      "critical": true
+    },
+    {
+      "id": "onsite_unknown",
+      "statement": "岗位要求固定三天现场，但背景全文未说明能否接受；应标为尚未确认，不能认定不愿意或不具备出勤条件。",
+      "evidence": [
+        {
+          "document_id": "opportunity",
+          "quote": "每周须到现场工作三天，其余工作日可以远程；这是当前岗位的固定安排，不能以全远程替代。"
+        }
+      ],
+      "critical": true
+    },
+    {
+      "id": "ask_and_condition",
+      "statement": "需要追问每周现场三天是否能接受；在得到答案前只给出有条件的投递建议，不把全部硬条件说成已满足。",
+      "evidence": [
+        {
+          "document_id": "opportunity",
+          "quote": "每周须到现场工作三天，其余工作日可以远程；这是当前岗位的固定安排，不能以全远程替代。"
+        }
+      ],
+      "critical": true
+    }
+  ],
+  "allowed_conclusions": [
+    "经验和技能已有匹配依据，但是否满足出勤安排仍未知，建议先确认再决定投递。",
+    "可说明确认出勤后有进一步投递的基础。"
+  ],
+  "forbidden_conclusions": [
+    "根据没有出勤说明就断言申请人不能现场工作。",
+    "未经追问便认定全部硬条件满足。",
+    "用未提供学历或证书作为拒绝投递的原因。"
+  ],
+  "clarification": {
+    "required": true,
+    "topics": [
+      "能否按每周三天到现场工作"
+    ],
+    "avoid": [
+      "重复询问已有四年经验、SQL 和 Python 经历；询问没有影响条件判断的私人细节。"
+    ],
+    "answer_facts": [
+      {
+        "topic": "能否按每周三天到现场工作",
+        "answer": "我可以每周到现场工作三天，能够按岗位安排出勤，不需要全远程。",
+        "source": "user_statement"
+      }
+    ],
+    "after_answer_expectation": "把出勤状态从未知更新为申请人口头确认可接受；可建议投递并核验能力，仍不得保证录用。"
+  },
+  "review_notes": [
+    "缺失由完整读取 background.md 后核对得出；不存在可引用的“未写明出勤”的原句，不能伪造这种引用。",
+    "评分时区分业务上的条件性建议与没有回答核心问题。"
+  ],
+  "case_id": "career-02"
+}

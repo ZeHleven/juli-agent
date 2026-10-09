@@ -1,5 +1,11 @@
 # 模型与受控工具接入（M04）
 
+E07普通持久入口使用`native-analysis-v3`。analysis必须新增`critical_question`：非空关键问题进入pending，null才能作为正式分析提交；省略、空白或旧格式不能在该入口直接完成。直接clarification仍支持，公开AnalysisResult不增加字段。内部候选与正式结果接受同样的场景、权限和回读校验。非交互连接兼容入口可读旧结果或显式null的新结果，但不能丢弃非空问题。E05实验依旧有独立的审查决策，不启用新必经模型阶段；详见[E07结果](evaluation/round-07-result.md)。
+
+最新E06在模型可见Schema中同步fact非空引用和引用唯一性；明确用户本轮回答应标为条件推断或未核验限制，不能补造文件引用。search返回后才用实际evidence_id读取原文，不把文件version_id传入read。结果字段仍严格拒收，不自动修复；协议v2与旧运行配置隔离。效果及剩余追问问题见[E06结果](evaluation/round-06-result.md)。下文M04为初始接入能力的历史说明，持久化和真实评测以较新轮次为准。
+
+E05 新增持久入口的可选审查模式：`SessionPolicy(review_before_final=True)`。草稿、实际回读、关键未知审查及最终生成分别保存，审查需要用户信息时才进入pending。普通模式默认不变；用法、当前8个证据片段上限及费用/能力边界见 [运行器指南](runtime.md)。审查模型仍可能漏掉未知，不能把流程校验当成事实正确性证明。
+
 本阶段交付可装配的模型协议、工具网关和手动推进会话，并用离线测试验证它们与真实资料库、检索、证据回读的连接。未调用真实模型或验收分析效果，没有自动循环运行、追问恢复或结果持久发布。现有 HTTP 服务仍返回 `analysis_enabled: false`，不会因为配置了环境变量就偷偷开启模型调用。
 
 ## 先运行无密钥演示
@@ -28,7 +34,13 @@ python -m juli model-demo --directory scenarios
 
 ## 模型协议与上下文
 
-核心 `ModelProvider` 接收 `ModelRequest`，返回带 usage 的 `ModelReply`，只允许“一个工具请求”或“最终文本”二选一。核心不依赖 HTTPX、供应商 SDK、LangChain 或 LangGraph。
+核心 `ModelProvider` 接收 `ModelRequest`，返回带 usage 的 `ModelReply`。E03 起支持最多八个工具的有界批次及附带说明；无工具时文本作为最终结果或追问解析。有工具时说明只保留为历史，不能当作最终分析。旧 `tool_call` 与新增 `tool_calls` 互斥，单工具调用接口保持可用。核心不依赖 HTTPX、供应商 SDK、LangChain 或 LangGraph。
+
+E04 起，模型侧的分析输出为 `{"kind":"analysis","task_id":"…","blocks":[…],"scenario_payload":{…}}`。`scenario_payload` 是原生JSON对象，由受信场景的结果schema约束；输入的资料目录和问题不能填入该字段。模型响应与场景payload的schema分别提供，保持场景内部 `#/$defs` 引用的原始根语义。
+
+严格解析器将原生对象确定性序列化为既有内部 `AnalysisResult.scenario_payload_json`，然后通过原有任务ID、场景结构、引用范围和回读凭证验证。公开API结果与数据库结构不变。没有 `kind` 的旧严格分析输出仍兼容；混用两种格式、缺必填项、未知kind、额外字段、Markdown包裹均不会被自动修复或删字段放行。
+
+持久运行器的输出schema还允许 `{"kind":"clarification","question":"…"}`，与分析互斥。提示模型在决定性信息缺失或冲突时提问并等待，已知信息不重复问，收到答复后区分用户自述与文件证据。旧内存入口只提供分析schema，不宣称支持等待与追问。提示词不是正确选择分支或事实正确的保证，须通过实测验证。
 
 上下文分为：
 
@@ -66,7 +78,7 @@ python -m juli model-demo --directory scenarios
 
 ## 首个 HTTP 模型适配器
 
-`ChatCompletionsProvider` 使用显式 HTTPS `/chat/completions` 目标，提供文本与单函数调用的受限兼容路径。需安装 `.[model]`；没有默认模型、默认服务地址、密钥自动发现或自动供应商切换。
+`ChatCompletionsProvider` 使用显式 HTTPS `/chat/completions` 目标，提供文本与有界函数调用批次的受限兼容路径。需安装 `.[model]`；没有默认模型、默认服务地址、密钥自动发现或自动供应商切换。
 
 配置示意如下，仅构造对象，不发送请求：
 
@@ -88,7 +100,7 @@ provider = ChatCompletionsProvider(config, api_key=api_key)
 
 协议使用 `max_completion_tokens`、`stream: false`、`n: 1`、`store: false`，并关闭并行工具请求。工具的公开名称通过稳定别名映射到供应商函数名称；工具返回使用匹配的 `tool_call_id`。依据 [OpenAI 官方 Chat Completions 文档](https://developers.openai.com/api/reference/resources/chat/subresources/completions/methods/create) 和 [函数调用文档](https://developers.openai.com/api/docs/guides/function-calling) 实现并用模拟 HTTP 验证，未声称所有兼容服务支持同样字段或具有同样的数据保留策略。
 
-响应最大 1 MiB，必须有一致的整数 usage，并且只返回一个最终文本或单个工具调用。拒绝并行调用、未知函数名、拒答、截断、混合工具/文本、非法 JSON 或缺失 usage。最终文本不使用供应商强制 JSON 模式，由框架解析与校验，不接受 Markdown 包裹或自动“修复”结果。
+响应最大 1 MiB，必须有一致的整数 usage。允许单个最终文本，或最多八个工具提案及说明文字；整批验证后才返回给运行器，拒绝重复调用 ID、未知函数名、非对象参数、拒答、截断、非法 JSON 或缺失 usage。模型一次返回多个工具不等于工具并发执行；持久运行器逐项校验并串行执行，结果全部返回后才进行下一次模型调用。原 assistant 消息和所有调用 ID 原序保存，说明文字不提升为系统指令。旧内存 `ModelSession` 明确拒绝多工具并提示使用持久运行器。最终文本仍由框架解析与校验，不接受 Markdown 包裹或自动“修复”结果。
 
 尚未实现流式输出、Responses 协议、图像/音频、多模态、供应商特有推理字段、工具并行或真实模型回归评测。兼容协议验证与实际模型能力验收是两件事。
 

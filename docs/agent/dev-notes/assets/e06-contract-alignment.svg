@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1480" viewBox="0 0 1200 1480" role="img" aria-labelledby="title desc">
+  <title id="title">据理 E06：格式通了，不等于任务完成</title>
+  <desc id="desc">合成评测机制示意，非产品实机图。E06使用普通模式执行两题，两题均保存正式结果；缺出勤信息题未真正追问，关键交互要求失败；方案冲突题完成追问和回答，正文仍有数量笔误及条件表达不一致。第三题未启动，累计调用35次，上限36次，并非预算耗尽。离线最终563项通过不表示真实质量全部通过。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0 0 L6 3 L0 6" fill="none" stroke="#73786e" stroke-width="1.5"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="1480" fill="#f5f2eb"/>
+  <g font-family="Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" fill="#243238">
+    <text x="64" y="65" font-size="20" letter-spacing="2" fill="#526c66">据理 · 开发笔记 E06 · 2026-10-03</text>
+    <text x="64" y="129" font-size="43" font-weight="700">格式通了，</text>
+    <text x="64" y="186" font-size="43" font-weight="700">不等于任务完成</text>
+    <text x="64" y="225" font-size="19" fill="#656a66">合成评测机制示意 · 非产品实机图 · 仅准备本地素材</text>
+
+    <rect x="64" y="257" width="517" height="138" rx="14" fill="#e6ede8" stroke="#c6d0c5"/>
+    <text x="89" y="293" font-size="20" fill="#526c66">两道已执行题</text>
+    <text x="89" y="344" font-size="38" font-weight="700">2/2 正式保存</text>
+    <text x="89" y="375" font-size="18">结果结构、引用和持久化通过运行时校验</text>
+    <rect x="605" y="257" width="531" height="138" rx="14" fill="#f4e7ce" stroke="#d8c5a0"/>
+    <text x="630" y="293" font-size="20" fill="#876526">其中一道缺出勤信息题</text>
+    <text x="630" y="344" font-size="38" font-weight="700" fill="#8c5c28">关键交互仍失败</text>
+    <text x="630" y="375" font-size="18">未实际追问；保存结果不等于质量通过</text>
+
+    <text x="64" y="447" font-size="26" font-weight="700">这轮修改：模型看到的约定，与执行校验对齐</text>
+    <rect x="64" y="472" width="1072" height="139" rx="13" fill="#fffaf4" stroke="#d4cfc4"/>
+    <text x="88" y="510" font-size="20">文档事实 → 必须带已回读引用　　用户补充 → 注明自述，作为条件推断</text>
+    <text x="88" y="547" font-size="20">先收到搜索结果 → 使用真实证据编号读取　　文件版本编号不能代替证据编号</text>
+    <text x="88" y="583" font-size="18" fill="#656a66">保留原校验和默认预算；本轮使用普通模式，E05实验审查模式仍默认关闭。</text>
+
+    <text x="64" y="664" font-size="26" font-weight="700">实际轨迹 A · 缺出勤信息题</text>
+    <g fill="#e6ede8" stroke="#c6d0c5">
+      <rect x="64" y="689" width="246" height="88" rx="12"/>
+      <rect x="349" y="689" width="246" height="88" rx="12"/>
+      <rect x="634" y="689" width="246" height="88" rx="12"/>
+    </g>
+    <g fill="none" stroke="#73786e" stroke-width="2" marker-end="url(#arrow)">
+      <path d="M316 733 H341"/>
+      <path d="M601 733 H626"/>
+    </g>
+    <g font-size="23" font-weight="700" text-anchor="middle">
+      <text x="187" y="742">搜索两份资料</text>
+      <text x="472" y="742">回读两份原文</text>
+      <text x="757" y="742">分析结果保存</text>
+    </g>
+    <text x="909" y="725" font-size="20" font-weight="700" fill="#95642e">没有 pending</text>
+    <text x="909" y="754" font-size="17" fill="#95642e">没有用户回答</text>
+    <text x="64" y="811" font-size="19">识别了关键出勤未知，却只把问题写进建议列表；回答后更新判断未发生。</text>
+
+    <text x="64" y="869" font-size="26" font-weight="700">实际轨迹 B · 方案冲突题</text>
+    <g fill="#e6ede8" stroke="#c6d0c5">
+      <rect x="64" y="894" width="239" height="90" rx="12"/>
+      <rect x="342" y="894" width="239" height="90" rx="12"/>
+      <rect x="620" y="894" width="239" height="90" rx="12"/>
+      <rect x="898" y="894" width="238" height="90" rx="12"/>
+    </g>
+    <g fill="none" stroke="#73786e" stroke-width="2" marker-end="url(#arrow)">
+      <path d="M309 939 H334"/>
+      <path d="M587 939 H612"/>
+      <path d="M865 939 H890"/>
+    </g>
+    <g font-size="22" font-weight="700" text-anchor="middle">
+      <text x="183" y="932">搜索三份资料</text>
+      <text x="461" y="932">回读三份原文</text>
+      <text x="739" y="932">实际追问</text>
+      <text x="1017" y="932">分析结果保存</text>
+    </g>
+    <g font-size="17" text-anchor="middle" fill="#526c66">
+      <text x="183" y="961">获得证据编号</text>
+      <text x="461" y="961">读取真实原文</text>
+      <text x="739" y="961">等待并收到回答</text>
+      <text x="1017" y="961">自述保留来源</text>
+    </g>
+    <text x="64" y="1021" font-size="19">用户补充使用条件推断；验收日期保留2025-06-20，没有伪造文件引用。</text>
+    <text x="64" y="1055" font-size="19" fill="#95642e">仍有“四项/五项”笔误，以及条件结论与限制段表达不一致。</text>
+
+    <rect x="64" y="1091" width="1072" height="103" rx="12" fill="#eeeae2" stroke="#d4cfc4"/>
+    <text x="87" y="1128" font-size="22" font-weight="700">第三题未启动：累计35/36次，还剩1次</text>
+    <text x="87" y="1165" font-size="19">剩余一次不足以合理安排下一题完整流程；未计为失败，也未称额度耗尽。</text>
+
+    <path d="M64 1231 H1136" stroke="#c7c4b9"/>
+    <text x="64" y="1270" font-size="21" font-weight="700">离线首次560通过＋3失败 → 压缩重复说明 → 最终563通过</text>
+    <text x="64" y="1304" font-size="18">修复输入预算回归，没有提高默认预算。离线验证不能替代真实判断与交互验收。</text>
+    <text x="64" y="1345" font-size="18">本轮7次调用 · 费用上界¥0.088394 · 累计占用¥0.590738 / ¥5（含历史预留）</text>
+    <text x="64" y="1377" font-size="18">不是准确率或实际账单；单次小样本不能证明因果，辅助复核不等于人工批准。</text>
+    <text x="64" y="1419" font-size="16" fill="#656a66">依据：docs/evaluation/round-06-plan.md、round-06-result.md；.local/e06-live-review原始轨迹索引。</text>
+    <text x="64" y="1448" font-size="16" fill="#656a66">仅做XML结构检查，未进行渲染视觉验收；未对外发布。</text>
+  </g>
+</svg>

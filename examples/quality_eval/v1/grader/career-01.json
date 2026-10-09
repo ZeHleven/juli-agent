@@ -1,0 +1,107 @@
+{
+  "purpose": "验证材料充分时能逐项对照硬条件和能力证据，形成不过度承诺的投递建议。",
+  "required_findings": [
+    {
+      "id": "experience",
+      "statement": "岗位明确要求至少三年全职数据分析经验；申请人有四年，因此经验门槛满足。",
+      "evidence": [
+        {
+          "document_id": "opportunity",
+          "quote": "录用流程进入业务面试前，必须满足至少三年全职数据分析工作经验；实习、课程作业和个人练习不计入这个年限。"
+        },
+        {
+          "document_id": "background",
+          "quote": "我的全职数据分析工作经验合计四年，已经剔除实习、课程作业和个人练习的时间，没有重叠计算。"
+        }
+      ],
+      "critical": true
+    },
+    {
+      "id": "technical_work",
+      "statement": "背景中同时有独立 SQL 多表查询和 Python 清洗维护经历，能为岗位相应能力要求提供初步依据；不能描述为第三方核验已通过。",
+      "evidence": [
+        {
+          "document_id": "opportunity",
+          "quote": "需要能够独立编写 SQL 多表查询，并用 Python 维护可重复运行的数据清洗脚本。"
+        },
+        {
+          "document_id": "background",
+          "quote": "在服务周报项目中，我独立编写过连接订单表、工单表和服务记录表的 SQL 查询，并处理过重复记录与空值。"
+        },
+        {
+          "document_id": "background",
+          "quote": "我独立维护一套每天运行的 Python 清洗脚本，负责输入校验、日期格式统一、错误日志记录和失败后的人工排查。"
+        }
+      ],
+      "critical": true
+    },
+    {
+      "id": "collaboration",
+      "statement": "与运营同事确认和修改统计口径的经历对应非技术协作要求。",
+      "evidence": [
+        {
+          "document_id": "opportunity",
+          "quote": "需要有一次与非技术同事共同确认指标口径、根据反馈修改分析结果的经历。"
+        },
+        {
+          "document_id": "background",
+          "quote": "做异常工单分析时，我与运营同事逐项确认“重复来访”和“当天解决”的定义，按照他们的反馈修改统计口径，并在交付说明中保留修改原因。"
+        }
+      ],
+      "critical": true
+    },
+    {
+      "id": "onsite",
+      "statement": "固定每周三天现场出勤已有明确可接受的表述，不需要重复追问是否可以全远程。",
+      "evidence": [
+        {
+          "document_id": "opportunity",
+          "quote": "每周须到现场工作三天，其余工作日可以远程；这是当前岗位的固定安排，不能以全远程替代。"
+        },
+        {
+          "document_id": "background",
+          "quote": "每周到现场工作三天可以接受，我可以按岗位约定安排出勤，其余工作日远程也没有问题。"
+        }
+      ],
+      "critical": true
+    },
+    {
+      "id": "limits",
+      "statement": "材料匹配只能形成投递建议和待核验事项，不能保证录用；图表能力为加分项而非额外硬门槛。",
+      "evidence": [
+        {
+          "document_id": "opportunity",
+          "quote": "熟悉图表设计属于加分项，不是进入面试的必备条件。岗位没有证书、学历层次或特定行业经历的附加门槛。"
+        },
+        {
+          "document_id": "background",
+          "quote": "我制作过基础趋势图和分组对比图，尚未提供第三方测评或正式面试成绩。这份经历说明和作品概述均由我本人提交，具体能力仍可在面试中核验。"
+        }
+      ],
+      "critical": false
+    }
+  ],
+  "allowed_conclusions": [
+    "依据现有自述资料，满足明示硬条件，能力经历也与要求对应，可以建议投递并通过面试核验。",
+    "可以提出准备作品说明等下一步建议，但不要求先追问才能给出初步分析。"
+  ],
+  "forbidden_conclusions": [
+    "保证被录用或给出没有依据的录用概率。",
+    "要求申请人补充已有明确说明的出勤安排才能继续分析。",
+    "把图表、学历或未列出的证书变成必要门槛。"
+  ],
+  "clarification": {
+    "required": false,
+    "topics": [],
+    "avoid": [
+      "重复询问已说明的四年全职经验、SQL、Python 或三天现场出勤。"
+    ],
+    "answer_facts": [],
+    "after_answer_expectation": "无需强制追问；可以建议面试核验，但不能把进一步核验当成资料已明确缺失。"
+  },
+  "review_notes": [
+    "经历是申请人自述，允许初步评估，不应宣称真实性已被外部验证。",
+    "不按措辞与标准答案的字面相似度评分；检查条件、证据和建议的关系。"
+  ],
+  "case_id": "career-01"
+}

@@ -34,7 +34,7 @@ class RuntimeStore:
         row = db.execute('SELECT * FROM runtime_runs WHERE task_id=?', (self.task_id,)).fetchone()
         if row is None:
             raise DomainError('runtime_not_started', 'Initialize this task with an explicit provider profile.')
-        if row['profile'] != profile or row['policy_json'] != policy.model_dump_json():
+        if row['profile'] != profile or row['policy_json'] != policy.persistence_json():
             raise DomainError('runtime_config_changed', 'Resume with the original deployment profile and policy.')
         return Checkpoint.model_validate_json(row['checkpoint_json'])
 
@@ -54,7 +54,7 @@ class RuntimeStore:
             if db.execute('SELECT 1 FROM runtime_locks WHERE conversation_id=?', (snapshot.conversation_id,)).fetchone():
                 raise DomainError('conversation_busy', 'Complete or cancel the active task in this conversation first.')
             checkpoint = make_checkpoint(snapshot, package)
-            db.execute('INSERT INTO runtime_runs VALUES (?,?,?,?)', (self.task_id, profile, policy.model_dump_json(), checkpoint.model_dump_json()))
+            db.execute('INSERT INTO runtime_runs VALUES (?,?,?,?)', (self.task_id, profile, policy.persistence_json(), checkpoint.model_dump_json()))
             db.execute('INSERT INTO runtime_locks VALUES (?,?)', (snapshot.conversation_id, self.task_id))
             self._transition(db, access, record, 'running')
 
@@ -97,6 +97,19 @@ class RuntimeStore:
             snapshot, package, _ = self.store._model_context(db, self.workspace_id, self.task_id)
             checkpoint = self._load(db, profile, policy)
             checkpoint, target, question = finish(checkpoint, snapshot, package)
+            if checkpoint.clarification_draft is not None:
+                if target != 'pending' or not question or not question.strip():
+                    raise DomainError('invalid_clarification_candidate', 'A candidate requires a pending question.')
+                # Same task/scenario/authorization/original-read boundary as a
+                # final result, in the transaction that commits the question.
+                self.store._validate_result(db, access, self.workspace_id, self.task_id, checkpoint.clarification_draft)
+            if checkpoint.review and checkpoint.review.draft is not None:
+                # Validate the whole selection before dispatch, without fabricating receipts.
+                for ref in checkpoint.review.evidence_ids:
+                    self.store._evidence(db, self.workspace_id, snapshot, ref)
+                if checkpoint.review.phase in {'review', 'final'}:
+                    # Entering review requires the same live original-read checks as a result.
+                    self.store._validate_result(db, access, self.workspace_id, self.task_id, checkpoint.review.draft)
             if checkpoint.result is not None:
                 self.store._validate_result(db, access, self.workspace_id, self.task_id, checkpoint.result)
             self._save(db, checkpoint)
@@ -143,6 +156,7 @@ class RuntimeStore:
                     raise DomainError('integrity_error', 'Pinned resource changed.')
             from juli.core.models import ModelMessage
             updated = checkpoint.model_dump()
+            updated['clarification_draft'] = None
             updated['messages'] = (*checkpoint.messages, ModelMessage(role='user', content=canonical_json({'clarification_answer': text})))
             self._save(db, Checkpoint.model_validate(updated))
             db.execute('INSERT INTO runtime_answers VALUES (?,?,?)', (self.task_id, request_key, request_hash))

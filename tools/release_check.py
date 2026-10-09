@@ -21,6 +21,7 @@ ROOT_FILES = frozenset({
 TREES = {
     'backend/src/juli': {'.py', '.html', '.css', '.js'},
     'docs': {'.md', '.json'}, 'scenarios': {'.md', '.json'},
+    'docs/agent/dev-notes/assets': {'.svg'},
     'examples': {'.py', '.md', '.json'},
     'experiments': {'.py', '.md', '.json', '.txt'},
     'tests': {'.py'}, 'tools': {'.py'},

@@ -4,6 +4,7 @@ from juli.core.common import canonical_json
 from juli.core.evidence import AnalysisResult, ResultBlock
 from juli.core.models import ModelReply, ModelToolCall, ModelUsage
 from juli.core.tools import ToolReference
+from juli.model_demo import scripted_analysis_json
 
 
 class WorkbenchDemoModel:
@@ -32,7 +33,7 @@ class WorkbenchDemoModel:
         else:
             blocks.append(ResultBlock(kind='limitation',text='未找到匹配关键词的资料片段，没有生成引用。'))
         result = AnalysisResult(task_id=task['task_id'],blocks=tuple(blocks),scenario_payload_json=canonical_json({'summary':'仅演示工作台与持久运行流程。'}))
-        return ModelReply(text=result.model_dump_json(),usage=usage)
+        return ModelReply(text=scripted_analysis_json(result),usage=usage)
 
 
 def demo_config():

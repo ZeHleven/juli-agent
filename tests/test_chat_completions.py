@@ -59,6 +59,85 @@ def test_tool_response_maps_alias_back_to_versioned_juli_tool():
     assert result.tool_call.call_id == 'call:1'
 
 
+def wire_tool(call_id, *, arguments='{"query":"Python"}', name=None, kind='function'):
+    reference = ToolReference(name='evidence.search', version='1.0.0')
+    return {'id': call_id, 'type': kind, 'function': {'name': name or tool_alias(reference), 'arguments': arguments}}
+
+
+@pytest.mark.parametrize('count', [1, 2, 8])
+def test_tool_batch_and_explanation_are_preserved_as_one_reply_and_message(count):
+    explanation = '  先分别检索岗位要求与已有能力。\n保留原始说明。  '
+    calls = [wire_tool(f'batch:{i}', arguments=json.dumps({'query': f'query-{i}'})) for i in range(count)]
+    message = {'role': 'assistant', 'content': explanation, 'tool_calls': calls}
+    reply = provider(lambda _: httpx.Response(200, json=response(message, 'tool_calls'))).complete(request())
+    assert reply.text == explanation
+    assert [call.call_id for call in reply.calls] == [item['id'] for item in calls]
+    assert [call.arguments_json for call in reply.calls] == [item['function']['arguments'] for item in calls]
+    assert (reply.tool_call is not None) == (count == 1)
+    history = ModelMessage(role='assistant', content=reply.text, tool_call=reply.tool_call, tool_calls=reply.tool_calls)
+    model_request = ModelRequest(messages=(ModelMessage(role='user', content='Question'), history,
+                                          *(ModelMessage(role='tool', tool_call_id=call.call_id, content='{"items":[]}') for call in reply.calls)),
+                                 tools=request().tools, max_output_tokens=100)
+    captured = []
+    def handler(wire):
+        captured.append(json.loads(wire.content))
+        return httpx.Response(200, json=response())
+    provider(handler).complete(model_request)
+    messages = captured[0]['messages']
+    assert len(messages) == 2 + count
+    assert messages[1] == message
+    assert [item['tool_call_id'] for item in messages[2:]] == [item['id'] for item in calls]
+
+
+@pytest.mark.parametrize('malformation', [
+    'duplicate_id', 'too_many', 'late_unknown_tool', 'late_non_function', 'late_bad_json',
+    'late_array_arguments', 'late_nonfinite_arguments', 'late_nonstring_arguments',
+    'late_invalid_id', 'nontext_explanation', 'truncated', 'refusal', 'usage_missing',
+    'calls_not_array', 'calls_false',
+])
+def test_entire_batch_is_rejected_if_any_call_or_envelope_is_invalid(malformation):
+    calls = [wire_tool('batch:1'), wire_tool('batch:2')]
+    message = {'role': 'assistant', 'content': 'Both searches are needed.', 'tool_calls': calls}
+    body = response(message, 'tool_calls')
+    if malformation == 'duplicate_id': calls[1]['id'] = calls[0]['id']
+    elif malformation == 'too_many': message['tool_calls'] = [wire_tool(f'batch:{i}') for i in range(9)]
+    elif malformation == 'late_unknown_tool': calls[1]['function']['name'] = 'unregistered'
+    elif malformation == 'late_non_function': calls[1]['type'] = 'custom'
+    elif malformation == 'late_bad_json': calls[1]['function']['arguments'] = '{bad JSON'
+    elif malformation == 'late_array_arguments': calls[1]['function']['arguments'] = '[]'
+    elif malformation == 'late_nonfinite_arguments': calls[1]['function']['arguments'] = '{"number":NaN}'
+    elif malformation == 'late_nonstring_arguments': calls[1]['function']['arguments'] = {'query': 'Python'}
+    elif malformation == 'late_invalid_id': calls[1]['id'] = 'invalid id with spaces'
+    elif malformation == 'nontext_explanation': message['content'] = [{'type': 'text', 'text': 'unsupported'}]
+    elif malformation == 'truncated': body['choices'][0]['finish_reason'] = 'length'
+    elif malformation == 'refusal': message['refusal'] = 'Refused'
+    elif malformation == 'usage_missing': del body['usage']
+    elif malformation == 'calls_not_array': message['tool_calls'] = {'id': 'batch:1'}
+    elif malformation == 'calls_false': message['tool_calls'] = False
+    attempts = []
+    def handler(wire):
+        attempts.append(wire)
+        return httpx.Response(200, json=body)
+    with pytest.raises(DomainError) as error:
+        provider(handler).complete(request())
+    assert error.value.code == 'invalid_model_response'
+    assert len(attempts) == 1
+
+
+def test_unavailable_tool_late_in_history_batch_fails_before_transport():
+    calls = (
+        ModelToolCall(call_id='history:1', tool=ToolReference(name='evidence.search', version='1.0.0'), arguments_json='{}'),
+        ModelToolCall(call_id='history:2', tool=ToolReference(name='unavailable.tool', version='1.0.0'), arguments_json='{}'),
+    )
+    model_request = ModelRequest(messages=(ModelMessage(role='assistant', content='Both searches', tool_calls=calls),),
+                                 tools=request().tools, max_output_tokens=100)
+    def forbidden(_):
+        raise AssertionError('Invalid history must not trigger transport')
+    with pytest.raises(DomainError) as error:
+        provider(forbidden).complete(model_request)
+    assert error.value.code == 'tool_not_granted'
+
+
 def test_assistant_tool_and_tool_result_history_have_native_roles():
     call = ModelToolCall(call_id='call:history',tool=ToolReference(name='evidence.search',version='1.0.0'),arguments_json='{"query":"Python"}')
     model_request = ModelRequest(messages=(ModelMessage(role='user',content='Question'),ModelMessage(role='assistant',tool_call=call),ModelMessage(role='tool',tool_call_id=call.call_id,content='{"items":[]}')), tools=tool_contracts().list(),max_output_tokens=100)
@@ -91,7 +170,7 @@ def test_transport_timeout_is_unknown_and_not_retried():
     assert len(attempts) == 1
 
 
-@pytest.mark.parametrize('malformation', ['usage_missing','usage_boolean','usage_inconsistent','length','refusal','parallel','unknown_tool','bad_json'])
+@pytest.mark.parametrize('malformation', ['usage_missing','usage_boolean','usage_inconsistent','length','refusal','unknown_tool','bad_json'])
 def test_malformed_or_incomplete_responses_are_rejected(malformation):
     body = response()
     if malformation == 'usage_missing': del body['usage']
@@ -99,9 +178,9 @@ def test_malformed_or_incomplete_responses_are_rejected(malformation):
     elif malformation == 'usage_inconsistent': body['usage']['total_tokens'] = 99
     elif malformation == 'length': body['choices'][0]['finish_reason'] = 'length'
     elif malformation == 'refusal': body['choices'][0]['message']['refusal'] = 'Refused'
-    elif malformation in {'parallel','unknown_tool'}:
+    elif malformation == 'unknown_tool':
         call = {'id':'a','type':'function','function':{'name':'unregistered','arguments':'{}'}}
-        body['choices'][0] = {'finish_reason':'tool_calls','message':{'role':'assistant','content':None,'tool_calls':[call] * (2 if malformation == 'parallel' else 1)}}
+        body['choices'][0] = {'finish_reason':'tool_calls','message':{'role':'assistant','content':None,'tool_calls':[call]}}
     def handler(_):
         return httpx.Response(200, content=b'not json' if malformation == 'bad_json' else json.dumps(body).encode())
     with pytest.raises(DomainError) as error: provider(handler).complete(request())

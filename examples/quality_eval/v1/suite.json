@@ -1,0 +1,536 @@
+{
+  "suite_id": "juli-quality-eval-v1",
+  "version": "1.0.0",
+  "created_date": "2026-10-02",
+  "status": "prepared_not_run",
+  "source_commit": "2c54675e2d0325ea91676b3adfb9d83b987a80f1",
+  "sample_source": "newly_written_synthetic",
+  "base_case_count": 12,
+  "paired_variant_count": 4,
+  "planned_trials_per_case": 3,
+  "actual_model_runs": 0,
+  "model": null,
+  "provider": null,
+  "call_budget": null,
+  "input_contract": "Only send question, as_of_date, allowlisted document bytes/display_name/role and trusted scenario package; never send case condition, split, grader, fragments or suite metadata.",
+  "reserved_set_policy": "Course cases are developer-authored and visible; reserved from tuning, not an independent blind evaluation. Reclassify and replace if used for tuning.",
+  "cases": [
+    {
+      "id": "career-01",
+      "domain": "career",
+      "condition": "sufficient",
+      "split": "development",
+      "scenario_path": "scenarios/career-fit",
+      "as_of_date": "2026-10-02",
+      "question": "请结合这个岗位的要求和我的背景，分析我目前与岗位的匹配情况，以及是否适合投递；请说明判断依据和还需要确认的信息。",
+      "documents": [
+        {
+          "id": "opportunity",
+          "path": "inputs/career-01/jd.md",
+          "role": "opportunity",
+          "display_name": "数据分析岗位说明"
+        },
+        {
+          "id": "background",
+          "path": "inputs/career-01/background.md",
+          "role": "background",
+          "display_name": "申请人背景"
+        }
+      ],
+      "gold_path": "grader/career-01.json",
+      "tags": [
+        "synthetic",
+        "sql-python",
+        "hard-vs-preferred",
+        "apply-not-hiring"
+      ]
+    },
+    {
+      "id": "career-02",
+      "domain": "career",
+      "condition": "missing",
+      "split": "development",
+      "scenario_path": "scenarios/career-fit",
+      "as_of_date": "2026-10-02",
+      "question": "请结合这个岗位的要求和我的背景，分析我目前与岗位的匹配情况，以及是否适合投递；请说明判断依据和还需要确认的信息。",
+      "documents": [
+        {
+          "id": "opportunity",
+          "path": "inputs/career-02/jd.md",
+          "role": "opportunity",
+          "display_name": "数据分析岗位说明"
+        },
+        {
+          "id": "background",
+          "path": "inputs/career-02/background.md",
+          "role": "background",
+          "display_name": "申请人背景"
+        }
+      ],
+      "gold_path": "grader/career-02.json",
+      "tags": [
+        "synthetic",
+        "missing-critical-fact",
+        "follow-up"
+      ]
+    },
+    {
+      "id": "career-03",
+      "domain": "career",
+      "condition": "conflicting",
+      "split": "development",
+      "scenario_path": "scenarios/career-fit",
+      "as_of_date": "2026-10-02",
+      "question": "请结合这个岗位的要求和我的背景，分析我目前与岗位的匹配情况，以及是否适合投递；请说明判断依据和还需要确认的信息。",
+      "documents": [
+        {
+          "id": "opportunity",
+          "path": "inputs/career-03/jd.md",
+          "role": "opportunity",
+          "display_name": "数据分析岗位说明"
+        },
+        {
+          "id": "background",
+          "path": "inputs/career-03/background.md",
+          "role": "background",
+          "display_name": "申请人背景"
+        },
+        {
+          "id": "portfolio",
+          "path": "inputs/career-03/portfolio.md",
+          "role": "background",
+          "display_name": "申请人作品说明"
+        }
+      ],
+      "gold_path": "grader/career-03.json",
+      "tags": [
+        "synthetic",
+        "conflicting-evidence",
+        "source-parity",
+        "follow-up"
+      ]
+    },
+    {
+      "id": "career-04",
+      "domain": "career",
+      "condition": "long_context",
+      "split": "development",
+      "scenario_path": "scenarios/career-fit",
+      "as_of_date": "2026-10-02",
+      "question": "请结合这个岗位的要求和我的背景，分析我目前与岗位的匹配情况，以及是否适合投递；请说明判断依据和还需要确认的信息。",
+      "documents": [
+        {
+          "id": "opportunity",
+          "path": "inputs/career-04/jd.md",
+          "role": "opportunity",
+          "display_name": "数据分析岗位说明"
+        },
+        {
+          "id": "background",
+          "path": "inputs/career-04/background.md",
+          "role": "background",
+          "display_name": "申请人背景"
+        }
+      ],
+      "gold_path": "grader/career-04.json",
+      "tags": [
+        "synthetic",
+        "long-markdown",
+        "late-hard-condition",
+        "schedule-conflict"
+      ]
+    },
+    {
+      "id": "career-05",
+      "domain": "career",
+      "condition": "counterfactual",
+      "split": "development",
+      "scenario_path": "scenarios/career-fit",
+      "as_of_date": "2026-10-02",
+      "question": "请结合这个岗位的要求和我的背景，分析我目前与岗位的匹配情况，以及是否适合投递；请说明判断依据和还需要确认的信息。",
+      "documents": [
+        {
+          "id": "opportunity",
+          "path": "inputs/career-05/jd.md",
+          "role": "opportunity",
+          "display_name": "数据分析岗位说明"
+        },
+        {
+          "id": "background",
+          "path": "inputs/career-05/background.md",
+          "role": "background",
+          "display_name": "申请人背景"
+        }
+      ],
+      "gold_path": "grader/career-05.json",
+      "tags": [
+        "synthetic",
+        "paired",
+        "counterfactual",
+        "experience-threshold"
+      ],
+      "pair": {
+        "base_case": "career-01",
+        "relation": "changes_conclusion",
+        "changed_document_id": "background",
+        "description": "仅将全职数据分析经验从四年改为二年；三年硬门槛从满足变为不满足，其他能力和出勤判断保持。"
+      }
+    },
+    {
+      "id": "career-06",
+      "domain": "career",
+      "condition": "invariance",
+      "split": "development",
+      "scenario_path": "scenarios/career-fit",
+      "as_of_date": "2026-10-02",
+      "question": "请结合这个岗位的要求和我的背景，分析我目前与岗位的匹配情况，以及是否适合投递；请说明判断依据和还需要确认的信息。",
+      "documents": [
+        {
+          "id": "opportunity",
+          "path": "inputs/career-06/jd.md",
+          "role": "opportunity",
+          "display_name": "数据分析岗位说明"
+        },
+        {
+          "id": "background",
+          "path": "inputs/career-06/background.md",
+          "role": "background",
+          "display_name": "申请人背景"
+        }
+      ],
+      "gold_path": "grader/career-06.json",
+      "tags": [
+        "synthetic",
+        "paired",
+        "invariance",
+        "irrelevant-addition"
+      ],
+      "pair": {
+        "base_case": "career-01",
+        "relation": "preserves_conclusion",
+        "changed_document_id": "background",
+        "description": "仅追加盆栽速写爱好段落；工作经验、能力、出勤和投递建议应保持，爱好不应充当工作能力证据。"
+      }
+    },
+    {
+      "id": "tender-01",
+      "domain": "tender",
+      "condition": "sufficient",
+      "split": "development",
+      "scenario_path": "scenarios/tender-review",
+      "as_of_date": "2026-10-02",
+      "question": "以2026-10-02为判断时点，结合项目说明和机构资料，分析我们目前是否具备参与栖屿项目的基础。请列出关键依据、不确定事项以及参与前需要处理的事项；缺少关键信息时再问我。",
+      "documents": [
+        {
+          "id": "requirements",
+          "path": "inputs/tender-01/requirements.md",
+          "role": "requirements",
+          "display_name": "栖屿项目说明"
+        },
+        {
+          "id": "organization",
+          "path": "inputs/tender-01/organization.md",
+          "role": "organization",
+          "display_name": "虚构机构甲项目资料"
+        }
+      ],
+      "gold_path": "grader/tender-01.json",
+      "tags": [
+        "synthetic",
+        "hard_requirements",
+        "two_document_alignment",
+        "evidence_support"
+      ]
+    },
+    {
+      "id": "tender-02",
+      "domain": "tender",
+      "condition": "missing",
+      "split": "development",
+      "scenario_path": "scenarios/tender-review",
+      "as_of_date": "2026-10-02",
+      "question": "以2026-10-02为判断时点，结合石汀项目要求和我们的资料，分析现在是否适合参与，指出需要补充什么，并说明已有依据。",
+      "documents": [
+        {
+          "id": "requirements",
+          "path": "inputs/tender-02/requirements.md",
+          "role": "requirements",
+          "display_name": "石汀项目要求"
+        },
+        {
+          "id": "organization",
+          "path": "inputs/tender-02/organization.md",
+          "role": "organization",
+          "display_name": "虚构机构乙资料"
+        }
+      ],
+      "gold_path": "grader/tender-02.json",
+      "tags": [
+        "synthetic",
+        "missing_evidence",
+        "clarification",
+        "self_report_boundary"
+      ]
+    },
+    {
+      "id": "tender-03",
+      "domain": "tender",
+      "condition": "conflicting",
+      "split": "development",
+      "scenario_path": "scenarios/tender-review",
+      "as_of_date": "2026-10-02",
+      "question": "请结合砾湾项目规则与我们提交的两份记录，按2026-10-02的情况分析能否参与。把影响结论的依据和需要我确认的事项说清楚。",
+      "documents": [
+        {
+          "id": "requirements",
+          "path": "inputs/tender-03/requirements.md",
+          "role": "requirements",
+          "display_name": "砾湾项目规则"
+        },
+        {
+          "id": "organization",
+          "path": "inputs/tender-03/organization.md",
+          "role": "organization",
+          "display_name": "虚构机构丙方案记录甲"
+        },
+        {
+          "id": "organization_b",
+          "path": "inputs/tender-03/organization-b.md",
+          "role": "organization",
+          "display_name": "虚构机构丙方案记录乙"
+        }
+      ],
+      "gold_path": "grader/tender-03.json",
+      "tags": [
+        "synthetic",
+        "conflicting_sources",
+        "clarification",
+        "no_implicit_precedence"
+      ]
+    },
+    {
+      "id": "tender-04",
+      "domain": "tender",
+      "condition": "long_context",
+      "split": "development",
+      "scenario_path": "scenarios/tender-review",
+      "as_of_date": "2026-10-02",
+      "question": "按2026-10-02的情况，结合完整项目文件和机构摘要，判断我们是否适合按现有方案参与榆灯项目。请优先指出会改变参与判断的条件，并引用对应依据。",
+      "documents": [
+        {
+          "id": "requirements",
+          "path": "inputs/tender-04/requirements.md",
+          "role": "requirements",
+          "display_name": "榆灯完整项目文件"
+        },
+        {
+          "id": "organization",
+          "path": "inputs/tender-04/organization.md",
+          "role": "organization",
+          "display_name": "虚构机构丁资料摘要"
+        }
+      ],
+      "gold_path": "grader/tender-04.json",
+      "tags": [
+        "synthetic",
+        "long_markdown",
+        "specific_over_general",
+        "late_critical_condition"
+      ]
+    },
+    {
+      "id": "tender-05",
+      "domain": "tender",
+      "condition": "counterfactual",
+      "split": "development",
+      "scenario_path": "scenarios/tender-review",
+      "as_of_date": "2026-10-02",
+      "question": "以2026-10-02为判断时点，结合项目说明和机构资料，分析我们目前是否具备参与栖屿项目的基础。请列出关键依据、不确定事项以及参与前需要处理的事项；缺少关键信息时再问我。",
+      "documents": [
+        {
+          "id": "requirements",
+          "path": "inputs/tender-05/requirements.md",
+          "role": "requirements",
+          "display_name": "栖屿项目说明"
+        },
+        {
+          "id": "organization",
+          "path": "inputs/tender-05/organization.md",
+          "role": "organization",
+          "display_name": "虚构机构甲项目资料"
+        }
+      ],
+      "gold_path": "grader/tender-05.json",
+      "tags": [
+        "synthetic",
+        "paired_case",
+        "counterfactual",
+        "valid_on_as_of_not_sufficient"
+      ],
+      "pair": {
+        "base_case": "tender-01",
+        "relation": "changes_conclusion",
+        "changed_document_id": "organization",
+        "description": "仅将Q2凭证截止日由2026-12-31改为2026-10-31；判断应从材料支持全部必要条件变为不覆盖2026-11-15的已知缺口，其余五项保持不变。"
+      }
+    },
+    {
+      "id": "tender-06",
+      "domain": "tender",
+      "condition": "invariance",
+      "split": "development",
+      "scenario_path": "scenarios/tender-review",
+      "as_of_date": "2026-10-02",
+      "question": "以2026-10-02为判断时点，结合项目说明和机构资料，分析我们目前是否具备参与栖屿项目的基础。请列出关键依据、不确定事项以及参与前需要处理的事项；缺少关键信息时再问我。",
+      "documents": [
+        {
+          "id": "requirements",
+          "path": "inputs/tender-06/requirements.md",
+          "role": "requirements",
+          "display_name": "栖屿项目说明"
+        },
+        {
+          "id": "organization",
+          "path": "inputs/tender-06/organization.md",
+          "role": "organization",
+          "display_name": "虚构机构甲项目资料"
+        }
+      ],
+      "gold_path": "grader/tender-06.json",
+      "tags": [
+        "synthetic",
+        "paired_case",
+        "invariance",
+        "irrelevant_detail"
+      ],
+      "pair": {
+        "base_case": "tender-01",
+        "relation": "preserves_conclusion",
+        "changed_document_id": "organization",
+        "description": "只将机构宣传封面颜色从青绿色改为浅灰色；该颜色不属于项目要求，六项条件及参与基础结论应保持不变。"
+      }
+    },
+    {
+      "id": "course-01",
+      "domain": "course",
+      "condition": "sufficient",
+      "split": "reserved_validation",
+      "scenario_path": "examples/quality_eval/v1/scenarios/course-fit",
+      "as_of_date": "2026-10-02",
+      "question": "请结合我的学习背景与课程资料，判断课程内容、先修基础、时间和全部必缴费用是否适合我，说明依据、未知项及下一步建议。",
+      "documents": [
+        {
+          "id": "course",
+          "path": "inputs/course-01/course.md",
+          "role": "course",
+          "display_name": "课程说明"
+        },
+        {
+          "id": "background",
+          "path": "inputs/course-01/background.md",
+          "role": "learner",
+          "display_name": "学习背景"
+        }
+      ],
+      "gold_path": "grader/course-01.json",
+      "tags": [
+        "synthetic",
+        "course-adaptation",
+        "sufficient"
+      ]
+    },
+    {
+      "id": "course-02",
+      "domain": "course",
+      "condition": "missing",
+      "split": "reserved_validation",
+      "scenario_path": "examples/quality_eval/v1/scenarios/course-fit",
+      "as_of_date": "2026-10-02",
+      "question": "请结合我的学习背景与课程资料，判断课程内容、先修基础、时间和全部必缴费用是否适合我，说明依据、未知项及下一步建议。",
+      "documents": [
+        {
+          "id": "course",
+          "path": "inputs/course-02/course.md",
+          "role": "course",
+          "display_name": "课程说明"
+        },
+        {
+          "id": "background",
+          "path": "inputs/course-02/background.md",
+          "role": "learner",
+          "display_name": "学习背景"
+        }
+      ],
+      "gold_path": "grader/course-02.json",
+      "tags": [
+        "synthetic",
+        "course-adaptation",
+        "missing"
+      ]
+    },
+    {
+      "id": "course-03",
+      "domain": "course",
+      "condition": "conflicting",
+      "split": "reserved_validation",
+      "scenario_path": "examples/quality_eval/v1/scenarios/course-fit",
+      "as_of_date": "2026-10-02",
+      "question": "请结合我的学习背景与课程资料，判断课程内容、先修基础、时间和全部必缴费用是否适合我，说明依据、未知项及下一步建议。",
+      "documents": [
+        {
+          "id": "course",
+          "path": "inputs/course-03/course.md",
+          "role": "course",
+          "display_name": "课程说明"
+        },
+        {
+          "id": "background",
+          "path": "inputs/course-03/background.md",
+          "role": "learner",
+          "display_name": "学习背景"
+        },
+        {
+          "id": "availability",
+          "path": "inputs/course-03/availability.md",
+          "role": "learner",
+          "display_name": "时间安排记录"
+        }
+      ],
+      "gold_path": "grader/course-03.json",
+      "tags": [
+        "synthetic",
+        "course-adaptation",
+        "conflicting"
+      ]
+    },
+    {
+      "id": "course-04",
+      "domain": "course",
+      "condition": "long_context",
+      "split": "reserved_validation",
+      "scenario_path": "examples/quality_eval/v1/scenarios/course-fit",
+      "as_of_date": "2026-10-02",
+      "question": "请结合我的学习背景与课程资料，判断课程内容、先修基础、时间和全部必缴费用是否适合我，说明依据、未知项及下一步建议。",
+      "documents": [
+        {
+          "id": "course",
+          "path": "inputs/course-04/course.md",
+          "role": "course",
+          "display_name": "课程说明"
+        },
+        {
+          "id": "background",
+          "path": "inputs/course-04/background.md",
+          "role": "learner",
+          "display_name": "学习背景"
+        }
+      ],
+      "gold_path": "grader/course-04.json",
+      "tags": [
+        "synthetic",
+        "course-adaptation",
+        "long_context"
+      ]
+    }
+  ]
+}

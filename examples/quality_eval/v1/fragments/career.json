@@ -1,0 +1,199 @@
+[
+  {
+    "id": "career-01",
+    "domain": "career",
+    "condition": "sufficient",
+    "split": "development",
+    "scenario_path": "scenarios/career-fit",
+    "as_of_date": "2026-10-02",
+    "question": "请结合这个岗位的要求和我的背景，分析我目前与岗位的匹配情况，以及是否适合投递；请说明判断依据和还需要确认的信息。",
+    "documents": [
+      {
+        "id": "opportunity",
+        "path": "inputs/career-01/jd.md",
+        "role": "opportunity",
+        "display_name": "数据分析岗位说明"
+      },
+      {
+        "id": "background",
+        "path": "inputs/career-01/background.md",
+        "role": "background",
+        "display_name": "申请人背景"
+      }
+    ],
+    "gold_path": "grader/career-01.json",
+    "tags": [
+      "synthetic",
+      "sql-python",
+      "hard-vs-preferred",
+      "apply-not-hiring"
+    ]
+  },
+  {
+    "id": "career-02",
+    "domain": "career",
+    "condition": "missing",
+    "split": "development",
+    "scenario_path": "scenarios/career-fit",
+    "as_of_date": "2026-10-02",
+    "question": "请结合这个岗位的要求和我的背景，分析我目前与岗位的匹配情况，以及是否适合投递；请说明判断依据和还需要确认的信息。",
+    "documents": [
+      {
+        "id": "opportunity",
+        "path": "inputs/career-02/jd.md",
+        "role": "opportunity",
+        "display_name": "数据分析岗位说明"
+      },
+      {
+        "id": "background",
+        "path": "inputs/career-02/background.md",
+        "role": "background",
+        "display_name": "申请人背景"
+      }
+    ],
+    "gold_path": "grader/career-02.json",
+    "tags": [
+      "synthetic",
+      "missing-critical-fact",
+      "follow-up"
+    ]
+  },
+  {
+    "id": "career-03",
+    "domain": "career",
+    "condition": "conflicting",
+    "split": "development",
+    "scenario_path": "scenarios/career-fit",
+    "as_of_date": "2026-10-02",
+    "question": "请结合这个岗位的要求和我的背景，分析我目前与岗位的匹配情况，以及是否适合投递；请说明判断依据和还需要确认的信息。",
+    "documents": [
+      {
+        "id": "opportunity",
+        "path": "inputs/career-03/jd.md",
+        "role": "opportunity",
+        "display_name": "数据分析岗位说明"
+      },
+      {
+        "id": "background",
+        "path": "inputs/career-03/background.md",
+        "role": "background",
+        "display_name": "申请人背景"
+      },
+      {
+        "id": "portfolio",
+        "path": "inputs/career-03/portfolio.md",
+        "role": "background",
+        "display_name": "申请人作品说明"
+      }
+    ],
+    "gold_path": "grader/career-03.json",
+    "tags": [
+      "synthetic",
+      "conflicting-evidence",
+      "source-parity",
+      "follow-up"
+    ]
+  },
+  {
+    "id": "career-04",
+    "domain": "career",
+    "condition": "long_context",
+    "split": "development",
+    "scenario_path": "scenarios/career-fit",
+    "as_of_date": "2026-10-02",
+    "question": "请结合这个岗位的要求和我的背景，分析我目前与岗位的匹配情况，以及是否适合投递；请说明判断依据和还需要确认的信息。",
+    "documents": [
+      {
+        "id": "opportunity",
+        "path": "inputs/career-04/jd.md",
+        "role": "opportunity",
+        "display_name": "数据分析岗位说明"
+      },
+      {
+        "id": "background",
+        "path": "inputs/career-04/background.md",
+        "role": "background",
+        "display_name": "申请人背景"
+      }
+    ],
+    "gold_path": "grader/career-04.json",
+    "tags": [
+      "synthetic",
+      "long-markdown",
+      "late-hard-condition",
+      "schedule-conflict"
+    ]
+  },
+  {
+    "id": "career-05",
+    "domain": "career",
+    "condition": "counterfactual",
+    "split": "development",
+    "scenario_path": "scenarios/career-fit",
+    "as_of_date": "2026-10-02",
+    "question": "请结合这个岗位的要求和我的背景，分析我目前与岗位的匹配情况，以及是否适合投递；请说明判断依据和还需要确认的信息。",
+    "documents": [
+      {
+        "id": "opportunity",
+        "path": "inputs/career-05/jd.md",
+        "role": "opportunity",
+        "display_name": "数据分析岗位说明"
+      },
+      {
+        "id": "background",
+        "path": "inputs/career-05/background.md",
+        "role": "background",
+        "display_name": "申请人背景"
+      }
+    ],
+    "gold_path": "grader/career-05.json",
+    "tags": [
+      "synthetic",
+      "paired",
+      "counterfactual",
+      "experience-threshold"
+    ],
+    "pair": {
+      "base_case": "career-01",
+      "relation": "changes_conclusion",
+      "changed_document_id": "background",
+      "description": "仅将全职数据分析经验从四年改为二年；三年硬门槛从满足变为不满足，其他能力和出勤判断保持。"
+    }
+  },
+  {
+    "id": "career-06",
+    "domain": "career",
+    "condition": "invariance",
+    "split": "development",
+    "scenario_path": "scenarios/career-fit",
+    "as_of_date": "2026-10-02",
+    "question": "请结合这个岗位的要求和我的背景，分析我目前与岗位的匹配情况，以及是否适合投递；请说明判断依据和还需要确认的信息。",
+    "documents": [
+      {
+        "id": "opportunity",
+        "path": "inputs/career-06/jd.md",
+        "role": "opportunity",
+        "display_name": "数据分析岗位说明"
+      },
+      {
+        "id": "background",
+        "path": "inputs/career-06/background.md",
+        "role": "background",
+        "display_name": "申请人背景"
+      }
+    ],
+    "gold_path": "grader/career-06.json",
+    "tags": [
+      "synthetic",
+      "paired",
+      "invariance",
+      "irrelevant-addition"
+    ],
+    "pair": {
+      "base_case": "career-01",
+      "relation": "preserves_conclusion",
+      "changed_document_id": "background",
+      "description": "仅追加盆栽速写爱好段落；工作经验、能力、出勤和投递建议应保持，爱好不应充当工作能力证据。"
+    }
+  }
+]

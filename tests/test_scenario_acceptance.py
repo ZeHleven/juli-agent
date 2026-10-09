@@ -1,3 +1,4 @@
+from juli.model_demo import scripted_analysis_json
 import copy
 import ipaddress
 import json
@@ -134,7 +135,7 @@ def test_scenario_specific_schema_is_enforced_when_result_is_committed(tmp_path,
             task = next(json.loads(m.content) for m in request.messages if m.role == 'user')
             result = AnalysisResult(task_id=task['task_id'], blocks=(ResultBlock(kind='limitation',text='Invalid fixture'),),
                 scenario_payload_json=json.dumps(payload))
-            return ModelReply(text=result.model_dump_json(), usage=ModelUsage(input_tokens=1, output_tokens=1))
+            return ModelReply(text=scripted_analysis_json(result), usage=ModelUsage(input_tokens=1, output_tokens=1))
     session = AcceptanceSession(tmp_path/'schema.sqlite3',case,task_budget=EXAMPLE_BUDGET,
         provider_factory=lambda: InvalidPayload(case))
     try:

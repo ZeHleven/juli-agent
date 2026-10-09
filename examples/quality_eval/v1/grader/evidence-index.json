@@ -1,0 +1,2340 @@
+{
+  "cases": {
+    "career-01": [
+      {
+        "finding_id": "experience",
+        "sources": [
+          {
+            "document_id": "opportunity",
+            "path": "inputs/career-01/jd.md",
+            "sha256": "59663e59fc39f037b9a183de09bbb422279227c1e498faea7b4435f587bfe0b7",
+            "char_start": 159,
+            "char_end": 210,
+            "line_start": 11,
+            "line_end": 11,
+            "quote": "录用流程进入业务面试前，必须满足至少三年全职数据分析工作经验；实习、课程作业和个人练习不计入这个年限。"
+          },
+          {
+            "document_id": "background",
+            "path": "inputs/career-01/background.md",
+            "sha256": "266211e67b4ac1f8a88c0a602a1e54740900e0bbb944e29ba79cf88c3bba1df1",
+            "char_start": 73,
+            "char_end": 117,
+            "line_start": 5,
+            "line_end": 5,
+            "quote": "我的全职数据分析工作经验合计四年，已经剔除实习、课程作业和个人练习的时间，没有重叠计算。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "technical_work",
+        "sources": [
+          {
+            "document_id": "opportunity",
+            "path": "inputs/career-01/jd.md",
+            "sha256": "59663e59fc39f037b9a183de09bbb422279227c1e498faea7b4435f587bfe0b7",
+            "char_start": 214,
+            "char_end": 257,
+            "line_start": 13,
+            "line_end": 13,
+            "quote": "需要能够独立编写 SQL 多表查询，并用 Python 维护可重复运行的数据清洗脚本。"
+          },
+          {
+            "document_id": "background",
+            "path": "inputs/career-01/background.md",
+            "sha256": "266211e67b4ac1f8a88c0a602a1e54740900e0bbb944e29ba79cf88c3bba1df1",
+            "char_start": 121,
+            "char_end": 172,
+            "line_start": 7,
+            "line_end": 7,
+            "quote": "在服务周报项目中，我独立编写过连接订单表、工单表和服务记录表的 SQL 查询，并处理过重复记录与空值。"
+          },
+          {
+            "document_id": "background",
+            "path": "inputs/career-01/background.md",
+            "sha256": "266211e67b4ac1f8a88c0a602a1e54740900e0bbb944e29ba79cf88c3bba1df1",
+            "char_start": 176,
+            "char_end": 231,
+            "line_start": 9,
+            "line_end": 9,
+            "quote": "我独立维护一套每天运行的 Python 清洗脚本，负责输入校验、日期格式统一、错误日志记录和失败后的人工排查。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "collaboration",
+        "sources": [
+          {
+            "document_id": "opportunity",
+            "path": "inputs/career-01/jd.md",
+            "sha256": "59663e59fc39f037b9a183de09bbb422279227c1e498faea7b4435f587bfe0b7",
+            "char_start": 261,
+            "char_end": 295,
+            "line_start": 15,
+            "line_end": 15,
+            "quote": "需要有一次与非技术同事共同确认指标口径、根据反馈修改分析结果的经历。"
+          },
+          {
+            "document_id": "background",
+            "path": "inputs/career-01/background.md",
+            "sha256": "266211e67b4ac1f8a88c0a602a1e54740900e0bbb944e29ba79cf88c3bba1df1",
+            "char_start": 235,
+            "char_end": 299,
+            "line_start": 11,
+            "line_end": 11,
+            "quote": "做异常工单分析时，我与运营同事逐项确认“重复来访”和“当天解决”的定义，按照他们的反馈修改统计口径，并在交付说明中保留修改原因。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "onsite",
+        "sources": [
+          {
+            "document_id": "opportunity",
+            "path": "inputs/career-01/jd.md",
+            "sha256": "59663e59fc39f037b9a183de09bbb422279227c1e498faea7b4435f587bfe0b7",
+            "char_start": 299,
+            "char_end": 341,
+            "line_start": 17,
+            "line_end": 17,
+            "quote": "每周须到现场工作三天，其余工作日可以远程；这是当前岗位的固定安排，不能以全远程替代。"
+          },
+          {
+            "document_id": "background",
+            "path": "inputs/career-01/background.md",
+            "sha256": "266211e67b4ac1f8a88c0a602a1e54740900e0bbb944e29ba79cf88c3bba1df1",
+            "char_start": 303,
+            "char_end": 343,
+            "line_start": 13,
+            "line_end": 13,
+            "quote": "每周到现场工作三天可以接受，我可以按岗位约定安排出勤，其余工作日远程也没有问题。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "limits",
+        "sources": [
+          {
+            "document_id": "opportunity",
+            "path": "inputs/career-01/jd.md",
+            "sha256": "59663e59fc39f037b9a183de09bbb422279227c1e498faea7b4435f587bfe0b7",
+            "char_start": 345,
+            "char_end": 393,
+            "line_start": 19,
+            "line_end": 19,
+            "quote": "熟悉图表设计属于加分项，不是进入面试的必备条件。岗位没有证书、学历层次或特定行业经历的附加门槛。"
+          },
+          {
+            "document_id": "background",
+            "path": "inputs/career-01/background.md",
+            "sha256": "266211e67b4ac1f8a88c0a602a1e54740900e0bbb944e29ba79cf88c3bba1df1",
+            "char_start": 347,
+            "char_end": 412,
+            "line_start": 15,
+            "line_end": 15,
+            "quote": "我制作过基础趋势图和分组对比图，尚未提供第三方测评或正式面试成绩。这份经历说明和作品概述均由我本人提交，具体能力仍可在面试中核验。"
+          }
+        ],
+        "no_direct_quote": false
+      }
+    ],
+    "career-02": [
+      {
+        "finding_id": "experience",
+        "sources": [
+          {
+            "document_id": "opportunity",
+            "path": "inputs/career-02/jd.md",
+            "sha256": "59663e59fc39f037b9a183de09bbb422279227c1e498faea7b4435f587bfe0b7",
+            "char_start": 159,
+            "char_end": 210,
+            "line_start": 11,
+            "line_end": 11,
+            "quote": "录用流程进入业务面试前，必须满足至少三年全职数据分析工作经验；实习、课程作业和个人练习不计入这个年限。"
+          },
+          {
+            "document_id": "background",
+            "path": "inputs/career-02/background.md",
+            "sha256": "3c8b85e65dc953f05e395e4200ef733d7e44ab749f1eaecfcca61ea4e8539595",
+            "char_start": 72,
+            "char_end": 100,
+            "line_start": 5,
+            "line_end": 5,
+            "quote": "我的全职数据分析工作经验合计四年，不包括实习和课程作业。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "technical_work",
+        "sources": [
+          {
+            "document_id": "background",
+            "path": "inputs/career-02/background.md",
+            "sha256": "3c8b85e65dc953f05e395e4200ef733d7e44ab749f1eaecfcca61ea4e8539595",
+            "char_start": 104,
+            "char_end": 149,
+            "line_start": 7,
+            "line_end": 7,
+            "quote": "我独立编写过 SQL 多表查询，用来关联库存、订单和补货记录，检查重复行后再制作运营汇总。"
+          },
+          {
+            "document_id": "background",
+            "path": "inputs/career-02/background.md",
+            "sha256": "3c8b85e65dc953f05e395e4200ef733d7e44ab749f1eaecfcca61ea4e8539595",
+            "char_start": 153,
+            "char_end": 202,
+            "line_start": 9,
+            "line_end": 9,
+            "quote": "我负责一套 Python 清洗脚本的维护，包括字段校验、格式转换和运行异常记录，每周检查执行结果。"
+          },
+          {
+            "document_id": "opportunity",
+            "path": "inputs/career-02/jd.md",
+            "sha256": "59663e59fc39f037b9a183de09bbb422279227c1e498faea7b4435f587bfe0b7",
+            "char_start": 214,
+            "char_end": 257,
+            "line_start": 13,
+            "line_end": 13,
+            "quote": "需要能够独立编写 SQL 多表查询，并用 Python 维护可重复运行的数据清洗脚本。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "collaboration",
+        "sources": [
+          {
+            "document_id": "background",
+            "path": "inputs/career-02/background.md",
+            "sha256": "3c8b85e65dc953f05e395e4200ef733d7e44ab749f1eaecfcca61ea4e8539595",
+            "char_start": 206,
+            "char_end": 252,
+            "line_start": 11,
+            "line_end": 11,
+            "quote": "我与运营负责人共同定义过缺货率的分母，确认取消订单是否计入后修改了周报，并保存口径变更说明。"
+          },
+          {
+            "document_id": "opportunity",
+            "path": "inputs/career-02/jd.md",
+            "sha256": "59663e59fc39f037b9a183de09bbb422279227c1e498faea7b4435f587bfe0b7",
+            "char_start": 261,
+            "char_end": 295,
+            "line_start": 15,
+            "line_end": 15,
+            "quote": "需要有一次与非技术同事共同确认指标口径、根据反馈修改分析结果的经历。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "onsite_unknown",
+        "sources": [
+          {
+            "document_id": "opportunity",
+            "path": "inputs/career-02/jd.md",
+            "sha256": "59663e59fc39f037b9a183de09bbb422279227c1e498faea7b4435f587bfe0b7",
+            "char_start": 299,
+            "char_end": 341,
+            "line_start": 17,
+            "line_end": 17,
+            "quote": "每周须到现场工作三天，其余工作日可以远程；这是当前岗位的固定安排，不能以全远程替代。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "ask_and_condition",
+        "sources": [
+          {
+            "document_id": "opportunity",
+            "path": "inputs/career-02/jd.md",
+            "sha256": "59663e59fc39f037b9a183de09bbb422279227c1e498faea7b4435f587bfe0b7",
+            "char_start": 299,
+            "char_end": 341,
+            "line_start": 17,
+            "line_end": 17,
+            "quote": "每周须到现场工作三天，其余工作日可以远程；这是当前岗位的固定安排，不能以全远程替代。"
+          }
+        ],
+        "no_direct_quote": false
+      }
+    ],
+    "career-03": [
+      {
+        "finding_id": "experience",
+        "sources": [
+          {
+            "document_id": "background",
+            "path": "inputs/career-03/background.md",
+            "sha256": "dd5cecc3eb0bdd400322acead8af412e13a3f7c778a9e21cdeaaa408a1aae4b7",
+            "char_start": 84,
+            "char_end": 112,
+            "line_start": 5,
+            "line_end": 5,
+            "quote": "我的全职数据分析工作经验合计四年，不包括实习和个人练习。"
+          },
+          {
+            "document_id": "opportunity",
+            "path": "inputs/career-03/jd.md",
+            "sha256": "59663e59fc39f037b9a183de09bbb422279227c1e498faea7b4435f587bfe0b7",
+            "char_start": 159,
+            "char_end": 210,
+            "line_start": 11,
+            "line_end": 11,
+            "quote": "录用流程进入业务面试前，必须满足至少三年全职数据分析工作经验；实习、课程作业和个人练习不计入这个年限。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "python_conflict",
+        "sources": [
+          {
+            "document_id": "background",
+            "path": "inputs/career-03/background.md",
+            "sha256": "dd5cecc3eb0bdd400322acead8af412e13a3f7c778a9e21cdeaaa408a1aae4b7",
+            "char_start": 151,
+            "char_end": 195,
+            "line_start": 9,
+            "line_end": 9,
+            "quote": "在周报自动化项目中，Python 清洗脚本由我独立编写和维护，包含校验、清洗和运行日志。"
+          },
+          {
+            "document_id": "portfolio",
+            "path": "inputs/career-03/portfolio.md",
+            "sha256": "f3a93c8c9aca77d9bae7d4a5f50344ed813a4ded4315a7240425509285bef434",
+            "char_start": 81,
+            "char_end": 178,
+            "line_start": 5,
+            "line_end": 5,
+            "quote": "周报自动化项目的分工如下：我负责 SQL 查询、电子表格检查和需求确认；Python 清洗脚本由同组其他成员编写并维护，我只查看脚本生成的结果，没有独立编写或维护过该项目的 Python 脚本。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "no_precedence",
+        "sources": [
+          {
+            "document_id": "background",
+            "path": "inputs/career-03/background.md",
+            "sha256": "dd5cecc3eb0bdd400322acead8af412e13a3f7c778a9e21cdeaaa408a1aae4b7",
+            "char_start": 38,
+            "char_end": 80,
+            "line_start": 3,
+            "line_end": 3,
+            "quote": "此说明与另附的作品说明均由申请人本人提交；没有提供编写时间、适用期间或优先版本说明。"
+          },
+          {
+            "document_id": "portfolio",
+            "path": "inputs/career-03/portfolio.md",
+            "sha256": "f3a93c8c9aca77d9bae7d4a5f50344ed813a4ded4315a7240425509285bef434",
+            "char_start": 38,
+            "char_end": 77,
+            "line_start": 3,
+            "line_end": 3,
+            "quote": "此说明与经历说明均由申请人本人提交；没有提供编写时间、适用期间或优先版本说明。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "relevance",
+        "sources": [
+          {
+            "document_id": "opportunity",
+            "path": "inputs/career-03/jd.md",
+            "sha256": "59663e59fc39f037b9a183de09bbb422279227c1e498faea7b4435f587bfe0b7",
+            "char_start": 214,
+            "char_end": 257,
+            "line_start": 13,
+            "line_end": 13,
+            "quote": "需要能够独立编写 SQL 多表查询，并用 Python 维护可重复运行的数据清洗脚本。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "remaining_match",
+        "sources": [
+          {
+            "document_id": "background",
+            "path": "inputs/career-03/background.md",
+            "sha256": "dd5cecc3eb0bdd400322acead8af412e13a3f7c778a9e21cdeaaa408a1aae4b7",
+            "char_start": 116,
+            "char_end": 147,
+            "line_start": 7,
+            "line_end": 7,
+            "quote": "我能独立编写 SQL 多表查询，做过订单和服务记录的关联分析。"
+          },
+          {
+            "document_id": "background",
+            "path": "inputs/career-03/background.md",
+            "sha256": "dd5cecc3eb0bdd400322acead8af412e13a3f7c778a9e21cdeaaa408a1aae4b7",
+            "char_start": 199,
+            "char_end": 235,
+            "line_start": 11,
+            "line_end": 11,
+            "quote": "我与服务团队共同确认过“按期完成”的计算规则，并在评审后修改了统计口径。"
+          },
+          {
+            "document_id": "background",
+            "path": "inputs/career-03/background.md",
+            "sha256": "dd5cecc3eb0bdd400322acead8af412e13a3f7c778a9e21cdeaaa408a1aae4b7",
+            "char_start": 239,
+            "char_end": 254,
+            "line_start": 13,
+            "line_end": 13,
+            "quote": "每周到现场工作三天我可以接受。"
+          }
+        ],
+        "no_direct_quote": false
+      }
+    ],
+    "career-04": [
+      {
+        "finding_id": "experience",
+        "sources": [
+          {
+            "document_id": "opportunity",
+            "path": "inputs/career-04/jd.md",
+            "sha256": "0da9265a0fae54ec78c49c177b40744f2c0fda7cba0f4f0c83f41d541907c9fc",
+            "char_start": 74,
+            "char_end": 104,
+            "line_start": 7,
+            "line_end": 7,
+            "quote": "本岗位要求至少三年全职数据分析工作经验，不含实习和课程练习。"
+          },
+          {
+            "document_id": "background",
+            "path": "inputs/career-04/background.md",
+            "sha256": "3bdaaa98c02e64c0c0471bded5cdf7e52050fadfe7af5621416e3a0f999787e7",
+            "char_start": 73,
+            "char_end": 117,
+            "line_start": 5,
+            "line_end": 5,
+            "quote": "我的全职数据分析工作经验合计四年，已经剔除实习、课程作业和个人练习的时间，没有重叠计算。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "technical_match",
+        "sources": [
+          {
+            "document_id": "opportunity",
+            "path": "inputs/career-04/jd.md",
+            "sha256": "0da9265a0fae54ec78c49c177b40744f2c0fda7cba0f4f0c83f41d541907c9fc",
+            "char_start": 108,
+            "char_end": 174,
+            "line_start": 9,
+            "line_end": 9,
+            "quote": "申请人需要独立使用 SQL 关联多表数据，并使用 Python 维护重复运行的清洗脚本；也需要有与非技术同事共同确认指标口径的经历。"
+          },
+          {
+            "document_id": "background",
+            "path": "inputs/career-04/background.md",
+            "sha256": "3bdaaa98c02e64c0c0471bded5cdf7e52050fadfe7af5621416e3a0f999787e7",
+            "char_start": 121,
+            "char_end": 172,
+            "line_start": 7,
+            "line_end": 7,
+            "quote": "在服务周报项目中，我独立编写过连接订单表、工单表和服务记录表的 SQL 查询，并处理过重复记录与空值。"
+          },
+          {
+            "document_id": "background",
+            "path": "inputs/career-04/background.md",
+            "sha256": "3bdaaa98c02e64c0c0471bded5cdf7e52050fadfe7af5621416e3a0f999787e7",
+            "char_start": 176,
+            "char_end": 231,
+            "line_start": 9,
+            "line_end": 9,
+            "quote": "我独立维护一套每天运行的 Python 清洗脚本，负责输入校验、日期格式统一、错误日志记录和失败后的人工排查。"
+          },
+          {
+            "document_id": "background",
+            "path": "inputs/career-04/background.md",
+            "sha256": "3bdaaa98c02e64c0c0471bded5cdf7e52050fadfe7af5621416e3a0f999787e7",
+            "char_start": 235,
+            "char_end": 299,
+            "line_start": 11,
+            "line_end": 11,
+            "quote": "做异常工单分析时，我与运营同事逐项确认“重复来访”和“当天解决”的定义，按照他们的反馈修改统计口径，并在交付说明中保留修改原因。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "late_requirement",
+        "sources": [
+          {
+            "document_id": "opportunity",
+            "path": "inputs/career-04/jd.md",
+            "sha256": "0da9265a0fae54ec78c49c177b40744f2c0fda7cba0f4f0c83f41d541907c9fc",
+            "char_start": 5401,
+            "char_end": 5468,
+            "line_start": 139,
+            "line_end": 139,
+            "quote": "本岗位每六周必须参加一次 21:00 至 24:00 的远程支持窗口，所有任职者均须轮值；目前不能改到白天，也没有免除这一安排的名额。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "schedule_conflict",
+        "sources": [
+          {
+            "document_id": "opportunity",
+            "path": "inputs/career-04/jd.md",
+            "sha256": "0da9265a0fae54ec78c49c177b40744f2c0fda7cba0f4f0c83f41d541907c9fc",
+            "char_start": 5401,
+            "char_end": 5468,
+            "line_start": 139,
+            "line_end": 139,
+            "quote": "本岗位每六周必须参加一次 21:00 至 24:00 的远程支持窗口，所有任职者均须轮值；目前不能改到白天，也没有免除这一安排的名额。"
+          },
+          {
+            "document_id": "background",
+            "path": "inputs/career-04/background.md",
+            "sha256": "3bdaaa98c02e64c0c0471bded5cdf7e52050fadfe7af5621416e3a0f999787e7",
+            "char_start": 416,
+            "char_end": 499,
+            "line_start": 17,
+            "line_end": 17,
+            "quote": "由于固定的个人时间安排，我不能在 21:00 至 24:00 参加工作，也不能承担这个时段的远程轮值；这一限制在未来一年内不会改变。白天的现场出勤仍可按每周三天安排。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "decision",
+        "sources": [
+          {
+            "document_id": "opportunity",
+            "path": "inputs/career-04/jd.md",
+            "sha256": "0da9265a0fae54ec78c49c177b40744f2c0fda7cba0f4f0c83f41d541907c9fc",
+            "char_start": 5472,
+            "char_end": 5525,
+            "line_start": 141,
+            "line_end": 141,
+            "quote": "申请人可以在投递前与岗位联系人确认窗口的具体日期；日期可提前沟通，但本说明没有承诺更改支持时段或免除轮值。"
+          }
+        ],
+        "no_direct_quote": false
+      }
+    ],
+    "career-05": [
+      {
+        "finding_id": "experience",
+        "sources": [
+          {
+            "document_id": "opportunity",
+            "path": "inputs/career-05/jd.md",
+            "sha256": "59663e59fc39f037b9a183de09bbb422279227c1e498faea7b4435f587bfe0b7",
+            "char_start": 159,
+            "char_end": 210,
+            "line_start": 11,
+            "line_end": 11,
+            "quote": "录用流程进入业务面试前，必须满足至少三年全职数据分析工作经验；实习、课程作业和个人练习不计入这个年限。"
+          },
+          {
+            "document_id": "background",
+            "path": "inputs/career-05/background.md",
+            "sha256": "939eff7730e3998f70578d2a6a8492ce81af716be6cfb5b53ef6ec0728d1341a",
+            "char_start": 73,
+            "char_end": 117,
+            "line_start": 5,
+            "line_end": 5,
+            "quote": "我的全职数据分析工作经验合计二年，已经剔除实习、课程作业和个人练习的时间，没有重叠计算。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "technical_work",
+        "sources": [
+          {
+            "document_id": "opportunity",
+            "path": "inputs/career-05/jd.md",
+            "sha256": "59663e59fc39f037b9a183de09bbb422279227c1e498faea7b4435f587bfe0b7",
+            "char_start": 214,
+            "char_end": 257,
+            "line_start": 13,
+            "line_end": 13,
+            "quote": "需要能够独立编写 SQL 多表查询，并用 Python 维护可重复运行的数据清洗脚本。"
+          },
+          {
+            "document_id": "background",
+            "path": "inputs/career-05/background.md",
+            "sha256": "939eff7730e3998f70578d2a6a8492ce81af716be6cfb5b53ef6ec0728d1341a",
+            "char_start": 121,
+            "char_end": 172,
+            "line_start": 7,
+            "line_end": 7,
+            "quote": "在服务周报项目中，我独立编写过连接订单表、工单表和服务记录表的 SQL 查询，并处理过重复记录与空值。"
+          },
+          {
+            "document_id": "background",
+            "path": "inputs/career-05/background.md",
+            "sha256": "939eff7730e3998f70578d2a6a8492ce81af716be6cfb5b53ef6ec0728d1341a",
+            "char_start": 176,
+            "char_end": 231,
+            "line_start": 9,
+            "line_end": 9,
+            "quote": "我独立维护一套每天运行的 Python 清洗脚本，负责输入校验、日期格式统一、错误日志记录和失败后的人工排查。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "collaboration",
+        "sources": [
+          {
+            "document_id": "opportunity",
+            "path": "inputs/career-05/jd.md",
+            "sha256": "59663e59fc39f037b9a183de09bbb422279227c1e498faea7b4435f587bfe0b7",
+            "char_start": 261,
+            "char_end": 295,
+            "line_start": 15,
+            "line_end": 15,
+            "quote": "需要有一次与非技术同事共同确认指标口径、根据反馈修改分析结果的经历。"
+          },
+          {
+            "document_id": "background",
+            "path": "inputs/career-05/background.md",
+            "sha256": "939eff7730e3998f70578d2a6a8492ce81af716be6cfb5b53ef6ec0728d1341a",
+            "char_start": 235,
+            "char_end": 299,
+            "line_start": 11,
+            "line_end": 11,
+            "quote": "做异常工单分析时，我与运营同事逐项确认“重复来访”和“当天解决”的定义，按照他们的反馈修改统计口径，并在交付说明中保留修改原因。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "onsite",
+        "sources": [
+          {
+            "document_id": "opportunity",
+            "path": "inputs/career-05/jd.md",
+            "sha256": "59663e59fc39f037b9a183de09bbb422279227c1e498faea7b4435f587bfe0b7",
+            "char_start": 299,
+            "char_end": 341,
+            "line_start": 17,
+            "line_end": 17,
+            "quote": "每周须到现场工作三天，其余工作日可以远程；这是当前岗位的固定安排，不能以全远程替代。"
+          },
+          {
+            "document_id": "background",
+            "path": "inputs/career-05/background.md",
+            "sha256": "939eff7730e3998f70578d2a6a8492ce81af716be6cfb5b53ef6ec0728d1341a",
+            "char_start": 303,
+            "char_end": 343,
+            "line_start": 13,
+            "line_end": 13,
+            "quote": "每周到现场工作三天可以接受，我可以按岗位约定安排出勤，其余工作日远程也没有问题。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "limits",
+        "sources": [
+          {
+            "document_id": "opportunity",
+            "path": "inputs/career-05/jd.md",
+            "sha256": "59663e59fc39f037b9a183de09bbb422279227c1e498faea7b4435f587bfe0b7",
+            "char_start": 345,
+            "char_end": 393,
+            "line_start": 19,
+            "line_end": 19,
+            "quote": "熟悉图表设计属于加分项，不是进入面试的必备条件。岗位没有证书、学历层次或特定行业经历的附加门槛。"
+          },
+          {
+            "document_id": "background",
+            "path": "inputs/career-05/background.md",
+            "sha256": "939eff7730e3998f70578d2a6a8492ce81af716be6cfb5b53ef6ec0728d1341a",
+            "char_start": 347,
+            "char_end": 412,
+            "line_start": 15,
+            "line_end": 15,
+            "quote": "我制作过基础趋势图和分组对比图，尚未提供第三方测评或正式面试成绩。这份经历说明和作品概述均由我本人提交，具体能力仍可在面试中核验。"
+          }
+        ],
+        "no_direct_quote": false
+      }
+    ],
+    "career-06": [
+      {
+        "finding_id": "experience",
+        "sources": [
+          {
+            "document_id": "opportunity",
+            "path": "inputs/career-06/jd.md",
+            "sha256": "59663e59fc39f037b9a183de09bbb422279227c1e498faea7b4435f587bfe0b7",
+            "char_start": 159,
+            "char_end": 210,
+            "line_start": 11,
+            "line_end": 11,
+            "quote": "录用流程进入业务面试前，必须满足至少三年全职数据分析工作经验；实习、课程作业和个人练习不计入这个年限。"
+          },
+          {
+            "document_id": "background",
+            "path": "inputs/career-06/background.md",
+            "sha256": "14d2a4c8d5a4006b9f686168afb11b241ecc67ff4a6903862ce14b759a30bc58",
+            "char_start": 73,
+            "char_end": 117,
+            "line_start": 5,
+            "line_end": 5,
+            "quote": "我的全职数据分析工作经验合计四年，已经剔除实习、课程作业和个人练习的时间，没有重叠计算。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "technical_work",
+        "sources": [
+          {
+            "document_id": "opportunity",
+            "path": "inputs/career-06/jd.md",
+            "sha256": "59663e59fc39f037b9a183de09bbb422279227c1e498faea7b4435f587bfe0b7",
+            "char_start": 214,
+            "char_end": 257,
+            "line_start": 13,
+            "line_end": 13,
+            "quote": "需要能够独立编写 SQL 多表查询，并用 Python 维护可重复运行的数据清洗脚本。"
+          },
+          {
+            "document_id": "background",
+            "path": "inputs/career-06/background.md",
+            "sha256": "14d2a4c8d5a4006b9f686168afb11b241ecc67ff4a6903862ce14b759a30bc58",
+            "char_start": 121,
+            "char_end": 172,
+            "line_start": 7,
+            "line_end": 7,
+            "quote": "在服务周报项目中，我独立编写过连接订单表、工单表和服务记录表的 SQL 查询，并处理过重复记录与空值。"
+          },
+          {
+            "document_id": "background",
+            "path": "inputs/career-06/background.md",
+            "sha256": "14d2a4c8d5a4006b9f686168afb11b241ecc67ff4a6903862ce14b759a30bc58",
+            "char_start": 176,
+            "char_end": 231,
+            "line_start": 9,
+            "line_end": 9,
+            "quote": "我独立维护一套每天运行的 Python 清洗脚本，负责输入校验、日期格式统一、错误日志记录和失败后的人工排查。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "collaboration",
+        "sources": [
+          {
+            "document_id": "opportunity",
+            "path": "inputs/career-06/jd.md",
+            "sha256": "59663e59fc39f037b9a183de09bbb422279227c1e498faea7b4435f587bfe0b7",
+            "char_start": 261,
+            "char_end": 295,
+            "line_start": 15,
+            "line_end": 15,
+            "quote": "需要有一次与非技术同事共同确认指标口径、根据反馈修改分析结果的经历。"
+          },
+          {
+            "document_id": "background",
+            "path": "inputs/career-06/background.md",
+            "sha256": "14d2a4c8d5a4006b9f686168afb11b241ecc67ff4a6903862ce14b759a30bc58",
+            "char_start": 235,
+            "char_end": 299,
+            "line_start": 11,
+            "line_end": 11,
+            "quote": "做异常工单分析时，我与运营同事逐项确认“重复来访”和“当天解决”的定义，按照他们的反馈修改统计口径，并在交付说明中保留修改原因。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "onsite",
+        "sources": [
+          {
+            "document_id": "opportunity",
+            "path": "inputs/career-06/jd.md",
+            "sha256": "59663e59fc39f037b9a183de09bbb422279227c1e498faea7b4435f587bfe0b7",
+            "char_start": 299,
+            "char_end": 341,
+            "line_start": 17,
+            "line_end": 17,
+            "quote": "每周须到现场工作三天，其余工作日可以远程；这是当前岗位的固定安排，不能以全远程替代。"
+          },
+          {
+            "document_id": "background",
+            "path": "inputs/career-06/background.md",
+            "sha256": "14d2a4c8d5a4006b9f686168afb11b241ecc67ff4a6903862ce14b759a30bc58",
+            "char_start": 303,
+            "char_end": 343,
+            "line_start": 13,
+            "line_end": 13,
+            "quote": "每周到现场工作三天可以接受，我可以按岗位约定安排出勤，其余工作日远程也没有问题。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "limits",
+        "sources": [
+          {
+            "document_id": "opportunity",
+            "path": "inputs/career-06/jd.md",
+            "sha256": "59663e59fc39f037b9a183de09bbb422279227c1e498faea7b4435f587bfe0b7",
+            "char_start": 345,
+            "char_end": 393,
+            "line_start": 19,
+            "line_end": 19,
+            "quote": "熟悉图表设计属于加分项，不是进入面试的必备条件。岗位没有证书、学历层次或特定行业经历的附加门槛。"
+          },
+          {
+            "document_id": "background",
+            "path": "inputs/career-06/background.md",
+            "sha256": "14d2a4c8d5a4006b9f686168afb11b241ecc67ff4a6903862ce14b759a30bc58",
+            "char_start": 347,
+            "char_end": 412,
+            "line_start": 15,
+            "line_end": 15,
+            "quote": "我制作过基础趋势图和分组对比图，尚未提供第三方测评或正式面试成绩。这份经历说明和作品概述均由我本人提交，具体能力仍可在面试中核验。"
+          }
+        ],
+        "no_direct_quote": false
+      }
+    ],
+    "tender-01": [
+      {
+        "finding_id": "credential",
+        "sources": [
+          {
+            "document_id": "requirements",
+            "path": "inputs/tender-01/requirements.md",
+            "sha256": "9aad78c7935a9609c186bb80146321b873a1b512cbd0b32152ccf662f4eff187",
+            "char_start": 103,
+            "char_end": 161,
+            "line_start": 7,
+            "line_end": 7,
+            "quote": "机构须提交项目内凭证“资料处理等级Q2”，且该凭证有效期必须覆盖至2026-11-15；仅覆盖申请当日不算满足本项。"
+          },
+          {
+            "document_id": "organization",
+            "path": "inputs/tender-01/organization.md",
+            "sha256": "3cd5650c5c017d095851f52e93240007e71b0d26f09636a489615fbd51282320",
+            "char_start": 64,
+            "char_end": 111,
+            "line_start": 7,
+            "line_end": 7,
+            "quote": "资料处理等级Q2的持有人为虚构机构甲；凭证有效期为2026-01-01至2026-12-31。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "case_scale",
+        "sources": [
+          {
+            "document_id": "requirements",
+            "path": "inputs/tender-01/requirements.md",
+            "sha256": "9aad78c7935a9609c186bb80146321b873a1b512cbd0b32152ccf662f4eff187",
+            "char_start": 166,
+            "char_end": 227,
+            "line_start": 8,
+            "line_end": 8,
+            "quote": "至少提供一个在2024-01-01至2026-09-30之间完成验收的同类归整案例，单个案例的验收数量不得少于8000份。"
+          },
+          {
+            "document_id": "organization",
+            "path": "inputs/tender-01/organization.md",
+            "sha256": "3cd5650c5c017d095851f52e93240007e71b0d26f09636a489615fbd51282320",
+            "char_start": 168,
+            "char_end": 230,
+            "line_start": 12,
+            "line_end": 12,
+            "quote": "“合成海螺档案归整项目”的验收记录载明：2025-12-08完成验收，验收数量为9200份，服务内容为分类、编号和逐份复核。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "staffing",
+        "sources": [
+          {
+            "document_id": "requirements",
+            "path": "inputs/tender-01/requirements.md",
+            "sha256": "9aad78c7935a9609c186bb80146321b873a1b512cbd0b32152ccf662f4eff187",
+            "char_start": 232,
+            "char_end": 299,
+            "line_start": 9,
+            "line_end": 9,
+            "quote": "须安排不少于两名专职成员，自2026-10-15起至2026-11-15止连续可投入本项目；仅在部分日期可投入的人员不计入该最低人数。"
+          },
+          {
+            "document_id": "organization",
+            "path": "inputs/tender-01/organization.md",
+            "sha256": "3cd5650c5c017d095851f52e93240007e71b0d26f09636a489615fbd51282320",
+            "char_start": 248,
+            "char_end": 306,
+            "line_start": 16,
+            "line_end": 16,
+            "quote": "成员甲和成员乙已列入本项目排期，两人均可自2026-10-15至2026-11-15专职投入，期间没有其他项目占用。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "delivery",
+        "sources": [
+          {
+            "document_id": "requirements",
+            "path": "inputs/tender-01/requirements.md",
+            "sha256": "9aad78c7935a9609c186bb80146321b873a1b512cbd0b32152ccf662f4eff187",
+            "char_start": 304,
+            "char_end": 325,
+            "line_start": 10,
+            "line_end": 10,
+            "quote": "全部成果最晚须于2026-11-15交付。"
+          },
+          {
+            "document_id": "organization",
+            "path": "inputs/tender-01/organization.md",
+            "sha256": "3cd5650c5c017d095851f52e93240007e71b0d26f09636a489615fbd51282320",
+            "char_start": 308,
+            "char_end": 333,
+            "line_start": 17,
+            "line_end": 17,
+            "quote": "本项目计划在2026-11-12完成全部成果交付。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "price",
+        "sources": [
+          {
+            "document_id": "requirements",
+            "path": "inputs/tender-01/requirements.md",
+            "sha256": "9aad78c7935a9609c186bb80146321b873a1b512cbd0b32152ccf662f4eff187",
+            "char_start": 330,
+            "char_end": 368,
+            "line_start": 11,
+            "line_end": 11,
+            "quote": "总报价不得超过120000元，价格必须包含整理、复核、交付和交通的全部费用。"
+          },
+          {
+            "document_id": "organization",
+            "path": "inputs/tender-01/organization.md",
+            "sha256": "3cd5650c5c017d095851f52e93240007e71b0d26f09636a489615fbd51282320",
+            "char_start": 351,
+            "char_end": 392,
+            "line_start": 21,
+            "line_end": 21,
+            "quote": "拟提交总报价为118000元，已包含整理、复核、交付和交通的全部费用，不另收费用。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "data_handling",
+        "sources": [
+          {
+            "document_id": "requirements",
+            "path": "inputs/tender-01/requirements.md",
+            "sha256": "9aad78c7935a9609c186bb80146321b873a1b512cbd0b32152ccf662f4eff187",
+            "char_start": 373,
+            "char_end": 422,
+            "line_start": 12,
+            "line_end": 12,
+            "quote": "项目原始资料只能在委托方提供的离线设备上处理，不得上传第三方云服务；机构须说明其可执行的工作方式。"
+          },
+          {
+            "document_id": "organization",
+            "path": "inputs/tender-01/organization.md",
+            "sha256": "3cd5650c5c017d095851f52e93240007e71b0d26f09636a489615fbd51282320",
+            "char_start": 394,
+            "char_end": 446,
+            "line_start": 22,
+            "line_end": 22,
+            "quote": "工作方案规定：使用委托方提供的离线设备，关闭云同步，所有原始资料均留在委托方设备内，不上传第三方云服务。"
+          }
+        ],
+        "no_direct_quote": false
+      }
+    ],
+    "tender-02": [
+      {
+        "finding_id": "validity_rule",
+        "sources": [
+          {
+            "document_id": "requirements",
+            "path": "inputs/tender-02/requirements.md",
+            "sha256": "4d8138505dce8885db9bb72de92e9eb36f4c9138627b6b524ba1a14e9c8d7341",
+            "char_start": 61,
+            "char_end": 105,
+            "line_start": 5,
+            "line_end": 5,
+            "quote": "本项目要求提交项目内凭证“目录整编Q1”，凭证有效期必须至少覆盖至2026-11-01。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "validity_missing",
+        "sources": [],
+        "no_direct_quote": true
+      },
+      {
+        "finding_id": "case_scale",
+        "sources": [
+          {
+            "document_id": "requirements",
+            "path": "inputs/tender-02/requirements.md",
+            "sha256": "4d8138505dce8885db9bb72de92e9eb36f4c9138627b6b524ba1a14e9c8d7341",
+            "char_start": 107,
+            "char_end": 149,
+            "line_start": 6,
+            "line_end": 6,
+            "quote": "须提供2025-01-01之后完成验收、单个案例不少于5000份目录记录的案例材料。"
+          },
+          {
+            "document_id": "organization",
+            "path": "inputs/tender-02/organization.md",
+            "sha256": "cabebac1de425208ff8755b3064cbf46135fe655057d4712e9a18bc3fcb0bc32",
+            "char_start": 105,
+            "char_end": 154,
+            "line_start": 11,
+            "line_end": 11,
+            "quote": "合成苇叶目录项目验收页记载：验收日期为2025-08-21，整编完成并验收的目录记录为6200份。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "staffing",
+        "sources": [
+          {
+            "document_id": "requirements",
+            "path": "inputs/tender-02/requirements.md",
+            "sha256": "4d8138505dce8885db9bb72de92e9eb36f4c9138627b6b524ba1a14e9c8d7341",
+            "char_start": 151,
+            "char_end": 191,
+            "line_start": 7,
+            "line_end": 7,
+            "quote": "团队至少两人，均须能够在2026-10-10至2026-10-31期间专职参与。"
+          },
+          {
+            "document_id": "organization",
+            "path": "inputs/tender-02/organization.md",
+            "sha256": "cabebac1de425208ff8755b3064cbf46135fe655057d4712e9a18bc3fcb0bc32",
+            "char_start": 170,
+            "char_end": 213,
+            "line_start": 15,
+            "line_end": 15,
+            "quote": "成员丙与成员丁已确认2026-10-10至2026-10-31期间全程专职参加本项目。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "price",
+        "sources": [
+          {
+            "document_id": "requirements",
+            "path": "inputs/tender-02/requirements.md",
+            "sha256": "4d8138505dce8885db9bb72de92e9eb36f4c9138627b6b524ba1a14e9c8d7341",
+            "char_start": 193,
+            "char_end": 226,
+            "line_start": 8,
+            "line_end": 8,
+            "quote": "全部费用合计不得超过80000元，且不接受后续追加交通或复核费用。"
+          },
+          {
+            "document_id": "organization",
+            "path": "inputs/tender-02/organization.md",
+            "sha256": "cabebac1de425208ff8755b3064cbf46135fe655057d4712e9a18bc3fcb0bc32",
+            "char_start": 215,
+            "char_end": 250,
+            "line_start": 16,
+            "line_end": 16,
+            "quote": "项目报价为76000元，覆盖全部工作、交通和复核费用，无追加费用条款。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "data_handling",
+        "sources": [
+          {
+            "document_id": "requirements",
+            "path": "inputs/tender-02/requirements.md",
+            "sha256": "4d8138505dce8885db9bb72de92e9eb36f4c9138627b6b524ba1a14e9c8d7341",
+            "char_start": 228,
+            "char_end": 257,
+            "line_start": 9,
+            "line_end": 9,
+            "quote": "目录记录只允许在委托方离线终端上操作，不得同步到外部服务。"
+          },
+          {
+            "document_id": "organization",
+            "path": "inputs/tender-02/organization.md",
+            "sha256": "cabebac1de425208ff8755b3064cbf46135fe655057d4712e9a18bc3fcb0bc32",
+            "char_start": 252,
+            "char_end": 287,
+            "line_start": 17,
+            "line_end": 17,
+            "quote": "实施方案采用委托方离线终端，不启用外部同步，不向外部服务传输目录记录。"
+          }
+        ],
+        "no_direct_quote": false
+      }
+    ],
+    "tender-03": [
+      {
+        "finding_id": "source_status",
+        "sources": [
+          {
+            "document_id": "organization",
+            "path": "inputs/tender-03/organization.md",
+            "sha256": "1c49dd866a9f8e741364fbba543ff1a85a58df373ba6c4fcb0e3b98b62719e94",
+            "char_start": 17,
+            "char_end": 65,
+            "line_start": 3,
+            "line_end": 3,
+            "quote": "记录日期：2026-10-01。此记录属于合成资料包，资料包未给它设置高于其他同日记录的优先级。"
+          },
+          {
+            "document_id": "organization_b",
+            "path": "inputs/tender-03/organization-b.md",
+            "sha256": "86b029c59f80b722700967318d17f22c6f165fb91cf0b0751cec097b218c8900",
+            "char_start": 17,
+            "char_end": 65,
+            "line_start": 3,
+            "line_end": 3,
+            "quote": "记录日期：2026-10-01。此记录属于合成资料包，资料包未给它设置高于其他同日记录的优先级。"
+          },
+          {
+            "document_id": "organization_b",
+            "path": "inputs/tender-03/organization-b.md",
+            "sha256": "86b029c59f80b722700967318d17f22c6f165fb91cf0b0751cec097b218c8900",
+            "char_start": 156,
+            "char_end": 189,
+            "line_start": 7,
+            "line_end": 7,
+            "quote": "本页没有记载它与方案记录甲之间的审批先后、签署生效时间或替代关系。"
+          },
+          {
+            "document_id": "requirements",
+            "path": "inputs/tender-03/requirements.md",
+            "sha256": "9843059be6df3be329ef77def4855866a94922868c338424de9cdeb4f81d7ab1",
+            "char_start": 251,
+            "char_end": 306,
+            "line_start": 11,
+            "line_end": 11,
+            "quote": "机构提供多份同日方案时，本项目不默认按附件顺序、篇幅或文件名字母确定效力，需要机构澄清其当前采用的方案及依据。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "staff_conflict",
+        "sources": [
+          {
+            "document_id": "requirements",
+            "path": "inputs/tender-03/requirements.md",
+            "sha256": "9843059be6df3be329ef77def4855866a94922868c338424de9cdeb4f81d7ab1",
+            "char_start": 145,
+            "char_end": 184,
+            "line_start": 7,
+            "line_end": 7,
+            "quote": "2026-10-15至2026-11-30期间必须至少有两名专职成员全程参与。"
+          },
+          {
+            "document_id": "organization",
+            "path": "inputs/tender-03/organization.md",
+            "sha256": "1c49dd866a9f8e741364fbba543ff1a85a58df373ba6c4fcb0e3b98b62719e94",
+            "char_start": 155,
+            "char_end": 201,
+            "line_start": 7,
+            "line_end": 7,
+            "quote": "计划安排成员戊、成员己两人，自2026-10-15至2026-11-30全程专职参与本项目。"
+          },
+          {
+            "document_id": "organization_b",
+            "path": "inputs/tender-03/organization-b.md",
+            "sha256": "86b029c59f80b722700967318d17f22c6f165fb91cf0b0751cec097b218c8900",
+            "char_start": 69,
+            "char_end": 130,
+            "line_start": 5,
+            "line_end": 5,
+            "quote": "人员配置表仅安排成员戊一人，自2026-10-15至2026-11-30全程专职参与本项目；成员己在该期间拟投入另一项目。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "price_conflict",
+        "sources": [
+          {
+            "document_id": "requirements",
+            "path": "inputs/tender-03/requirements.md",
+            "sha256": "9843059be6df3be329ef77def4855866a94922868c338424de9cdeb4f81d7ab1",
+            "char_start": 186,
+            "char_end": 209,
+            "line_start": 8,
+            "line_end": 8,
+            "quote": "包括全部费用的项目总报价上限为120000元。"
+          },
+          {
+            "document_id": "organization",
+            "path": "inputs/tender-03/organization.md",
+            "sha256": "1c49dd866a9f8e741364fbba543ff1a85a58df373ba6c4fcb0e3b98b62719e94",
+            "char_start": 203,
+            "char_end": 225,
+            "line_start": 8,
+            "line_end": 8,
+            "quote": "本记录列明的全部费用总报价为116000元。"
+          },
+          {
+            "document_id": "organization_b",
+            "path": "inputs/tender-03/organization-b.md",
+            "sha256": "86b029c59f80b722700967318d17f22c6f165fb91cf0b0751cec097b218c8900",
+            "char_start": 132,
+            "char_end": 154,
+            "line_start": 6,
+            "line_end": 6,
+            "quote": "本记录列明的全部费用总报价为128000元。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "credential",
+        "sources": [
+          {
+            "document_id": "requirements",
+            "path": "inputs/tender-03/requirements.md",
+            "sha256": "9843059be6df3be329ef77def4855866a94922868c338424de9cdeb4f81d7ab1",
+            "char_start": 66,
+            "char_end": 104,
+            "line_start": 5,
+            "line_end": 5,
+            "quote": "参与机构须持有项目内凭证“复核协作R2”，有效期覆盖至2026-11-30。"
+          },
+          {
+            "document_id": "organization",
+            "path": "inputs/tender-03/organization.md",
+            "sha256": "1c49dd866a9f8e741364fbba543ff1a85a58df373ba6c4fcb0e3b98b62719e94",
+            "char_start": 69,
+            "char_end": 114,
+            "line_start": 5,
+            "line_end": 5,
+            "quote": "复核协作R2凭证摘录显示：虚构机构丙的有效期为2026-02-01至2026-12-31。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "case_scale",
+        "sources": [
+          {
+            "document_id": "requirements",
+            "path": "inputs/tender-03/requirements.md",
+            "sha256": "9843059be6df3be329ef77def4855866a94922868c338424de9cdeb4f81d7ab1",
+            "char_start": 106,
+            "char_end": 143,
+            "line_start": 6,
+            "line_end": 6,
+            "quote": "须有2024-01-01之后完成验收且不少于8000条记录的同类复核项目。"
+          },
+          {
+            "document_id": "organization",
+            "path": "inputs/tender-03/organization.md",
+            "sha256": "1c49dd866a9f8e741364fbba543ff1a85a58df373ba6c4fcb0e3b98b62719e94",
+            "char_start": 116,
+            "char_end": 153,
+            "line_start": 6,
+            "line_end": 6,
+            "quote": "合成青苔复核项目于2025-06-20完成验收，验收数量为9000条记录。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "delivery",
+        "sources": [
+          {
+            "document_id": "requirements",
+            "path": "inputs/tender-03/requirements.md",
+            "sha256": "9843059be6df3be329ef77def4855866a94922868c338424de9cdeb4f81d7ab1",
+            "char_start": 211,
+            "char_end": 236,
+            "line_start": 9,
+            "line_end": 9,
+            "quote": "本项目所有成果的最晚交付日为2026-11-15。"
+          },
+          {
+            "document_id": "organization",
+            "path": "inputs/tender-03/organization.md",
+            "sha256": "1c49dd866a9f8e741364fbba543ff1a85a58df373ba6c4fcb0e3b98b62719e94",
+            "char_start": 227,
+            "char_end": 247,
+            "line_start": 9,
+            "line_end": 9,
+            "quote": "成果计划于2026-11-10全部交付。"
+          }
+        ],
+        "no_direct_quote": false
+      }
+    ],
+    "tender-04": [
+      {
+        "finding_id": "specific_deadline",
+        "sources": [
+          {
+            "document_id": "requirements",
+            "path": "inputs/tender-04/requirements.md",
+            "sha256": "e38a2e98cf8b9bc4254e9a622ed04840ef8e2998649789e7a9c859ebb5583938",
+            "char_start": 6602,
+            "char_end": 6680,
+            "line_start": 131,
+            "line_end": 131,
+            "quote": "本项目工作编号B-4适用压缩交付窗口：全部成果最晚须于2026-10-25交付，一般签约后六十日窗口不适用于B-4；交付计划晚于该日期即不满足本项参与条件。"
+          },
+          {
+            "document_id": "organization",
+            "path": "inputs/tender-04/organization.md",
+            "sha256": "75cc46bfb407e3a08ff67b119422fd5502547c8ffcf873f0142f6881beb01b54",
+            "char_start": 246,
+            "char_end": 268,
+            "line_start": 10,
+            "line_end": 10,
+            "quote": "榆灯项目的计划交付日为2026-11-05。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "credential",
+        "sources": [
+          {
+            "document_id": "requirements",
+            "path": "inputs/tender-04/requirements.md",
+            "sha256": "e38a2e98cf8b9bc4254e9a622ed04840ef8e2998649789e7a9c859ebb5583938",
+            "char_start": 146,
+            "char_end": 182,
+            "line_start": 8,
+            "line_end": 8,
+            "quote": "机构须持有项目内凭证“整理作业S1”，有效期覆盖至2026-11-30。"
+          },
+          {
+            "document_id": "organization",
+            "path": "inputs/tender-04/organization.md",
+            "sha256": "75cc46bfb407e3a08ff67b119422fd5502547c8ffcf873f0142f6881beb01b54",
+            "char_start": 52,
+            "char_end": 101,
+            "line_start": 5,
+            "line_end": 5,
+            "quote": "整理作业S1凭证摘录记载：持有人为虚构机构丁，有效期为2026-01-01至2026-12-31。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "case_scale",
+        "sources": [
+          {
+            "document_id": "requirements",
+            "path": "inputs/tender-04/requirements.md",
+            "sha256": "e38a2e98cf8b9bc4254e9a622ed04840ef8e2998649789e7a9c859ebb5583938",
+            "char_start": 184,
+            "char_end": 224,
+            "line_start": 9,
+            "line_end": 9,
+            "quote": "须提供2025-01-01之后完成验收、单个案例不少于4000份材料的整理经历。"
+          },
+          {
+            "document_id": "organization",
+            "path": "inputs/tender-04/organization.md",
+            "sha256": "75cc46bfb407e3a08ff67b119422fd5502547c8ffcf873f0142f6881beb01b54",
+            "char_start": 103,
+            "char_end": 140,
+            "line_start": 6,
+            "line_end": 6,
+            "quote": "合成叶舟整理项目在2025-09-18完成验收，验收材料数量为4800份。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "staffing",
+        "sources": [
+          {
+            "document_id": "requirements",
+            "path": "inputs/tender-04/requirements.md",
+            "sha256": "e38a2e98cf8b9bc4254e9a622ed04840ef8e2998649789e7a9c859ebb5583938",
+            "char_start": 226,
+            "char_end": 266,
+            "line_start": 10,
+            "line_end": 10,
+            "quote": "须安排至少两名成员，自2026-10-10至2026-11-15均能够专职参与。"
+          },
+          {
+            "document_id": "organization",
+            "path": "inputs/tender-04/organization.md",
+            "sha256": "75cc46bfb407e3a08ff67b119422fd5502547c8ffcf873f0142f6881beb01b54",
+            "char_start": 142,
+            "char_end": 182,
+            "line_start": 7,
+            "line_end": 7,
+            "quote": "成员庚和成员辛均可自2026-10-10至2026-11-15专职参与榆灯项目。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "price",
+        "sources": [
+          {
+            "document_id": "requirements",
+            "path": "inputs/tender-04/requirements.md",
+            "sha256": "e38a2e98cf8b9bc4254e9a622ed04840ef8e2998649789e7a9c859ebb5583938",
+            "char_start": 268,
+            "char_end": 289,
+            "line_start": 11,
+            "line_end": 11,
+            "quote": "包括全部费用的总报价不得超过90000元。"
+          },
+          {
+            "document_id": "organization",
+            "path": "inputs/tender-04/organization.md",
+            "sha256": "75cc46bfb407e3a08ff67b119422fd5502547c8ffcf873f0142f6881beb01b54",
+            "char_start": 184,
+            "char_end": 209,
+            "line_start": 8,
+            "line_end": 8,
+            "quote": "包括全部费用的拟报价为88000元，不设追加费用。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "data_handling",
+        "sources": [
+          {
+            "document_id": "requirements",
+            "path": "inputs/tender-04/requirements.md",
+            "sha256": "e38a2e98cf8b9bc4254e9a622ed04840ef8e2998649789e7a9c859ebb5583938",
+            "char_start": 291,
+            "char_end": 321,
+            "line_start": 12,
+            "line_end": 12,
+            "quote": "所有原始材料必须留在项目方离线终端内，不得上传任何外部服务。"
+          },
+          {
+            "document_id": "organization",
+            "path": "inputs/tender-04/organization.md",
+            "sha256": "75cc46bfb407e3a08ff67b119422fd5502547c8ffcf873f0142f6881beb01b54",
+            "char_start": 211,
+            "char_end": 244,
+            "line_start": 9,
+            "line_end": 9,
+            "quote": "实施方案在项目方离线终端内处理所有原始材料，不向任何外部服务上传。"
+          }
+        ],
+        "no_direct_quote": false
+      }
+    ],
+    "tender-05": [
+      {
+        "finding_id": "credential",
+        "sources": [
+          {
+            "document_id": "requirements",
+            "path": "inputs/tender-05/requirements.md",
+            "sha256": "9aad78c7935a9609c186bb80146321b873a1b512cbd0b32152ccf662f4eff187",
+            "char_start": 103,
+            "char_end": 161,
+            "line_start": 7,
+            "line_end": 7,
+            "quote": "机构须提交项目内凭证“资料处理等级Q2”，且该凭证有效期必须覆盖至2026-11-15；仅覆盖申请当日不算满足本项。"
+          },
+          {
+            "document_id": "organization",
+            "path": "inputs/tender-05/organization.md",
+            "sha256": "ce461549f687cfc56558f744dd4ec1e16c9c7550d4e63b83753badbcc8c5bfa9",
+            "char_start": 64,
+            "char_end": 111,
+            "line_start": 7,
+            "line_end": 7,
+            "quote": "资料处理等级Q2的持有人为虚构机构甲；凭证有效期为2026-01-01至2026-10-31。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "case_scale",
+        "sources": [
+          {
+            "document_id": "requirements",
+            "path": "inputs/tender-05/requirements.md",
+            "sha256": "9aad78c7935a9609c186bb80146321b873a1b512cbd0b32152ccf662f4eff187",
+            "char_start": 166,
+            "char_end": 227,
+            "line_start": 8,
+            "line_end": 8,
+            "quote": "至少提供一个在2024-01-01至2026-09-30之间完成验收的同类归整案例，单个案例的验收数量不得少于8000份。"
+          },
+          {
+            "document_id": "organization",
+            "path": "inputs/tender-05/organization.md",
+            "sha256": "ce461549f687cfc56558f744dd4ec1e16c9c7550d4e63b83753badbcc8c5bfa9",
+            "char_start": 168,
+            "char_end": 230,
+            "line_start": 12,
+            "line_end": 12,
+            "quote": "“合成海螺档案归整项目”的验收记录载明：2025-12-08完成验收，验收数量为9200份，服务内容为分类、编号和逐份复核。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "staffing",
+        "sources": [
+          {
+            "document_id": "requirements",
+            "path": "inputs/tender-05/requirements.md",
+            "sha256": "9aad78c7935a9609c186bb80146321b873a1b512cbd0b32152ccf662f4eff187",
+            "char_start": 232,
+            "char_end": 299,
+            "line_start": 9,
+            "line_end": 9,
+            "quote": "须安排不少于两名专职成员，自2026-10-15起至2026-11-15止连续可投入本项目；仅在部分日期可投入的人员不计入该最低人数。"
+          },
+          {
+            "document_id": "organization",
+            "path": "inputs/tender-05/organization.md",
+            "sha256": "ce461549f687cfc56558f744dd4ec1e16c9c7550d4e63b83753badbcc8c5bfa9",
+            "char_start": 248,
+            "char_end": 306,
+            "line_start": 16,
+            "line_end": 16,
+            "quote": "成员甲和成员乙已列入本项目排期，两人均可自2026-10-15至2026-11-15专职投入，期间没有其他项目占用。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "delivery",
+        "sources": [
+          {
+            "document_id": "requirements",
+            "path": "inputs/tender-05/requirements.md",
+            "sha256": "9aad78c7935a9609c186bb80146321b873a1b512cbd0b32152ccf662f4eff187",
+            "char_start": 304,
+            "char_end": 325,
+            "line_start": 10,
+            "line_end": 10,
+            "quote": "全部成果最晚须于2026-11-15交付。"
+          },
+          {
+            "document_id": "organization",
+            "path": "inputs/tender-05/organization.md",
+            "sha256": "ce461549f687cfc56558f744dd4ec1e16c9c7550d4e63b83753badbcc8c5bfa9",
+            "char_start": 308,
+            "char_end": 333,
+            "line_start": 17,
+            "line_end": 17,
+            "quote": "本项目计划在2026-11-12完成全部成果交付。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "price",
+        "sources": [
+          {
+            "document_id": "requirements",
+            "path": "inputs/tender-05/requirements.md",
+            "sha256": "9aad78c7935a9609c186bb80146321b873a1b512cbd0b32152ccf662f4eff187",
+            "char_start": 330,
+            "char_end": 368,
+            "line_start": 11,
+            "line_end": 11,
+            "quote": "总报价不得超过120000元，价格必须包含整理、复核、交付和交通的全部费用。"
+          },
+          {
+            "document_id": "organization",
+            "path": "inputs/tender-05/organization.md",
+            "sha256": "ce461549f687cfc56558f744dd4ec1e16c9c7550d4e63b83753badbcc8c5bfa9",
+            "char_start": 351,
+            "char_end": 392,
+            "line_start": 21,
+            "line_end": 21,
+            "quote": "拟提交总报价为118000元，已包含整理、复核、交付和交通的全部费用，不另收费用。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "data_handling",
+        "sources": [
+          {
+            "document_id": "requirements",
+            "path": "inputs/tender-05/requirements.md",
+            "sha256": "9aad78c7935a9609c186bb80146321b873a1b512cbd0b32152ccf662f4eff187",
+            "char_start": 373,
+            "char_end": 422,
+            "line_start": 12,
+            "line_end": 12,
+            "quote": "项目原始资料只能在委托方提供的离线设备上处理，不得上传第三方云服务；机构须说明其可执行的工作方式。"
+          },
+          {
+            "document_id": "organization",
+            "path": "inputs/tender-05/organization.md",
+            "sha256": "ce461549f687cfc56558f744dd4ec1e16c9c7550d4e63b83753badbcc8c5bfa9",
+            "char_start": 394,
+            "char_end": 446,
+            "line_start": 22,
+            "line_end": 22,
+            "quote": "工作方案规定：使用委托方提供的离线设备，关闭云同步，所有原始资料均留在委托方设备内，不上传第三方云服务。"
+          }
+        ],
+        "no_direct_quote": false
+      }
+    ],
+    "tender-06": [
+      {
+        "finding_id": "credential",
+        "sources": [
+          {
+            "document_id": "requirements",
+            "path": "inputs/tender-06/requirements.md",
+            "sha256": "9aad78c7935a9609c186bb80146321b873a1b512cbd0b32152ccf662f4eff187",
+            "char_start": 103,
+            "char_end": 161,
+            "line_start": 7,
+            "line_end": 7,
+            "quote": "机构须提交项目内凭证“资料处理等级Q2”，且该凭证有效期必须覆盖至2026-11-15；仅覆盖申请当日不算满足本项。"
+          },
+          {
+            "document_id": "organization",
+            "path": "inputs/tender-06/organization.md",
+            "sha256": "74d6f21e1952ccaf5ba1421200a7ad563e61e17d34b21bd131f3b7d8a2872aa2",
+            "char_start": 64,
+            "char_end": 111,
+            "line_start": 7,
+            "line_end": 7,
+            "quote": "资料处理等级Q2的持有人为虚构机构甲；凭证有效期为2026-01-01至2026-12-31。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "case_scale",
+        "sources": [
+          {
+            "document_id": "requirements",
+            "path": "inputs/tender-06/requirements.md",
+            "sha256": "9aad78c7935a9609c186bb80146321b873a1b512cbd0b32152ccf662f4eff187",
+            "char_start": 166,
+            "char_end": 227,
+            "line_start": 8,
+            "line_end": 8,
+            "quote": "至少提供一个在2024-01-01至2026-09-30之间完成验收的同类归整案例，单个案例的验收数量不得少于8000份。"
+          },
+          {
+            "document_id": "organization",
+            "path": "inputs/tender-06/organization.md",
+            "sha256": "74d6f21e1952ccaf5ba1421200a7ad563e61e17d34b21bd131f3b7d8a2872aa2",
+            "char_start": 168,
+            "char_end": 230,
+            "line_start": 12,
+            "line_end": 12,
+            "quote": "“合成海螺档案归整项目”的验收记录载明：2025-12-08完成验收，验收数量为9200份，服务内容为分类、编号和逐份复核。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "staffing",
+        "sources": [
+          {
+            "document_id": "requirements",
+            "path": "inputs/tender-06/requirements.md",
+            "sha256": "9aad78c7935a9609c186bb80146321b873a1b512cbd0b32152ccf662f4eff187",
+            "char_start": 232,
+            "char_end": 299,
+            "line_start": 9,
+            "line_end": 9,
+            "quote": "须安排不少于两名专职成员，自2026-10-15起至2026-11-15止连续可投入本项目；仅在部分日期可投入的人员不计入该最低人数。"
+          },
+          {
+            "document_id": "organization",
+            "path": "inputs/tender-06/organization.md",
+            "sha256": "74d6f21e1952ccaf5ba1421200a7ad563e61e17d34b21bd131f3b7d8a2872aa2",
+            "char_start": 248,
+            "char_end": 306,
+            "line_start": 16,
+            "line_end": 16,
+            "quote": "成员甲和成员乙已列入本项目排期，两人均可自2026-10-15至2026-11-15专职投入，期间没有其他项目占用。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "delivery",
+        "sources": [
+          {
+            "document_id": "requirements",
+            "path": "inputs/tender-06/requirements.md",
+            "sha256": "9aad78c7935a9609c186bb80146321b873a1b512cbd0b32152ccf662f4eff187",
+            "char_start": 304,
+            "char_end": 325,
+            "line_start": 10,
+            "line_end": 10,
+            "quote": "全部成果最晚须于2026-11-15交付。"
+          },
+          {
+            "document_id": "organization",
+            "path": "inputs/tender-06/organization.md",
+            "sha256": "74d6f21e1952ccaf5ba1421200a7ad563e61e17d34b21bd131f3b7d8a2872aa2",
+            "char_start": 308,
+            "char_end": 333,
+            "line_start": 17,
+            "line_end": 17,
+            "quote": "本项目计划在2026-11-12完成全部成果交付。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "price",
+        "sources": [
+          {
+            "document_id": "requirements",
+            "path": "inputs/tender-06/requirements.md",
+            "sha256": "9aad78c7935a9609c186bb80146321b873a1b512cbd0b32152ccf662f4eff187",
+            "char_start": 330,
+            "char_end": 368,
+            "line_start": 11,
+            "line_end": 11,
+            "quote": "总报价不得超过120000元，价格必须包含整理、复核、交付和交通的全部费用。"
+          },
+          {
+            "document_id": "organization",
+            "path": "inputs/tender-06/organization.md",
+            "sha256": "74d6f21e1952ccaf5ba1421200a7ad563e61e17d34b21bd131f3b7d8a2872aa2",
+            "char_start": 351,
+            "char_end": 392,
+            "line_start": 21,
+            "line_end": 21,
+            "quote": "拟提交总报价为118000元，已包含整理、复核、交付和交通的全部费用，不另收费用。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "data_handling",
+        "sources": [
+          {
+            "document_id": "requirements",
+            "path": "inputs/tender-06/requirements.md",
+            "sha256": "9aad78c7935a9609c186bb80146321b873a1b512cbd0b32152ccf662f4eff187",
+            "char_start": 373,
+            "char_end": 422,
+            "line_start": 12,
+            "line_end": 12,
+            "quote": "项目原始资料只能在委托方提供的离线设备上处理，不得上传第三方云服务；机构须说明其可执行的工作方式。"
+          },
+          {
+            "document_id": "organization",
+            "path": "inputs/tender-06/organization.md",
+            "sha256": "74d6f21e1952ccaf5ba1421200a7ad563e61e17d34b21bd131f3b7d8a2872aa2",
+            "char_start": 394,
+            "char_end": 446,
+            "line_start": 22,
+            "line_end": 22,
+            "quote": "工作方案规定：使用委托方提供的离线设备，关闭云同步，所有原始资料均留在委托方设备内，不上传第三方云服务。"
+          }
+        ],
+        "no_direct_quote": false
+      }
+    ],
+    "course-01": [
+      {
+        "finding_id": "goal",
+        "sources": [
+          {
+            "document_id": "course",
+            "path": "inputs/course-01/course.md",
+            "sha256": "7fd1cfbd0fa311989c9a0b75039730851acfe6c6d08d60931d6386bc33f5a1ed",
+            "char_start": 168,
+            "char_end": 210,
+            "line_start": 9,
+            "line_end": 9,
+            "quote": "内容包括数据清洗、分组汇总、图表展示及自动生成周报，结课项目为一份可复跑的数据周报。"
+          },
+          {
+            "document_id": "background",
+            "path": "inputs/course-01/background.md",
+            "sha256": "18a404b2a3e5de19e84d8af88525379893fba7a4d9dbbabbf86f98dd4b5dec27",
+            "char_start": 79,
+            "char_end": 110,
+            "line_start": 6,
+            "line_end": 6,
+            "quote": "我的目标是从课程开课日起8周内做出自动生成数据周报的个人工具。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "required-time",
+        "sources": [
+          {
+            "document_id": "course",
+            "path": "inputs/course-01/course.md",
+            "sha256": "7fd1cfbd0fa311989c9a0b75039730851acfe6c6d08d60931d6386bc33f5a1ed",
+            "char_start": 212,
+            "char_end": 244,
+            "line_start": 10,
+            "line_end": 10,
+            "quote": "每周三19:30至21:30须实时到课，另需每周3小时作业时间。"
+          },
+          {
+            "document_id": "course",
+            "path": "inputs/course-01/course.md",
+            "sha256": "7fd1cfbd0fa311989c9a0b75039730851acfe6c6d08d60931d6386bc33f5a1ed",
+            "char_start": 246,
+            "char_end": 264,
+            "line_start": 11,
+            "line_end": 11,
+            "quote": "课程不提供用回放替代实时到课的安排。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "skills",
+        "sources": [
+          {
+            "document_id": "course",
+            "path": "inputs/course-01/course.md",
+            "sha256": "7fd1cfbd0fa311989c9a0b75039730851acfe6c6d08d60931d6386bc33f5a1ed",
+            "char_start": 101,
+            "char_end": 139,
+            "line_start": 7,
+            "line_end": 7,
+            "quote": "课程要求学员已能使用Python函数、列表和字典，并独立完成CSV文件读写。"
+          },
+          {
+            "document_id": "course",
+            "path": "inputs/course-01/course.md",
+            "sha256": "7fd1cfbd0fa311989c9a0b75039730851acfe6c6d08d60931d6386bc33f5a1ed",
+            "char_start": 141,
+            "char_end": 166,
+            "line_start": 8,
+            "line_end": 8,
+            "quote": "SQL属于建议基础，不是报名或完成课程的必需条件。"
+          },
+          {
+            "document_id": "background",
+            "path": "inputs/course-01/background.md",
+            "sha256": "18a404b2a3e5de19e84d8af88525379893fba7a4d9dbbabbf86f98dd4b5dec27",
+            "char_start": 35,
+            "char_end": 66,
+            "line_start": 4,
+            "line_end": 4,
+            "quote": "我已写过使用函数、列表和字典的小脚本，并独立完成过CSV读写。"
+          },
+          {
+            "document_id": "background",
+            "path": "inputs/course-01/background.md",
+            "sha256": "18a404b2a3e5de19e84d8af88525379893fba7a4d9dbbabbf86f98dd4b5dec27",
+            "char_start": 68,
+            "char_end": 77,
+            "line_start": 5,
+            "line_end": 5,
+            "quote": "我没有学过SQL。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "schedule",
+        "sources": [
+          {
+            "document_id": "background",
+            "path": "inputs/course-01/background.md",
+            "sha256": "18a404b2a3e5de19e84d8af88525379893fba7a4d9dbbabbf86f98dd4b5dec27",
+            "char_start": 148,
+            "char_end": 185,
+            "line_start": 8,
+            "line_end": 8,
+            "quote": "开课后的8周，我每周能投入6小时，周三19:30至21:30可以实时上课。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "cost",
+        "sources": [
+          {
+            "document_id": "course",
+            "path": "inputs/course-01/course.md",
+            "sha256": "7fd1cfbd0fa311989c9a0b75039730851acfe6c6d08d60931d6386bc33f5a1ed",
+            "char_start": 266,
+            "char_end": 275,
+            "line_start": 12,
+            "line_end": 12,
+            "quote": "学费为2400元。"
+          },
+          {
+            "document_id": "course",
+            "path": "inputs/course-01/course.md",
+            "sha256": "7fd1cfbd0fa311989c9a0b75039730851acfe6c6d08d60931d6386bc33f5a1ed",
+            "char_start": 277,
+            "char_end": 295,
+            "line_start": 13,
+            "line_end": 13,
+            "quote": "本课程无其他必须支付的服务或材料费。"
+          },
+          {
+            "document_id": "background",
+            "path": "inputs/course-01/background.md",
+            "sha256": "18a404b2a3e5de19e84d8af88525379893fba7a4d9dbbabbf86f98dd4b5dec27",
+            "char_start": 112,
+            "char_end": 146,
+            "line_start": 7,
+            "line_end": 7,
+            "quote": "我的总预算上限为3000元，包含学费和必须另外支付的服务或材料费用。"
+          }
+        ],
+        "no_direct_quote": false
+      }
+    ],
+    "course-02": [
+      {
+        "finding_id": "goal",
+        "sources": [
+          {
+            "document_id": "course",
+            "path": "inputs/course-02/course.md",
+            "sha256": "7fd1cfbd0fa311989c9a0b75039730851acfe6c6d08d60931d6386bc33f5a1ed",
+            "char_start": 168,
+            "char_end": 210,
+            "line_start": 9,
+            "line_end": 9,
+            "quote": "内容包括数据清洗、分组汇总、图表展示及自动生成周报，结课项目为一份可复跑的数据周报。"
+          },
+          {
+            "document_id": "background",
+            "path": "inputs/course-02/background.md",
+            "sha256": "f92c8f4066f83f50c97a1116e71ae6f9e927e47a2831df09aa76a7967771b190",
+            "char_start": 35,
+            "char_end": 66,
+            "line_start": 4,
+            "line_end": 4,
+            "quote": "我的目标是从课程开课日起8周内做出自动生成数据周报的个人工具。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "required-time",
+        "sources": [
+          {
+            "document_id": "course",
+            "path": "inputs/course-02/course.md",
+            "sha256": "7fd1cfbd0fa311989c9a0b75039730851acfe6c6d08d60931d6386bc33f5a1ed",
+            "char_start": 212,
+            "char_end": 244,
+            "line_start": 10,
+            "line_end": 10,
+            "quote": "每周三19:30至21:30须实时到课，另需每周3小时作业时间。"
+          },
+          {
+            "document_id": "course",
+            "path": "inputs/course-02/course.md",
+            "sha256": "7fd1cfbd0fa311989c9a0b75039730851acfe6c6d08d60931d6386bc33f5a1ed",
+            "char_start": 246,
+            "char_end": 264,
+            "line_start": 11,
+            "line_end": 11,
+            "quote": "课程不提供用回放替代实时到课的安排。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "unknown",
+        "sources": [],
+        "no_direct_quote": true
+      },
+      {
+        "finding_id": "cost",
+        "sources": [
+          {
+            "document_id": "course",
+            "path": "inputs/course-02/course.md",
+            "sha256": "7fd1cfbd0fa311989c9a0b75039730851acfe6c6d08d60931d6386bc33f5a1ed",
+            "char_start": 266,
+            "char_end": 275,
+            "line_start": 12,
+            "line_end": 12,
+            "quote": "学费为2400元。"
+          },
+          {
+            "document_id": "course",
+            "path": "inputs/course-02/course.md",
+            "sha256": "7fd1cfbd0fa311989c9a0b75039730851acfe6c6d08d60931d6386bc33f5a1ed",
+            "char_start": 277,
+            "char_end": 295,
+            "line_start": 13,
+            "line_end": 13,
+            "quote": "本课程无其他必须支付的服务或材料费。"
+          },
+          {
+            "document_id": "background",
+            "path": "inputs/course-02/background.md",
+            "sha256": "f92c8f4066f83f50c97a1116e71ae6f9e927e47a2831df09aa76a7967771b190",
+            "char_start": 68,
+            "char_end": 102,
+            "line_start": 5,
+            "line_end": 5,
+            "quote": "我的总预算上限为3000元，包含学费和必须另外支付的服务或材料费用。"
+          }
+        ],
+        "no_direct_quote": false
+      }
+    ],
+    "course-03": [
+      {
+        "finding_id": "goal",
+        "sources": [
+          {
+            "document_id": "course",
+            "path": "inputs/course-03/course.md",
+            "sha256": "7fd1cfbd0fa311989c9a0b75039730851acfe6c6d08d60931d6386bc33f5a1ed",
+            "char_start": 168,
+            "char_end": 210,
+            "line_start": 9,
+            "line_end": 9,
+            "quote": "内容包括数据清洗、分组汇总、图表展示及自动生成周报，结课项目为一份可复跑的数据周报。"
+          },
+          {
+            "document_id": "background",
+            "path": "inputs/course-03/background.md",
+            "sha256": "ff66882f29aefab316cae1e2cfee60641ba042a308c9e2418132abd5fe9312d7",
+            "char_start": 79,
+            "char_end": 110,
+            "line_start": 6,
+            "line_end": 6,
+            "quote": "我的目标是从课程开课日起8周内做出自动生成数据周报的个人工具。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "required-time",
+        "sources": [
+          {
+            "document_id": "course",
+            "path": "inputs/course-03/course.md",
+            "sha256": "7fd1cfbd0fa311989c9a0b75039730851acfe6c6d08d60931d6386bc33f5a1ed",
+            "char_start": 212,
+            "char_end": 244,
+            "line_start": 10,
+            "line_end": 10,
+            "quote": "每周三19:30至21:30须实时到课，另需每周3小时作业时间。"
+          },
+          {
+            "document_id": "course",
+            "path": "inputs/course-03/course.md",
+            "sha256": "7fd1cfbd0fa311989c9a0b75039730851acfe6c6d08d60931d6386bc33f5a1ed",
+            "char_start": 246,
+            "char_end": 264,
+            "line_start": 11,
+            "line_end": 11,
+            "quote": "课程不提供用回放替代实时到课的安排。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "skills",
+        "sources": [
+          {
+            "document_id": "course",
+            "path": "inputs/course-03/course.md",
+            "sha256": "7fd1cfbd0fa311989c9a0b75039730851acfe6c6d08d60931d6386bc33f5a1ed",
+            "char_start": 101,
+            "char_end": 139,
+            "line_start": 7,
+            "line_end": 7,
+            "quote": "课程要求学员已能使用Python函数、列表和字典，并独立完成CSV文件读写。"
+          },
+          {
+            "document_id": "course",
+            "path": "inputs/course-03/course.md",
+            "sha256": "7fd1cfbd0fa311989c9a0b75039730851acfe6c6d08d60931d6386bc33f5a1ed",
+            "char_start": 141,
+            "char_end": 166,
+            "line_start": 8,
+            "line_end": 8,
+            "quote": "SQL属于建议基础，不是报名或完成课程的必需条件。"
+          },
+          {
+            "document_id": "background",
+            "path": "inputs/course-03/background.md",
+            "sha256": "ff66882f29aefab316cae1e2cfee60641ba042a308c9e2418132abd5fe9312d7",
+            "char_start": 35,
+            "char_end": 66,
+            "line_start": 4,
+            "line_end": 4,
+            "quote": "我已写过使用函数、列表和字典的小脚本，并独立完成过CSV读写。"
+          },
+          {
+            "document_id": "background",
+            "path": "inputs/course-03/background.md",
+            "sha256": "ff66882f29aefab316cae1e2cfee60641ba042a308c9e2418132abd5fe9312d7",
+            "char_start": 68,
+            "char_end": 77,
+            "line_start": 5,
+            "line_end": 5,
+            "quote": "我没有学过SQL。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "conflict",
+        "sources": [
+          {
+            "document_id": "background",
+            "path": "inputs/course-03/background.md",
+            "sha256": "ff66882f29aefab316cae1e2cfee60641ba042a308c9e2418132abd5fe9312d7",
+            "char_start": 148,
+            "char_end": 185,
+            "line_start": 8,
+            "line_end": 8,
+            "quote": "开课后的8周，我每周能投入4小时，周三19:30至21:30可以实时上课。"
+          },
+          {
+            "document_id": "availability",
+            "path": "inputs/course-03/availability.md",
+            "sha256": "a162191a3ab1459e8dd9520dc4b680eca04ec8571fc191479b694993a4e7328c",
+            "char_start": 49,
+            "char_end": 87,
+            "line_start": 4,
+            "line_end": 4,
+            "quote": "开课后的8周，我每周可以投入8小时，周三19:30至21:30可以实时上课。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "cost",
+        "sources": [
+          {
+            "document_id": "course",
+            "path": "inputs/course-03/course.md",
+            "sha256": "7fd1cfbd0fa311989c9a0b75039730851acfe6c6d08d60931d6386bc33f5a1ed",
+            "char_start": 266,
+            "char_end": 275,
+            "line_start": 12,
+            "line_end": 12,
+            "quote": "学费为2400元。"
+          },
+          {
+            "document_id": "course",
+            "path": "inputs/course-03/course.md",
+            "sha256": "7fd1cfbd0fa311989c9a0b75039730851acfe6c6d08d60931d6386bc33f5a1ed",
+            "char_start": 277,
+            "char_end": 295,
+            "line_start": 13,
+            "line_end": 13,
+            "quote": "本课程无其他必须支付的服务或材料费。"
+          },
+          {
+            "document_id": "background",
+            "path": "inputs/course-03/background.md",
+            "sha256": "ff66882f29aefab316cae1e2cfee60641ba042a308c9e2418132abd5fe9312d7",
+            "char_start": 112,
+            "char_end": 146,
+            "line_start": 7,
+            "line_end": 7,
+            "quote": "我的总预算上限为3000元，包含学费和必须另外支付的服务或材料费用。"
+          }
+        ],
+        "no_direct_quote": false
+      }
+    ],
+    "course-04": [
+      {
+        "finding_id": "goal",
+        "sources": [
+          {
+            "document_id": "course",
+            "path": "inputs/course-04/course.md",
+            "sha256": "9141df5b9a53de90e61c6d239e26949bda0ec36d5719958fc55999467113291d",
+            "char_start": 168,
+            "char_end": 210,
+            "line_start": 9,
+            "line_end": 9,
+            "quote": "内容包括数据清洗、分组汇总、图表展示及自动生成周报，结课项目为一份可复跑的数据周报。"
+          },
+          {
+            "document_id": "background",
+            "path": "inputs/course-04/background.md",
+            "sha256": "18a404b2a3e5de19e84d8af88525379893fba7a4d9dbbabbf86f98dd4b5dec27",
+            "char_start": 79,
+            "char_end": 110,
+            "line_start": 6,
+            "line_end": 6,
+            "quote": "我的目标是从课程开课日起8周内做出自动生成数据周报的个人工具。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "required-time",
+        "sources": [
+          {
+            "document_id": "course",
+            "path": "inputs/course-04/course.md",
+            "sha256": "9141df5b9a53de90e61c6d239e26949bda0ec36d5719958fc55999467113291d",
+            "char_start": 212,
+            "char_end": 244,
+            "line_start": 10,
+            "line_end": 10,
+            "quote": "每周三19:30至21:30须实时到课，另需每周3小时作业时间。"
+          },
+          {
+            "document_id": "course",
+            "path": "inputs/course-04/course.md",
+            "sha256": "9141df5b9a53de90e61c6d239e26949bda0ec36d5719958fc55999467113291d",
+            "char_start": 246,
+            "char_end": 264,
+            "line_start": 11,
+            "line_end": 11,
+            "quote": "课程不提供用回放替代实时到课的安排。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "skills",
+        "sources": [
+          {
+            "document_id": "course",
+            "path": "inputs/course-04/course.md",
+            "sha256": "9141df5b9a53de90e61c6d239e26949bda0ec36d5719958fc55999467113291d",
+            "char_start": 101,
+            "char_end": 139,
+            "line_start": 7,
+            "line_end": 7,
+            "quote": "课程要求学员已能使用Python函数、列表和字典，并独立完成CSV文件读写。"
+          },
+          {
+            "document_id": "course",
+            "path": "inputs/course-04/course.md",
+            "sha256": "9141df5b9a53de90e61c6d239e26949bda0ec36d5719958fc55999467113291d",
+            "char_start": 141,
+            "char_end": 166,
+            "line_start": 8,
+            "line_end": 8,
+            "quote": "SQL属于建议基础，不是报名或完成课程的必需条件。"
+          },
+          {
+            "document_id": "background",
+            "path": "inputs/course-04/background.md",
+            "sha256": "18a404b2a3e5de19e84d8af88525379893fba7a4d9dbbabbf86f98dd4b5dec27",
+            "char_start": 35,
+            "char_end": 66,
+            "line_start": 4,
+            "line_end": 4,
+            "quote": "我已写过使用函数、列表和字典的小脚本，并独立完成过CSV读写。"
+          },
+          {
+            "document_id": "background",
+            "path": "inputs/course-04/background.md",
+            "sha256": "18a404b2a3e5de19e84d8af88525379893fba7a4d9dbbabbf86f98dd4b5dec27",
+            "char_start": 68,
+            "char_end": 77,
+            "line_start": 5,
+            "line_end": 5,
+            "quote": "我没有学过SQL。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "schedule",
+        "sources": [
+          {
+            "document_id": "background",
+            "path": "inputs/course-04/background.md",
+            "sha256": "18a404b2a3e5de19e84d8af88525379893fba7a4d9dbbabbf86f98dd4b5dec27",
+            "char_start": 148,
+            "char_end": 185,
+            "line_start": 8,
+            "line_end": 8,
+            "quote": "开课后的8周，我每周能投入6小时，周三19:30至21:30可以实时上课。"
+          }
+        ],
+        "no_direct_quote": false
+      },
+      {
+        "finding_id": "hidden-cost",
+        "sources": [
+          {
+            "document_id": "course",
+            "path": "inputs/course-04/course.md",
+            "sha256": "9141df5b9a53de90e61c6d239e26949bda0ec36d5719958fc55999467113291d",
+            "char_start": 266,
+            "char_end": 275,
+            "line_start": 12,
+            "line_end": 12,
+            "quote": "学费为2400元。"
+          },
+          {
+            "document_id": "course",
+            "path": "inputs/course-04/course.md",
+            "sha256": "9141df5b9a53de90e61c6d239e26949bda0ec36d5719958fc55999467113291d",
+            "char_start": 4737,
+            "char_end": 4780,
+            "line_start": 168,
+            "line_end": 168,
+            "quote": "技术服务包费用800元为必缴项目，不能用自备设备或其他订阅抵扣，且不包含在上述学费中。"
+          },
+          {
+            "document_id": "background",
+            "path": "inputs/course-04/background.md",
+            "sha256": "18a404b2a3e5de19e84d8af88525379893fba7a4d9dbbabbf86f98dd4b5dec27",
+            "char_start": 112,
+            "char_end": 146,
+            "line_start": 7,
+            "line_end": 7,
+            "quote": "我的总预算上限为3000元，包含学费和必须另外支付的服务或材料费用。"
+          }
+        ],
+        "no_direct_quote": false
+      }
+    ]
+  },
+  "scenario_fingerprints": {
+    "scenarios/career-fit": "sha256:422278f608d7ef9a87e4fc0bf5e5902640d5e1ab7df9b3b63621f007331395dd",
+    "scenarios/tender-review": "sha256:76e8291b9713ddbb3b0b807adac5886e8dc143fd7efb223cb0b3032f19798ab1",
+    "examples/quality_eval/v1/scenarios/course-fit": "sha256:52661f93b921edd91660c4193e5001e1c8e2b9711e4ee19394c9880902af18e1"
+  },
+  "positions": "UTF-8 decoded text; zero-based Unicode character offsets; one-based lines; not runtime evidence IDs"
+}

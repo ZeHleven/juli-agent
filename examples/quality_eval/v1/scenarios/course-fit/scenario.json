@@ -1,0 +1,17 @@
+{
+  "api_version": "juli.scenario.v1",
+  "id": "course-fit",
+  "version": "0.1.0",
+  "name": "课程适配评测场景",
+  "description": "结合课程资料与学习者背景，分析先修基础、学习目标、时间和预算的适配情况。",
+  "resource_roles": [
+    {"name": "course", "label": "课程资料", "min_count": 1, "max_count": 8},
+    {"name": "learner", "label": "学习者背景", "min_count": 0, "max_count": 16}
+  ],
+  "instructions": "instructions.md",
+  "result_schema": "result.schema.json",
+  "tools": [
+    {"name": "evidence.search", "version": "1.0.0"},
+    {"name": "evidence.read", "version": "1.0.0"}
+  ]
+}

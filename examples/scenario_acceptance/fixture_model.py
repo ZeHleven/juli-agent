@@ -5,6 +5,7 @@ from juli.core.common import canonical_json, digest
 from juli.core.evidence import AnalysisResult, ResultBlock
 from juli.core.models import ModelReply, ModelToolCall, ModelUsage
 from juli.core.tools import ToolReference
+from juli.model_demo import scripted_analysis_json
 
 
 class ScenarioFixtureModel:
@@ -44,4 +45,4 @@ class ScenarioFixtureModel:
         if missing:
             blocks.append(ResultBlock(kind='limitation', text='背景资料未绑定，资料不足；未提供证明不等于不具备能力，不据此作适配判断。'))
         result = AnalysisResult(task_id=task['task_id'], blocks=tuple(blocks), scenario_payload_json=canonical_json(payload))
-        return ModelReply(text=result.model_dump_json(), usage=usage)
+        return ModelReply(text=scripted_analysis_json(result), usage=usage)

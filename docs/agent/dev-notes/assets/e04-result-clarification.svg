@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1120" viewBox="0 0 1200 1120" role="img" aria-labelledby="title desc">
+  <title id="title">据理 E04：结果能接住，追问还没稳定</title>
+  <desc id="desc">合成评测机制示意，非实机截图。原生结果对象与分析、追问互斥出口仍经过原有校验。三题中背景充分题完成，方案冲突题追问并收到回答后完成；缺少出勤信息题未回读也未追问，被证据校验拒收。流程完成2/3，不是分析质量成功率。</desc>
+  <rect width="1200" height="1120" fill="#f5f2eb"/>
+  <g font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#183f35">
+    <text x="64" y="76" font-size="18" letter-spacing="3">据理 JULI · 开发笔记 E04</text>
+    <text x="64" y="139" font-size="42" font-weight="700">结果能接住，追问还没稳定</text>
+    <text x="64" y="184" font-size="22" fill="#52685f">合成评测机制示意·非实机截图</text>
+
+    <rect x="64" y="220" width="1072" height="118" rx="18" fill="#183f35"/>
+    <text x="94" y="267" font-size="29" font-weight="700" fill="#fff">E03 0/3 → E04 2/3：三题的流程完成数</text>
+    <text x="94" y="310" font-size="21" fill="#dce9e0">不是分析质量成功率；409项离线测试不能替代真实任务验收。</text>
+
+    <rect x="64" y="366" width="1072" height="134" rx="18" fill="#fff" stroke="#d9dfd7"/>
+    <text x="94" y="408" font-size="24" font-weight="700">本轮改动：原生结果对象 + 分析 / 追问互斥出口</text>
+    <text x="94" y="446" font-size="20">能分析 → 提交结果；关键未知或冲突影响判断 → 提问、等待、继续。</text>
+    <text x="94" y="480" font-size="19" fill="#52685f">内部保存格式不变；场景要求、原文回读、证据权限与预算校验仍然保留。</text>
+
+    <text x="64" y="549" font-size="24" font-weight="700">同样三道合成题，本次真实模型调用</text>
+
+    <rect x="64" y="571" width="1072" height="107" rx="16" fill="#e1eee4"/>
+    <text x="94" y="609" font-size="23" font-weight="700">01  背景充分的岗位匹配</text>
+    <text x="94" y="650" font-size="20">回读两份原文 → 分析结果通过校验并保存</text>
+    <text x="985" y="630" font-size="24" font-weight="700">完成</text>
+
+    <rect x="64" y="696" width="1072" height="107" rx="16" fill="#f1e2d7"/>
+    <text x="94" y="734" font-size="23" font-weight="700" fill="#773b2d">02  缺少出勤信息的岗位匹配</text>
+    <text x="94" y="775" font-size="20" fill="#773b2d">只搜索、未回读，也未追问 → evidence_not_read</text>
+    <text x="985" y="755" font-size="24" font-weight="700" fill="#773b2d">拒收</text>
+
+    <rect x="64" y="821" width="1072" height="107" rx="16" fill="#d3e5da"/>
+    <text x="94" y="859" font-size="23" font-weight="700">03  两份方案冲突的参与判断</text>
+    <text x="94" y="900" font-size="20">回读三份原文 → 实际追问 → 操作者回答 → 更新分析</text>
+    <text x="985" y="880" font-size="24" font-weight="700">完成</text>
+
+    <text x="64" y="980" font-size="21" font-weight="700">一个追问流程已走通，缺失信息题仍未完成。</text>
+    <text x="64" y="1019" font-size="19" fill="#52685f">仅三题、单轮实测；内容辅助复核尚未人工终审，不能证明普遍质量或稳定性。</text>
+    <text x="64" y="1066" font-size="17" fill="#52685f">来源：E04 原始交互、结果汇总及独立辅助复核 · 2026-10-02 · 仅本地准备，未发布</text>
+  </g>
+</svg>

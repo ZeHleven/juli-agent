@@ -1,0 +1,17 @@
+{
+  "status": "fixture_checks_passed",
+  "base_cases": 12,
+  "paired_variants": 4,
+  "input_documents": 35,
+  "grading_findings": 85,
+  "located_evidence_quotes": 179,
+  "long_documents_characters": {
+    "career-04": 5626,
+    "tender-04": 6761,
+    "course-04": 4782
+  },
+  "scenario_packages": 3,
+  "model_runs": 0,
+  "model_quality_score": null,
+  "scope": "fixture structure, exact source quotes, text parsing, scenario compatibility; not model quality"
+}

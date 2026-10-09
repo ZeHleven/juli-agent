@@ -1,0 +1,124 @@
+[
+  {
+    "id": "course-01",
+    "domain": "course",
+    "condition": "sufficient",
+    "split": "reserved_validation",
+    "scenario_path": "examples/quality_eval/v1/scenarios/course-fit",
+    "as_of_date": "2026-10-02",
+    "question": "请结合我的学习背景与课程资料，判断课程内容、先修基础、时间和全部必缴费用是否适合我，说明依据、未知项及下一步建议。",
+    "documents": [
+      {
+        "id": "course",
+        "path": "inputs/course-01/course.md",
+        "role": "course",
+        "display_name": "课程说明"
+      },
+      {
+        "id": "background",
+        "path": "inputs/course-01/background.md",
+        "role": "learner",
+        "display_name": "学习背景"
+      }
+    ],
+    "gold_path": "grader/course-01.json",
+    "tags": [
+      "synthetic",
+      "course-adaptation",
+      "sufficient"
+    ]
+  },
+  {
+    "id": "course-02",
+    "domain": "course",
+    "condition": "missing",
+    "split": "reserved_validation",
+    "scenario_path": "examples/quality_eval/v1/scenarios/course-fit",
+    "as_of_date": "2026-10-02",
+    "question": "请结合我的学习背景与课程资料，判断课程内容、先修基础、时间和全部必缴费用是否适合我，说明依据、未知项及下一步建议。",
+    "documents": [
+      {
+        "id": "course",
+        "path": "inputs/course-02/course.md",
+        "role": "course",
+        "display_name": "课程说明"
+      },
+      {
+        "id": "background",
+        "path": "inputs/course-02/background.md",
+        "role": "learner",
+        "display_name": "学习背景"
+      }
+    ],
+    "gold_path": "grader/course-02.json",
+    "tags": [
+      "synthetic",
+      "course-adaptation",
+      "missing"
+    ]
+  },
+  {
+    "id": "course-03",
+    "domain": "course",
+    "condition": "conflicting",
+    "split": "reserved_validation",
+    "scenario_path": "examples/quality_eval/v1/scenarios/course-fit",
+    "as_of_date": "2026-10-02",
+    "question": "请结合我的学习背景与课程资料，判断课程内容、先修基础、时间和全部必缴费用是否适合我，说明依据、未知项及下一步建议。",
+    "documents": [
+      {
+        "id": "course",
+        "path": "inputs/course-03/course.md",
+        "role": "course",
+        "display_name": "课程说明"
+      },
+      {
+        "id": "background",
+        "path": "inputs/course-03/background.md",
+        "role": "learner",
+        "display_name": "学习背景"
+      },
+      {
+        "id": "availability",
+        "path": "inputs/course-03/availability.md",
+        "role": "learner",
+        "display_name": "时间安排记录"
+      }
+    ],
+    "gold_path": "grader/course-03.json",
+    "tags": [
+      "synthetic",
+      "course-adaptation",
+      "conflicting"
+    ]
+  },
+  {
+    "id": "course-04",
+    "domain": "course",
+    "condition": "long_context",
+    "split": "reserved_validation",
+    "scenario_path": "examples/quality_eval/v1/scenarios/course-fit",
+    "as_of_date": "2026-10-02",
+    "question": "请结合我的学习背景与课程资料，判断课程内容、先修基础、时间和全部必缴费用是否适合我，说明依据、未知项及下一步建议。",
+    "documents": [
+      {
+        "id": "course",
+        "path": "inputs/course-04/course.md",
+        "role": "course",
+        "display_name": "课程说明"
+      },
+      {
+        "id": "background",
+        "path": "inputs/course-04/background.md",
+        "role": "learner",
+        "display_name": "学习背景"
+      }
+    ],
+    "gold_path": "grader/course-04.json",
+    "tags": [
+      "synthetic",
+      "course-adaptation",
+      "long_context"
+    ]
+  }
+]

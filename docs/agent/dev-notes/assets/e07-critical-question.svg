@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">据理 E07：关键问题决定是否等待回答</title>
+  <desc id="desc">合成机制示意，非实机截图。分析声明关键问题后，校验通过才进入等待；用户回答作为用户数据继续分析。明确无关键问题才交付。</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#425d63" stroke-width="1.5"/></marker></defs>
+  <rect width="1200" height="720" fill="#f4f3ed"/>
+  <g font-family="Microsoft YaHei, sans-serif" fill="#183d42">
+    <text x="64" y="77" font-size="20" letter-spacing="3">据理 / 开发笔记 E07</text>
+    <text x="64" y="138" font-size="38" font-weight="700">发现关键问题，就留出回答的机会</text>
+    <text x="64" y="178" font-size="20" fill="#5e7172">合成机制示意 · 非产品截图 · 非真实模型改正后的输出</text>
+    <g fill="#fff" stroke="#b1c4c2" stroke-width="2">
+      <rect x="64" y="224" width="310" height="152" rx="18"/>
+      <rect x="444" y="224" width="310" height="152" rx="18"/>
+      <rect x="824" y="224" width="310" height="152" rx="18"/>
+      <rect x="64" y="454" width="310" height="152" rx="18"/>
+      <rect x="444" y="454" width="310" height="152" rx="18"/>
+      <rect x="824" y="454" width="310" height="152" rx="18"/>
+    </g>
+    <g font-size="25" font-weight="700">
+      <text x="88" y="269">分析候选</text><text x="468" y="269">校验候选与来源</text><text x="848" y="269">等待用户回答</text>
+      <text x="88" y="499">明确无关键问题</text><text x="468" y="499">再次校验</text><text x="848" y="499">交付正式结果</text>
+    </g>
+    <g font-size="19" fill="#4b6264">
+      <text x="88" y="310">关键未知：能按时到场吗？</text><text x="88" y="341">显式声明 critical_question</text>
+      <text x="468" y="310">任务、场景、权限、回读</text><text x="468" y="341">不满足则停止，不绕过</text>
+      <text x="848" y="310">pending / 正式结果为空</text><text x="848" y="341">补充信息后按原预算继续</text>
+      <text x="88" y="540">critical_question = null</text><text x="88" y="571">可保留非阻塞的可选建议</text>
+      <text x="468" y="540">用户回答是自述资料</text><text x="468" y="571">无法确认时注明条件与限制</text>
+      <text x="848" y="540">completed / 保存结果</text><text x="848" y="571">结构有效不保证结论正确</text>
+    </g>
+    <g fill="none" stroke="#425d63" stroke-width="2" marker-end="url(#arrow)">
+      <path d="M384 300H432"/><path d="M764 300H812"/>
+      <path d="M384 530H432"/><path d="M764 530H812"/>
+      <path d="M980 384V412H218V443"/>
+    </g>
+    <text x="489" y="442" font-size="16" fill="#5e7172">回答后重新分析，再声明是否就绪</text>
+    <text x="64" y="674" font-size="19">离线验证流程约束；真实模型能否稳定识别关键未知，仍待复测。</text>
+  </g>
+</svg>

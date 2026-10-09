@@ -14,6 +14,14 @@ from juli.core.resources import ResourceBinding
 from juli.core.tools import ToolReference
 
 
+def scripted_analysis_json(result: AnalysisResult, *, critical_question=None) -> str:
+    """Construct an explicit synthetic v3 decision; never process provider output."""
+    return canonical_json({'kind': 'analysis', 'task_id': result.task_id,
+        'blocks': [block.model_dump(mode='json') for block in result.blocks],
+        'scenario_payload': json.loads(result.scenario_payload_json),
+        'critical_question': critical_question})
+
+
 def scripted_retrieval_steps(task_id: str):
     usage = ModelUsage(input_tokens=100, output_tokens=80)
     search = ModelReply(tool_call=ModelToolCall(call_id='demo:search', tool=ToolReference(name='evidence.search', version='1.0.0'), arguments_json='{"query":"Python"}'), usage=usage)
@@ -25,7 +33,7 @@ def scripted_retrieval_steps(task_id: str):
     def answer(request):
         original = json.loads(request.messages[-1].content)['items'][0]
         result = AnalysisResult(task_id=task_id, blocks=(ResultBlock(kind='fact', text='合成资料记录了 Python 开发经验。', evidence_ids=(original['evidence_id'],)),), scenario_payload_json='{"summary":"仅验证连接和引用，不代表真实模型分析。"}')
-        return ModelReply(text=result.model_dump_json(), usage=usage)
+        return ModelReply(text=scripted_analysis_json(result), usage=usage)
     return [search, read, answer]
 
 

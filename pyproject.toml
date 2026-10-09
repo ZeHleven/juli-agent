@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "juli-agent"
-version = "0.1.0.dev7"
+version = "0.1.0.dev12"
 description = "Evidence-grounded analysis: reusable contracts and scenario extensions."
 readme = "README.md"
 requires-python = ">=3.11"

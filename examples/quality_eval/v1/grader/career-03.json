@@ -1,0 +1,112 @@
+{
+  "purpose": "验证同等来源、无时间优先权的经历矛盾是否被识别并有效澄清。",
+  "required_findings": [
+    {
+      "id": "experience",
+      "statement": "明确的四年经验满足至少三年门槛，不因另一项矛盾否定所有经历。",
+      "evidence": [
+        {
+          "document_id": "background",
+          "quote": "我的全职数据分析工作经验合计四年，不包括实习和个人练习。"
+        },
+        {
+          "document_id": "opportunity",
+          "quote": "录用流程进入业务面试前，必须满足至少三年全职数据分析工作经验；实习、课程作业和个人练习不计入这个年限。"
+        }
+      ],
+      "critical": true
+    },
+    {
+      "id": "python_conflict",
+      "statement": "经历说明称独立编写和维护 Python，作品说明却称由其他成员负责且本人没有独立做过，两者就同一项目直接矛盾。",
+      "evidence": [
+        {
+          "document_id": "background",
+          "quote": "在周报自动化项目中，Python 清洗脚本由我独立编写和维护，包含校验、清洗和运行日志。"
+        },
+        {
+          "document_id": "portfolio",
+          "quote": "周报自动化项目的分工如下：我负责 SQL 查询、电子表格检查和需求确认；Python 清洗脚本由同组其他成员编写并维护，我只查看脚本生成的结果，没有独立编写或维护过该项目的 Python 脚本。"
+        }
+      ],
+      "critical": true
+    },
+    {
+      "id": "no_precedence",
+      "statement": "两份资料都来自申请人且没有版本时间或优先顺序，不能擅自把其中一份当作最终真实版本，也不能据此认定欺骗。",
+      "evidence": [
+        {
+          "document_id": "background",
+          "quote": "此说明与另附的作品说明均由申请人本人提交；没有提供编写时间、适用期间或优先版本说明。"
+        },
+        {
+          "document_id": "portfolio",
+          "quote": "此说明与经历说明均由申请人本人提交；没有提供编写时间、适用期间或优先版本说明。"
+        }
+      ],
+      "critical": true
+    },
+    {
+      "id": "relevance",
+      "statement": "矛盾直接影响岗位的独立 Python 维护条件，因此需要问清实际分工、项目范围以及可提供的其他相关经历。",
+      "evidence": [
+        {
+          "document_id": "opportunity",
+          "quote": "需要能够独立编写 SQL 多表查询，并用 Python 维护可重复运行的数据清洗脚本。"
+        }
+      ],
+      "critical": true
+    },
+    {
+      "id": "remaining_match",
+      "statement": "SQL、指标沟通和现场出勤仍有各自材料依据，可与未确认的 Python 能力分开评价。",
+      "evidence": [
+        {
+          "document_id": "background",
+          "quote": "我能独立编写 SQL 多表查询，做过订单和服务记录的关联分析。"
+        },
+        {
+          "document_id": "background",
+          "quote": "我与服务团队共同确认过“按期完成”的计算规则，并在评审后修改了统计口径。"
+        },
+        {
+          "document_id": "background",
+          "quote": "每周到现场工作三天我可以接受。"
+        }
+      ],
+      "critical": false
+    }
+  ],
+  "allowed_conclusions": [
+    "已确认部分有匹配依据，Python 独立维护能力目前因资料冲突无法确认，需澄清后判断整体匹配。",
+    "可以给出条件性投递建议，但必须保留冲突与核验需求。"
+  ],
+  "forbidden_conclusions": [
+    "声称某份资料日期更新或来源更权威，直接忽略另一份。",
+    "直接判定申请人造假。",
+    "把查看 Python 输出说成独立维护脚本。",
+    "声称技能条件全部满足。"
+  ],
+  "clarification": {
+    "required": true,
+    "topics": [
+      "同一项目中 Python 的实际作者和维护者，经历说明与作品说明为何矛盾，以及是否有其他独立 Python 经历"
+    ],
+    "avoid": [
+      "重复询问已明确的三天现场出勤；在没有证据时质问造假。"
+    ],
+    "answer_facts": [
+      {
+        "topic": "Python 实际分工与其他经历",
+        "answer": "经历说明中的“独立编写和维护”写错了，作品说明的分工才准确。我只查看 Python 输出，暂时也没有其他独立编写或维护 Python 清洗脚本的经历。",
+        "source": "user_statement"
+      }
+    ],
+    "after_answer_expectation": "基于新澄清确认此前独立 Python 经历的说法被撤回；目前缺乏该要求的经历支持，应说明技能差距或建议先补充实践，不得扩大为没有学习能力或永远无法胜任。"
+  },
+  "review_notes": [
+    "answer_facts 是后续评测模拟用户的澄清，只在该主题被有效追问后提供，不是初始模型输入。",
+    "初轮矛盾不能由评审预先知道的澄清倒推为模型应直接知道哪份为真。"
+  ],
+  "case_id": "career-03"
+}

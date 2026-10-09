@@ -1,3 +1,4 @@
+from juli.model_demo import scripted_analysis_json
 import json
 import sqlite3
 
@@ -47,7 +48,7 @@ def change_budget(setup, **changes):
 
 def limitation(task):
     result = AnalysisResult(task_id=task, blocks=(ResultBlock(kind='limitation', text='合成资料不足。'),), scenario_payload_json='{"summary":"合成限制说明"}')
-    return ModelReply(text=result.model_dump_json(), usage=ModelUsage(input_tokens=10, output_tokens=20))
+    return ModelReply(text=scripted_analysis_json(result), usage=ModelUsage(input_tokens=10, output_tokens=20))
 
 
 def test_full_offline_script_uses_real_gateway_and_receipts_without_completing_task(model_task):
@@ -80,7 +81,7 @@ def test_final_fact_without_read_fails_even_if_id_exists(model_task):
     _, store, owner, space, _, task = model_task
     candidate = store.search_evidence(owner.token, space, task, 'Python')['items'][0]
     result = AnalysisResult(task_id=task, blocks=(ResultBlock(kind='fact', text='Synthetic fact', evidence_ids=(candidate['evidence_id'],)),), scenario_payload_json='{"summary":"test"}')
-    session, _ = session_for(model_task, [ModelReply(text=result.model_dump_json(), usage=ModelUsage(input_tokens=1, output_tokens=1))])
+    session, _ = session_for(model_task, [ModelReply(text=scripted_analysis_json(result), usage=ModelUsage(input_tokens=1, output_tokens=1))])
     with pytest.raises(DomainError) as error: session.advance()
     assert error.value.code == 'evidence_not_read'
 

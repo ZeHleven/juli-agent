@@ -1,0 +1,119 @@
+{
+  "purpose": "验证长篇项目文件后半部的特定范围条件能否被检索并用于改变实际参与建议。",
+  "required_findings": [
+    {
+      "id": "specific_deadline",
+      "statement": "B-4须在2026-10-25前交付，不能套用一般六十日窗口；机构计划2026-11-05交付，当前计划不满足这一必要条件。",
+      "evidence": [
+        {
+          "document_id": "requirements",
+          "quote": "本项目工作编号B-4适用压缩交付窗口：全部成果最晚须于2026-10-25交付，一般签约后六十日窗口不适用于B-4；交付计划晚于该日期即不满足本项参与条件。"
+        },
+        {
+          "document_id": "organization",
+          "quote": "榆灯项目的计划交付日为2026-11-05。"
+        }
+      ],
+      "critical": true
+    },
+    {
+      "id": "credential",
+      "statement": "S1有效期至12月31日覆盖要求的11月30日。",
+      "evidence": [
+        {
+          "document_id": "requirements",
+          "quote": "机构须持有项目内凭证“整理作业S1”，有效期覆盖至2026-11-30。"
+        },
+        {
+          "document_id": "organization",
+          "quote": "整理作业S1凭证摘录记载：持有人为虚构机构丁，有效期为2026-01-01至2026-12-31。"
+        }
+      ],
+      "critical": true
+    },
+    {
+      "id": "case_scale",
+      "statement": "4800份案例在2025-09-18验收，满足案例规模与时点条件。",
+      "evidence": [
+        {
+          "document_id": "requirements",
+          "quote": "须提供2025-01-01之后完成验收、单个案例不少于4000份材料的整理经历。"
+        },
+        {
+          "document_id": "organization",
+          "quote": "合成叶舟整理项目在2025-09-18完成验收，验收材料数量为4800份。"
+        }
+      ],
+      "critical": true
+    },
+    {
+      "id": "staffing",
+      "statement": "两名成员的可用期间覆盖要求，按排期满足人数条件。",
+      "evidence": [
+        {
+          "document_id": "requirements",
+          "quote": "须安排至少两名成员，自2026-10-10至2026-11-15均能够专职参与。"
+        },
+        {
+          "document_id": "organization",
+          "quote": "成员庚和成员辛均可自2026-10-10至2026-11-15专职参与榆灯项目。"
+        }
+      ],
+      "critical": true
+    },
+    {
+      "id": "price",
+      "statement": "88000元全包价在90000元上限内。",
+      "evidence": [
+        {
+          "document_id": "requirements",
+          "quote": "包括全部费用的总报价不得超过90000元。"
+        },
+        {
+          "document_id": "organization",
+          "quote": "包括全部费用的拟报价为88000元，不设追加费用。"
+        }
+      ],
+      "critical": true
+    },
+    {
+      "id": "data_handling",
+      "statement": "方案符合离线终端处理和不得外部上传的约定。",
+      "evidence": [
+        {
+          "document_id": "requirements",
+          "quote": "所有原始材料必须留在项目方离线终端内，不得上传任何外部服务。"
+        },
+        {
+          "document_id": "organization",
+          "quote": "实施方案在项目方离线终端内处理所有原始材料，不向任何外部服务上传。"
+        }
+      ],
+      "critical": true
+    }
+  ],
+  "allowed_conclusions": [
+    "按当前11月5日计划，交付节点不符合B-4特定要求，不宜按现方案参与；其他所列基础条件有资料支持。",
+    "如拟调整到10月25日或以前，需另行确认可执行排期，不能把尚未承诺的提前交付当作既定事实。"
+  ],
+  "forbidden_conclusions": [
+    "因一般六十日窗口而判断当前交付计划符合要求。",
+    "忽略工作编号B-4或把附录29当作无关说明。",
+    "断言机构永久没有交付能力，或凭空声称机构已承诺10月25日前完成。"
+  ],
+  "clarification": {
+    "required": false,
+    "topics": [],
+    "avoid": [
+      "在已知当前计划不满足时，先追问无关的封面或宣传资料。"
+    ],
+    "answer_facts": [],
+    "after_answer_expectation": "当前结论已有充分材料，不强制追问。若用户希望讨论修订方案，可以询问能否形成可核对的10月25日前排期，但现有不符合结论应先明确呈现。"
+  },
+  "review_notes": [
+    "长文是Markdown合成样本，不代表PDF解析、版面或OCR验收。",
+    "工作编号和特定日期条款在长文后半部；需根据范围适用性而非关键词出现次数选择规则。",
+    "附录为不同主题的自然说明，不用重复同一段文字扩充长度。"
+  ],
+  "case_id": "tender-04"
+}

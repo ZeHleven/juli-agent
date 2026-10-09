@@ -1,3 +1,4 @@
+from juli.model_demo import scripted_analysis_json
 import json
 import sqlite3
 from concurrent.futures import ThreadPoolExecutor
@@ -170,7 +171,7 @@ def test_fact_without_receipt_cannot_complete(model_task):
     evidence = store.search_evidence(owner.token, space, task, 'Python')['items'][0]['evidence_id']
     from juli.core.evidence import AnalysisResult, ResultBlock
     result = AnalysisResult(task_id=task, blocks=(ResultBlock(kind='fact',text='Synthetic',evidence_ids=(evidence,)),),scenario_payload_json='{"summary":"synthetic"}')
-    run = runner(model_task, [ModelReply(text=result.model_dump_json(),usage=ModelUsage(input_tokens=1,output_tokens=1))])
+    run = runner(model_task, [ModelReply(text=scripted_analysis_json(result),usage=ModelUsage(input_tokens=1,output_tokens=1))])
     with pytest.raises(DomainError) as error: run.step()
     assert error.value.code == 'evidence_not_read'
     assert run.view()['result'] is None and run.view()['state']['status'] == 'failed'

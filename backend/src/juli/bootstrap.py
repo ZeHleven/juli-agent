@@ -28,12 +28,15 @@ def tool_contracts() -> ToolRegistry:
     """Tool contracts shared by scenario registration, local retrieval and the model gateway."""
     registry = ToolRegistry()
     specs = (
-        ("evidence.search", "Find candidate evidence within a task's authorized resource snapshot.", "query"),
-        ("evidence.read", "Read original evidence within a task's authorized resource snapshot.", "evidence_id"),
+        ("evidence.search", "Find candidates; wait for returned evidence_id before reads.", "query"),
+        ("evidence.read", "Read original by earlier search evidence_id, not file version ID or same-batch search.", "evidence_id"),
     )
     for name, description, argument in specs:
         output_model = SearchOutput if name == "evidence.search" else ReadOutput
-        registry.register(ToolDefinition(reference=ToolReference(name=name, version="1.0.0"), description=description, policy=ToolPolicy(), input_schema_json=canonical_json({"type":"object","properties":{argument:{"type":"string","minLength":1,"maxLength":4000}},"required":[argument],"additionalProperties":False}), output_schema_json=canonical_json(output_model.model_json_schema())))
+        argument_schema = {"type": "string", "minLength": 1, "maxLength": 4000}
+        if argument == 'evidence_id':
+            argument_schema['description'] = 'Earlier search evidence_id; NOT resource_version_id/version_id.'
+        registry.register(ToolDefinition(reference=ToolReference(name=name, version="1.0.0"), description=description, policy=ToolPolicy(), input_schema_json=canonical_json({"type":"object","properties":{argument:argument_schema},"required":[argument],"additionalProperties":False}), output_schema_json=canonical_json(output_model.model_json_schema())))
     return registry
 
 
